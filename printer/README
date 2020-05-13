@@ -1,0 +1,15 @@
+Printer mod for Minetest
+========================
+
+Adds two nodes, a regular (computer) printer and a receipt printer.
+
+Both respond to digilines commands:
+
+{command="get_status"}
+Returns a table with the status of the printer
+
+{command="print",origin="Some text, optional, receipt printer only",title="Some text, optional, regular printer only",contents="Some text"}
+Prints a document
+
+{command="formfeed"}
+Ejects an empty page (regular printer only)
