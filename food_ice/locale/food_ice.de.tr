@@ -1,0 +1,50 @@
+# textdomain: food_ice
+
+
+### init.lua ###
+
+Ice-Bowl=Eisschüssel
+Iceball Blackberry=Eiskugel Johannisbeere
+Iceball Blueberry=Eiskugel Schwarzbeere
+Iceball Chocolate=Eiskugel Schokolade
+Iceball Pistachio=Eiskugel Pistazie
+Iceball Strawberry=Eiskugel Erdbeere
+Iceball Vanilla=Eiskugel Vanille
+Icecream Blackberry Lemon=Eiscreme Johannisbeere Zitrone
+Icecream Blueberry Lemon=Eiscreme Schwarzbeere Zitrone
+Icecream Blueberry Raspberry=Eiscreme Schwarzbeere Erdbeere
+Icecream Pistachio Vanilla=Eiscreme Pistazie Vanille
+Icecream Strawberry Raspberry=Eiscreme Erdbeere Himbeere
+Icecream Walnut Vanilla=Eiscreme Walnuss Vanille
+Icecup America=Cup Amerika
+Icecup England=Cup England
+Icecup French=Cup Frankreich
+Icecup German=Cup Deutschland
+Icecup Japan=Cup Japan
+Icecup New Zealand=Cup Neu Seeland
+Icecup Zaire=Cup Zaire
+Icewafer Blackberry=Eiswaffel Johannisbeere
+Icewafer Blackberry Pistachio=Eiswaffel Johannisbeere Pistazie
+Icewafer Blackberry Strawberry=Eiswaffel Johannisbeere Erdbeere
+Icewafer Blueberry=Eiswaffel Schwarzbeere
+Icewafer Blueberry Chocolate=Eiswaffel Schwarzbeere Schokolade
+Icewafer Blueberry Vanilla=Eiswaffel Schwarzbeere Vanille
+Icewafer Chocolate=Eiswaffel Schokolade
+Icewafer Chocolate Strawberry=Eiswaffel Schokolade Erdbeere
+Icewafer Pistachio=Eiswaffel Pistazie
+Icewafer Pistachio Blackberry=Eiswaffel Pistazie Johannisbeere
+Icewafer Pistachio Blueberry=Eiswaffel Pistazie Schwarzbeere
+Icewafer Strawberry=Eiswaffel Erdbeere
+Icewafer Strawberry Blueberry=Eiswaffel Erdbeere Schwarzbeere
+Icewafer Strawberry Pistachio=Eiswaffel Erdbeere Pistazie
+Icewafer Strawberry Vanilla=Eiswaffel Erdbeere Vanille
+Icewafer Vanilla=Eiswaffel Vanille
+Icewafer Vanilla Blackberry=Eiswaffel Vanille Johannisbeere
+Icewafer Vanilla Pistachio=Eiswaffel Vanille Pistazie
+Icewafercream Blackberry Lemon=Waffeleiscreme Johannisbeere Zitrone
+Icewafercream Blueberry Lemon=Waffeleiscreme Schwarzbeere Zitrone
+Icewafercream Blueberry Raspberry=Waffeleiscreme Schwarzbeere Erdbeere
+Icewafercream Pistachio Vanilla=Waffeleiscreme Pistazie Vanille
+Icewafercream Strawberry Raspberry=Waffeleiscreme Erdbeere Himbeere
+Icewafercream Walnut Vanilla=Waffeleiscreme Walnuss Vanille
+Wafer=Waffel

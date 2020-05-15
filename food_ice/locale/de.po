@@ -1,0 +1,199 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Food_Ice\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-21 13:34+0200\n"
+"PO-Revision-Date: 2018-05-21 13:56+0200\n"
+"Language-Team: A.C.M.\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.7\n"
+"Last-Translator: A.C.M. <undertakers_help@yahoo.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de\n"
+
+#: init.lua
+msgid "Ice-Bowl"
+msgstr "Eisschüssel"
+
+#: init.lua
+msgid "Wafer"
+msgstr "Waffel"
+
+#: init.lua
+msgid "Iceball Chocolate"
+msgstr "Eiskugel Schokolade"
+
+#: init.lua
+msgid "Iceball Blueberry"
+msgstr "Eiskugel Schwarzbeere"
+
+#: init.lua
+msgid "Iceball Blackberry"
+msgstr "Eiskugel Johannisbeere"
+
+#: init.lua
+msgid "Iceball Strawberry"
+msgstr "Eiskugel Erdbeere"
+
+#: init.lua
+msgid "Iceball Vanilla"
+msgstr "Eiskugel Vanille"
+
+#: init.lua
+msgid "Iceball Pistachio"
+msgstr "Eiskugel Pistazie"
+
+#: init.lua
+msgid "Icecream Pistachio Vanilla"
+msgstr "Eiscreme Pistazie Vanille"
+
+#: init.lua
+msgid "Icecream Strawberry Raspberry"
+msgstr "Eiscreme Erdbeere Himbeere"
+
+#: init.lua
+msgid "Icecream Blueberry Raspberry"
+msgstr "Eiscreme Schwarzbeere Erdbeere"
+
+#: init.lua
+msgid "Icecream Blueberry Lemon"
+msgstr "Eiscreme Schwarzbeere Zitrone"
+
+#: init.lua
+msgid "Icecream Blackberry Lemon"
+msgstr "Eiscreme Johannisbeere Zitrone"
+
+#: init.lua
+msgid "Icecream Walnut Vanilla"
+msgstr "Eiscreme Walnuss Vanille"
+
+#: init.lua
+msgid "Icewafer Blackberry"
+msgstr "Eiswaffel Johannisbeere"
+
+#: init.lua
+msgid "Icewafer Blueberry"
+msgstr "Eiswaffel Schwarzbeere"
+
+#: init.lua
+msgid "Icewafer Chocolate"
+msgstr "Eiswaffel Schokolade"
+
+#: init.lua
+msgid "Icewafer Strawberry"
+msgstr "Eiswaffel Erdbeere"
+
+#: init.lua
+msgid "Icewafer Pistachio"
+msgstr "Eiswaffel Pistazie"
+
+#: init.lua
+msgid "Icewafer Vanilla"
+msgstr "Eiswaffel Vanille"
+
+#: init.lua
+msgid "Icewafer Blackberry Pistachio"
+msgstr "Eiswaffel Johannisbeere Pistazie"
+
+#: init.lua
+msgid "Icewafer Blackberry Strawberry"
+msgstr "Eiswaffel Johannisbeere Erdbeere"
+
+#: init.lua
+msgid "Icewafer Blueberry Chocolate"
+msgstr "Eiswaffel Schwarzbeere Schokolade"
+
+#: init.lua
+msgid "Icewafer Blueberry Vanilla"
+msgstr "Eiswaffel Schwarzbeere Vanille"
+
+#: init.lua
+msgid "Icewafer Chocolate Strawberry"
+msgstr "Eiswaffel Schokolade Erdbeere"
+
+#: init.lua
+msgid "Icewafer Pistachio Blackberry"
+msgstr "Eiswaffel Pistazie Johannisbeere"
+
+#: init.lua
+msgid "Icewafer Pistachio Blueberry"
+msgstr "Eiswaffel Pistazie Schwarzbeere"
+
+#: init.lua
+msgid "Icewafer Strawberry Blueberry"
+msgstr "Eiswaffel Erdbeere Schwarzbeere"
+
+#: init.lua
+msgid "Icewafer Strawberry Pistachio"
+msgstr "Eiswaffel Erdbeere Pistazie"
+
+#: init.lua
+msgid "Icewafer Strawberry Vanilla"
+msgstr "Eiswaffel Erdbeere Vanille"
+
+#: init.lua
+msgid "Icewafer Vanilla Blackberry"
+msgstr "Eiswaffel Vanille Johannisbeere"
+
+#: init.lua
+msgid "Icewafer Vanilla Pistachio"
+msgstr "Eiswaffel Vanille Pistazie"
+
+#: init.lua
+msgid "Icewafercream Blackberry Lemon"
+msgstr "Waffeleiscreme Johannisbeere Zitrone"
+
+#: init.lua
+msgid "Icewafercream Blueberry Raspberry"
+msgstr "Waffeleiscreme Schwarzbeere Erdbeere"
+
+#: init.lua
+msgid "Icewafercream Pistachio Vanilla"
+msgstr "Waffeleiscreme Pistazie Vanille"
+
+#: init.lua
+msgid "Icewafercream Strawberry Raspberry"
+msgstr "Waffeleiscreme Erdbeere Himbeere"
+
+#: init.lua
+msgid "Icewafercream Walnut Vanilla"
+msgstr "Waffeleiscreme Walnuss Vanille"
+
+#: init.lua
+msgid "Icewafercream Blueberry Lemon"
+msgstr "Waffeleiscreme Schwarzbeere Zitrone"
+
+#: init.lua
+msgid "Icecup French"
+msgstr "Cup Frankreich"
+
+#: init.lua
+msgid "Icecup America"
+msgstr "Cup Amerika"
+
+#: init.lua
+msgid "Icecup German"
+msgstr "Cup Deutschland"
+
+#: init.lua
+msgid "Icecup New Zealand"
+msgstr "Cup Neu Seeland"
+
+#: init.lua
+msgid "Icecup England"
+msgstr "Cup England"
+
+#: init.lua
+msgid "Icecup Japan"
+msgstr "Cup Japan"
+
+#: init.lua
+msgid "Icecup Zaire"
+msgstr "Cup Zaire"
