@@ -1,0 +1,4 @@
+default
+stairs
+wool
+dye?
