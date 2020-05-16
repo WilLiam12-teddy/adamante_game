@@ -19,7 +19,7 @@ extras.nonight         = minetest.setting_getbool("nonight") or 0
 
 -- on timer affects
 -- spawn box, pingkick, jail
-extras.spawnpoint       = minetest.setting_get_pos("static_spawnpoint") or {x=0, y=31, z=0}
+extras.spawnpoint       = minetest.setting_get_pos("static_spawnpoint") or {x=0, y=15, z=0}
 extras.runloop          = minetest.setting_getbool("runloop") or 0
 extras.boxsize          = tonumber(minetest.setting_get("playerboxsize")) or 512
 extras.pingkick         = minetest.setting_getbool("pingkick") or 0
@@ -59,25 +59,21 @@ minetest.register_on_mods_loaded(function()
     print("[extras] selection range "..extras.range.." blocks")
 end )
 
--- local materials =   {   ["dirt"]="default_dirt.png",
---                         ["dirt_with_grass"]="default_grass.png",
---                         ["sand"]="default_sand.png",
---                         ["desert_sand"]="default_desert_sand.png",
---                         ["gravel"]="default_gravel.png",
---                         ["dirt_with_dry_grass"]="default_dry_grass.png",
---                         ["dirt_with_rainforest_litter"]="default_rainforest_litter.png",
---                         ["dirt_with_coniferous_litter"]="default_coniferous_litter.png",
---                     }
---
--- for material,tiles in pairs(materials) do
---     minetest.register_alias("smoothhills:panel_"..material.."_bottom","air")
---     minetest.register_alias("smoothhills:panel_"..material.."_slab","air")
---     minetest.register_alias("smoothhills:corner_"..material,"air")
---     minetest.register_alias("smoothhills:corner_"..material.."_high","air")
--- end
+local materials =   {   ["dirt"]="default_dirt.png",
+                        ["dirt_with_grass"]="default_grass.png",
+                        ["sand"]="default_sand.png",
+                        ["desert_sand"]="default_desert_sand.png",
+                        ["gravel"]="default_gravel.png",
+                        ["dirt_with_dry_grass"]="default_dry_grass.png",
+                        ["dirt_with_rainforest_litter"]="default_rainforest_litter.png",
+                        ["dirt_with_coniferous_litter"]="default_coniferous_litter.png",
+                    }
 
---minetest.register_alias("moretrees:rubber_tree_leaves","air")
---minetest.register_alias("moretrees:rubber_tree_trunk","air")
-minetest.register_alias("bakedclay:delphinium","air")
-minetest.register_alias("bakedclay:thistle","air")
+for material,tiles in pairs(materials) do
+    minetest.register_alias("smoothhills:panel_"..material.."_bottom","air")
+    minetest.register_alias("smoothhills:panel_"..material.."_slab","air")
+    minetest.register_alias("smoothhills:corner_"..material,"air")
+    minetest.register_alias("smoothhills:corner_"..material.."_high","air")
+end
+
 

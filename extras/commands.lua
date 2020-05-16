@@ -22,9 +22,10 @@ if extras.rollback~=0 then
         privs = {ismod = true},
         func = function( name, param)
             minetest.chat_send_all("Player "..param.." has privs removed, and all their work is being removed from the game.")
-            local privs = {}
-            --minetest.get_player_privs(param)
-            privs.shout = 1
+            local privs = minetest.get_player_privs(param)
+            privs.spill = nil
+            privs.outlander = nil
+            privs.noclip = nil
             minetest.set_player_privs(param, privs)
             minetest.rollback_revert_actions_by("player:"..param, 100000000)
             return false
@@ -32,43 +33,43 @@ if extras.rollback~=0 then
         })
 end
 
--- minetest.register_chatcommand("priv0", {
---     description = "Clear privs, ADD shout.",
---     privs = {server = true},
---     func = function( name, param)
---         if param==""  or name=="" then
---             minetest.chat_send_player(name, "I need a name...")
---             return false
---         end
---         extras.setprivs_jailed( param)
---     end,
---     })
---
--- minetest.register_chatcommand("priv1", {
---     description = "Clear privs, ADD default_privs",
---     privs = {server = true},
---     func = function( name, param)
---         if param==""  or name=="" then
---             minetest.chat_send_player(name, "I need a name...")
---             return false
---         end
---         extras.setprivs_released( param)
---     end,
---     })
---
--- minetest.register_chatcommand("p", {
---     description = "Promote to Player",
---     privs = {ismod = true},
---     func = function( name, param)
---         minetest.chat_send_all("Player "..param.." is promoted to PLAYER, They can now build beyond the wall.")
---         local privs = minetest.get_player_privs(param)
---         privs.spill = true
---         privs.outlander = true
---         privs.noclip = true
---         minetest.set_player_privs(param, privs)
---         return false
---     end,
---     })
+minetest.register_chatcommand("priv0", {
+    description = "Clear privs, ADD shout.",
+    privs = {server = true},
+    func = function( name, param)
+        if param==""  or name=="" then
+            minetest.chat_send_player(name, "I need a name...")
+            return false
+        end
+        extras.setprivs_jailed( param)
+    end,
+    })
+
+minetest.register_chatcommand("priv1", {
+    description = "Clear privs, ADD default_privs",
+    privs = {server = true},
+    func = function( name, param)
+        if param==""  or name=="" then
+            minetest.chat_send_player(name, "I need a name...")
+            return false
+        end
+        extras.setprivs_released( param)
+    end,
+    })
+
+minetest.register_chatcommand("p", {
+    description = "Promote to Player",
+    privs = {ismod = true},
+    func = function( name, param)
+        minetest.chat_send_all("Player "..param.." is promoted to PLAYER, They can now build beyond the wall.")
+        local privs = minetest.get_player_privs(param)
+        privs.spill = true
+        privs.outlander = true
+        privs.noclip = true
+        minetest.set_player_privs(param, privs)
+        return false
+    end,
+    })
 
 if extras.nospawn==0 then
 
@@ -76,8 +77,8 @@ if extras.nospawn==0 then
         description = "Teleport player to spawn point.",
         privs = {interact=true},
         func = function ( name, param )
-            local spawnpoint = extras.spawnpoint
---            local spawnpoint = {x=13,y=138,z=0}
+--            local spawnpoint = extras.spawnpoint
+            local spawnpoint = {x=23,y=138,z=0}
             local player = minetest.get_player_by_name(name)
             if minetest.get_modpath("xp_redo") then
                 if xp_redo.get_xp(player:get_player_name()) < 50 then
@@ -102,43 +103,6 @@ minetest.register_chatcommand("afk", {
     end,
 })
 
-minetest.register_chatcommand("ping", {
-    privs = {server = true},
-    params = "",
-    description = "Get ip & ping of players",
-    func = function(player_name, param)
-		for i, player in pairs(minetest.get_connected_players()) do
-			local name = player:get_player_name()
-			if name then
-				local ping = minetest.get_player_information(name).avg_rtt / 2
-				ping = math.floor(ping * 1000)
-				minetest.chat_send_player(player_name, "     "..name.." IP:"..minetest.get_player_information(name).address.."  Ping: "..ping.."ms")
-			end
-		end
-	end
-})
-
-minetest.register_chatcommand("wit", {
-    privs = {server = true},
-    params = "",
-    description = "Get itemstring of wielded item",
-    func = function(player_name, param)
-	local player = minetest.get_player_by_name(player_name)
-	minetest.chat_send_player(player_name, player:get_wielded_item():to_string())
-	return
-    end
-})
-
-minetest.register_chatcommand("eday", {
-    privs = {settime = true},
-    params = "<player_name>",
-    description = "Eternal Day (It never gets dark.)",
-    func = function(player_name, param)
-        minetest.set_timeofday(0.5)
-        minetest.setting_set("time_speed","0")
-    end
-})
-
 if extras.adminreset~=0 then
     minetest.register_chatcommand("r", {
         description = "Reset the server.",
@@ -152,7 +116,7 @@ end
 
 if extras.jail~=0 then
     minetest.register_chatcommand("setjail", {
-        description = "Set the position of the Jail to where you are now.",
+        description = "Set the position of the Jail to where you are now. by Nigel for Sasha5.",
         privs = {setjail=true},
         func = function ( name, param )
             extras.jail_data.jailpos = vector.round(minetest.get_player_by_name(name):getpos())
@@ -162,7 +126,7 @@ if extras.jail~=0 then
     })
 
     minetest.register_chatcommand("setrelease", {
-        description = "Set the release position to where you are now.",
+        description = "Set the release position to where you are now. by Nigel for Sasha5.",
         privs = {setjail=true},
         func = function ( name, param )
             extras.jail_data.releasepos = vector.round(minetest.get_player_by_name(name):getpos())
@@ -178,7 +142,7 @@ if extras.jail~=0 then
         func = function ( name, param )
             local player = minetest.get_player_by_name(param)
             if (player) then
---                print("go for jailing "..param)
+                print("go for jailing "..param)
                 extras.players_in_jail[param] = player;
                 player:setpos(vector.round(extras.jail_data.jailpos))
                 minetest.chat_send_all(""..param.." has been sent to jail by "..name.."")

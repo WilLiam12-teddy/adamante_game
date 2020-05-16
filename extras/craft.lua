@@ -1,5 +1,5 @@
 
-if extras.recrafting~=0 then
+if extras.recrafting then
     print("[extras] Recrafting - ACTIVE")
     local materials = { mese=     { modname='default',drop='mese_crystal'},
                         diamond=  { modname='default',drop='diamond'},

@@ -37,6 +37,11 @@ local spawnpoint = extras.spawnpoint
 
 if extras.runloop~=0 then
     local function do_services ()
+        if tick==12 then
+            tick=0
+        else
+            tick=tick+1
+        end
         --print("tick "..tick)
         for _, player in ipairs(minetest.get_connected_players()) do
             local name = player:get_player_name()
@@ -68,11 +73,6 @@ if extras.runloop~=0 then
             end
 
             -- thin out the slow connections
-            if tick==12 then
-                tick=0
-            else
-                tick=tick+1
-            end
             if tick==0 and extras.pingkick~=0 then
                 if name ~= nil then
                     local pinf = minetest.get_player_information(name)

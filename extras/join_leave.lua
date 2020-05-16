@@ -12,7 +12,6 @@ minetest.register_on_joinplayer(function(player)
     --if minetest.get_player_privs(player:get_player_name()).ui_full then
     minetest.after(0, player.hud_set_hotbar_itemcount, player, extras.playerhotbar)
     --minetest.after(0, extras.setpos, player:get_pos(), player)
-	player:set_clouds({density=0})
     if extras.nonight~=0 then
         print("[extras] Join/Leave - Day only mode - ACTIVE")
         minetest.set_timeofday(0.5)
