@@ -1,5 +1,4 @@
 --[[
-   Modifed: 28.09.2019 Sokomine (see README)
    3D Forniture
    
    Copyright 2012 Tonyka
@@ -20,13 +19,64 @@
    MA 02110-1301, USA.
    
    Contributors:
+
     InfinityProject
+
         suggested creating bathroom kit.
+
     cosarara97
+
         code.
    
 ]]--
 
+-- replacement
+
+	--Papyrus
+	minetest.register_node(":default:papyrus",
+		{description = "Papyrus",
+		drawtype = "nodebox",
+		tiles ={
+			"forniture_papyrus.png",
+			"forniture_papyrus.png",
+			"forniture_papyrus_s1.png",
+			"forniture_papyrus_s1.png",
+			"forniture_papyrus_s2.png",
+			"forniture_papyrus_s2.png",
+			},
+		inventory_image = "default_papyrus.png",
+		wield_image ="default_papyrus.png",
+		paramtype = "light",
+		is_ground_content = true,
+		walkable = false,
+		node_box = {
+			type = "fixed",
+			fixed = {
+				--papyrus 1
+				{-0.03-0.1,-0.5,-0.03-0.1, 0.03-0.1,0.5,0.03-0.1},
+				{-0.06-0.1,-0.02-0.1,-0.06-0.1, 0.06-0.1,0.02-0.1,0.06-0.1},
+				--papyrus 2
+				{-0.03-0.4,-0.5,-0.03-0.3, 0.03-0.4,0.5,0.03-0.3},
+				{-0.06-0.4,-0.02-0.2,-0.06-0.3, 0.06-0.4,0.02-0.2,0.06-0.3},
+				--papyrus 3
+				{-0.03+0.4,-0.5,-0.03-0.3,0.03+0.4,0.5,0.03-0.3},
+				{-0.06+0.4,-0.02+0.2,-0.06-0.3, 0.06+0.4,0.02+0.2,0.06-0.3},
+				--papyrus 4
+				{-0.03-0.4,-0.5,-0.03+0.4, 0.03-0.4,0.5,0.03+0.4},
+				{-0.06-0.4,0.02+0.4,-0.06+0.4, 0.06-0.4,0.02+0.4,0.06+0.4},
+				--papyrus 5
+				{-0.03-0.2,-0.5,-0.03+0.2, 0.03-0.2,0.5,0.03+0.2},
+				{-0.06-0.2,0.02-0.4,-0.06+0.2, 0.06-0.2,0.02-0.4,0.06+0.2},
+				--papyrus 6
+				{-0.03+0.1,-0.5,-0.03+0.2, 0.03+0.1,0.5,0.03+0.2},
+				{-0.06+0.1,0.02+0.3,-0.06+0.2, 0.06+0.1,0.02+0.3,0.06+0.2},
+				},
+			},
+		groups = {snappy = 3,flammable = 2},
+		sounds = default.node_sound_leaves_defaults(),
+	})
+
+ --nodes  
 
 	-- Deco Home
 
@@ -137,15 +187,9 @@
 			 groups = {snappy=2,choppy=2,oddly_breakable_by_hand=2}
 		})
 
-
 		--Table Lamp
-	lamp_states = {"off", "low", "med", "hi", "max"}
-	light_level = 0
-	-- not_in_creative_inventory will be set to this value (we only want the FIRST lamp there)
-	nocr = 0
-	for i, state in ipairs(lamp_states) do
-		minetest.register_node("3dforniture:table_lamp_"..state,
-			{ description = 'Table Lamp ('..state..')',
+		minetest.register_node("3dforniture:table_lamp_off",
+			{ description = 'Table Lamp',
 			drawtype = "nodebox",
 			tiles = {
 				"forniture_table_lamp_s.png",
@@ -178,19 +222,165 @@
 				type = "fixed",
 				fixed = {-0.5, -0.5, -0.5, 0.5,0.5, 0.5},
 			},
-			groups = {cracky=2,oddly_breakable_by_hand=1, not_in_creative_inventory=nocr},
+			groups = {cracky=2,oddly_breakable_by_hand=1,},
 			drop = "3dforniture:table_lamp_off",
-
-			light_source = light_level,
-			on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
-				minetest.swap_node(pos,
-				    {name="3dforniture:table_lamp_"..lamp_states[i%#lamp_states +1]})
-			end,
-
 		})
-		light_level = light_level + 4
-		nocr = 1
-	end
+
+		minetest.register_node("3dforniture:table_lamp_low",
+			{ description = 'Table Lamp',
+			drawtype = "nodebox",
+			tiles = {
+				"forniture_table_lamp_s.png",
+				"forniture_table_lamp_s.png",
+				"forniture_table_lamp_l.png",
+			},
+			 paramtype = 'light',
+			paramtype2 == 'facedir',
+			 node_box = {
+				type = "fixed",
+				fixed = {
+
+					--Lamp Base
+					{-0.15,-0.5,-0.15, 0.15,-0.45,0.15},
+					{-0.05,-0.45,-0.05, 0.05,-0.4,0.05},
+					{-0.025,-0.4,-0.025, 0.025,-0.1,0.025},
+					{-0.0125,-0.125,-0.2, 0.0125,-0.1,0.2},
+					{-0.2,-0.125,-0.0125, 0.2,-0.1,0.0125},
+
+					--Lamp Shade
+					{-0.2,-0.1,-0.2, -0.175,0.3,0.2},
+					{0.175,-0.1,-0.2, 0.2,0.3,0.2},
+					{-0.175,-0.1,-0.2, 0.175,0.3,-0.175},
+					{-0.175,-0.1,0.175, 0.175,0.3,0.2},
+				},
+			},
+			sunlight_propagates = true,
+			walkable = false,
+			light_source = 4,
+			selection_box = {
+				type = "fixed",
+				fixed = {-0.5, -0.5, -0.5, 0.5,0.5, 0.5},
+			},
+			groups = {cracky=2,oddly_breakable_by_hand=1,},
+			drop = "3dforniture:table_lamp_off",
+		})
+
+		minetest.register_node("3dforniture:table_lamp_med",
+			{ description = 'Table Lamp',
+			drawtype = "nodebox",
+			tiles = {
+				"forniture_table_lamp_s.png",
+				"forniture_table_lamp_s.png",
+				"forniture_table_lamp_l.png",
+			},
+			 paramtype = 'light',
+			paramtype2 == 'facedir',
+			 node_box = {
+				type = "fixed",
+				fixed = {
+
+					--Lamp Base
+					{-0.15,-0.5,-0.15, 0.15,-0.45,0.15},
+					{-0.05,-0.45,-0.05, 0.05,-0.4,0.05},
+					{-0.025,-0.4,-0.025, 0.025,-0.1,0.025},
+					{-0.0125,-0.125,-0.2, 0.0125,-0.1,0.2},
+					{-0.2,-0.125,-0.0125, 0.2,-0.1,0.0125},
+
+					--Lamp Shade
+					{-0.2,-0.1,-0.2, -0.175,0.3,0.2},
+					{0.175,-0.1,-0.2, 0.2,0.3,0.2},
+					{-0.175,-0.1,-0.2, 0.175,0.3,-0.175},
+					{-0.175,-0.1,0.175, 0.175,0.3,0.2},
+				},
+			},
+			sunlight_propagates = true,
+			walkable = false,
+			light_source = 8,
+			selection_box = {
+				type = "fixed",
+				fixed = {-0.5, -0.5, -0.5, 0.5,0.5, 0.5},
+			},
+			groups = {cracky=2,oddly_breakable_by_hand=1,},
+			drop = "3dforniture:table_lamp_off",
+		})
+
+		minetest.register_node("3dforniture:table_lamp_hi",
+			{ description = 'Table Lamp',
+			drawtype = "nodebox",
+			tiles = {
+				"forniture_table_lamp_s.png",
+				"forniture_table_lamp_s.png",
+				"forniture_table_lamp_l.png",
+			},
+			paramtype = 'light',
+			paramtype2 == 'facedir',
+			 node_box = {
+				type = "fixed",
+				fixed = {
+
+					--Lamp Base
+					{-0.15,-0.5,-0.15, 0.15,-0.45,0.15},
+					{-0.05,-0.45,-0.05, 0.05,-0.4,0.05},
+					{-0.025,-0.4,-0.025, 0.025,-0.1,0.025},
+					{-0.0125,-0.125,-0.2, 0.0125,-0.1,0.2},
+					{-0.2,-0.125,-0.0125, 0.2,-0.1,0.0125},
+
+					--Lamp Shade
+					{-0.2,-0.1,-0.2, -0.175,0.3,0.2},
+					{0.175,-0.1,-0.2, 0.2,0.3,0.2},
+					{-0.175,-0.1,-0.2, 0.175,0.3,-0.175},
+					{-0.175,-0.1,0.175, 0.175,0.3,0.2},
+				},
+			},
+			sunlight_propagates = true,
+			walkable = false,
+			light_source = 12,
+			selection_box = {
+				type = "fixed",
+				fixed = {-0.5, -0.5, -0.5, 0.5,0.5, 0.5},
+			},
+			groups = {cracky=2},
+			drop = "3dforniture:table_lamp_off",
+		})
+
+		minetest.register_node("3dforniture:table_lamp_max",
+			{ description = 'Table Lamp',
+			drawtype = "nodebox",
+			tiles = {
+				"forniture_table_lamp_s.png",
+				"forniture_table_lamp_s.png",
+				"forniture_table_lamp_l.png",
+			},
+			paramtype = 'light',
+			paramtype2 == 'facedir',
+			 node_box = {
+				type = "fixed",
+				fixed = {
+
+					--Lamp Base
+					{-0.15,-0.5,-0.15, 0.15,-0.45,0.15},
+					{-0.05,-0.45,-0.05, 0.05,-0.4,0.05},
+					{-0.025,-0.4,-0.025, 0.025,-0.1,0.025},
+					{-0.0125,-0.125,-0.2, 0.0125,-0.1,0.2},
+					{-0.2,-0.125,-0.0125, 0.2,-0.1,0.0125},
+
+					--Lamp Shade
+					{-0.2,-0.1,-0.2, -0.175,0.3,0.2},
+					{0.175,-0.1,-0.2, 0.2,0.3,0.2},
+					{-0.175,-0.1,-0.2, 0.175,0.3,-0.175},
+					{-0.175,-0.1,0.175, 0.175,0.3,0.2},
+				},
+			},
+			sunlight_propagates = true,
+			walkable = false,
+			light_source = 16,
+			selection_box = {
+				type = "fixed",
+				fixed = {-0.5, -0.5, -0.5, 0.5,0.5, 0.5},
+			},
+			groups = {cracky=2,oddly_breakable_by_hand=1,},
+			drop = "3dforniture:table_lamp_off",
+		})
 
 		-- Bathroom Kit
 
@@ -218,10 +408,7 @@
 					},
 				},
 				drop ="3dforniture:toilet",
-				groups = {cracky=3, not_in_creative_inventory=1},
-				on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
-					minetest.swap_node(pos, {name="3dforniture:toilet_open", param2=node.param2})
-				end,
+				groups = {cracky=3,}
 			})
 
 			minetest.register_node("3dforniture:toilet_open",
@@ -253,15 +440,8 @@
 					},
 				},
 				drop = "3dforniture:toilet",
-				groups = {cracky = 3, not_in_creative_inventory=1},
-				on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
-					minetest.swap_node(pos, {name="3dforniture:toilet", param2=node.param2})
-					minetest.sound_play("3dforniture_dig_toilet", {
-						pos=pos,
-						max_hear_distance = 10,
-						gain = 0.5,
-					})
-				end,
+				groups = {cracky = 3,},
+				sounds = {dig = "3dforniture_dig_toilet",  gain=0.5},
 			})
 
 			--Sink
@@ -569,7 +749,7 @@
 				 groups = {cracky=1}
 		})  
 
-		--Torch Wall
+		--Torch Wakll
 		minetest.register_node("3dforniture:torch_wall",
 			{ description = 'Torch Wall',
 			drawtype = "nodebox",
