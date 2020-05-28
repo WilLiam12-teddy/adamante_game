@@ -56,4 +56,14 @@ boardlist =
                 imgtyp = "png" 
             },
 
+            {  
+                title = "TodoDiaBIG", 
+                item1 = "yellow", 
+                item2 = "green", 
+                item3 = "white", 
+                scale = 6.0, 
+                filename = "tododiabig",
+                imgtyp = "png" 
+            },
+
     } -- bb_boardlist
