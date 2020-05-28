@@ -41,6 +41,8 @@ outdoor.register_simbol("sign_feirawal", "Feira Wal", "sign_feirawal.png", "Feir
 outdoor.register_simbol("sign_wal", "Wal", "sign_wal.png", "Wal")
 outdoor.register_simbol("sign_paes", "Bread", "sign_paes.png", "Bread")
 outdoor.register_simbol("sign_acougue", "Butchery", "sign_acougue.png", "Butchery")
+outdoor.register_simbol("sign_farmacia", "Farmacia TodoDia", "sign_farmacia.png", "Farmacia TodoDia")
+outdoor.register_simbol("sign_dora", "Dora TodoDia", "sign_dora.png", "Dora TodoDia")
 
 outdoor.register_simbol("sign_arrow_down", "Siga para a Baixo/Atraz", "sign_arrow_down.png")
 outdoor.register_simbol("sign_arrow_left", "Siga para a Esquerda", "sign_arrow_left.png")
