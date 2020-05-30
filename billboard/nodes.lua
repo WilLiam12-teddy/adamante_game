@@ -66,4 +66,14 @@ boardlist =
                 imgtyp = "png" 
             },
 
+            {  
+                title = "WalmartBIG", 
+                item1 = "yellow", 
+                item2 = "blue", 
+                item3 = "yellow", 
+                scale = 9.0, 
+                filename = "walmart",
+                imgtyp = "png" 
+            },
+
     } -- bb_boardlist
