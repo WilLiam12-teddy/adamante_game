@@ -35,8 +35,8 @@ mobs:register_mob("mobs_monster:mese_monster", {
 	fall_speed = -6,
 	stepheight = 2.1,
 	drops = {
-		{name = "default:mese_crystal", chance = 9, min = 0, max = 2},
-		{name = "default:mese_crystal_fragment", chance = 1, min = 0, max = 2},
+		{name = "default:mese_crystal", chance = 9, min = 1, max = 3},
+		{name = "default:mese_crystal_fragment", chance = 1, min = 1, max = 9},
 	},
 	water_damage = 1,
 	lava_damage = 1,
@@ -64,9 +64,6 @@ mobs:spawn({
 	active_object_count = 1,
 	max_height = -20,
 })
-
-
-mobs:register_egg("mobs_monster:mese_monster", S("Mese Monster"), "default_mese_block.png", 1)
 
 
 mobs:alias_mob("mobs:mese_monster", "mobs_monster:mese_monster") -- compatiblity

@@ -3,8 +3,7 @@ local S = mobs.intllib
 
 
 -- custom particle effects
-local effect = function(
-		pos, amount, texture, min_size, max_size, radius, gravity, glow)
+local effect = function(pos, amount, texture, min_size, max_size, radius, gravity, glow)
 
 	radius = radius or 2
 	min_size = min_size or 0.5
@@ -79,14 +78,6 @@ mobs:register_mob("mobs_monster:sand_monster", {
 		punch_start = 74,
 		punch_end = 105,
 	},
-	immune_to = {
-		{"default:shovel_wood", 3}, -- shovels deal more damage to sand monster
-		{"default:shovel_stone", 3},
-		{"default:shovel_bronze", 4},
-		{"default:shovel_steel", 4},
-		{"default:shovel_mese", 5},
-		{"default:shovel_diamond", 7},
-	},
 --[[
 	custom_attack = function(self, p)
 		local pos = self.object:get_pos()
@@ -99,21 +90,6 @@ mobs:register_mob("mobs_monster:sand_monster", {
 		pos.y = pos.y + 0.25
 		effect(pos, 30, "mobs_sand_particles.png", 0.1, 2, 3, 5)
 	end,
---[[
-	on_rightclick = function(self, clicker)
-
-		local tool = clicker:get_wielded_item()
-		local name = clicker:get_player_name()
-
-		if tool:get_name() == "default:sand" then
-
-			self.owner = name
-			self.type = "npc"
-
-			mobs:force_capture(self, clicker)
-		end
-	end,
-]]
 })
 
 
@@ -124,9 +100,5 @@ mobs:spawn({
 	active_object_count = 2,
 	min_height = 0,
 })
-
-
-mobs:register_egg("mobs_monster:sand_monster", S("Sand Monster"), "default_desert_sand.png", 1)
-
 
 mobs:alias_mob("mobs:sand_monster", "mobs_monster:sand_monster") -- compatibility

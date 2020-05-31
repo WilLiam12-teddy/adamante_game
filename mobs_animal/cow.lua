@@ -2,7 +2,7 @@
 local S = mobs.intllib
 
 
--- Cow by sirrobzeroone
+-- Cow by Krupnovpavel (additional texture by JurajVajda)
 
 mobs:register_mob("mobs_animal:cow", {
 	type = "animal",
@@ -16,7 +16,7 @@ mobs:register_mob("mobs_animal:cow", {
 	armor = 200,
 	collisionbox = {-0.4, -0.01, -0.4, 0.4, 1.2, 0.4},
 	visual = "mesh",
-	mesh = "mobs_cow.b3d",
+	mesh = "mobs_cow.x",
 	textures = {
 		{"mobs_cow.png"},
 		{"mobs_cow2.png"},
@@ -31,32 +31,23 @@ mobs:register_mob("mobs_animal:cow", {
 	jump_height = 6,
 	pushable = true,
 	drops = {
-		{name = "mobs:meat_raw", chance = 1, min = 1, max = 3},
-		{name = "mobs:leather", chance = 1, min = 0, max = 2},
+		{name = "mobs:beef_raw", chance = 1, min = 2, max = 4},
+		{name = "mobs:leather", chance = 1, min = 1, max = 4},
 	},
 	water_damage = 0,
 	lava_damage = 5,
 	light_damage = 0,
 	animation = {
+		speed_normal = 15,
+		speed_run = 15,
 		stand_start = 0,
 		stand_end = 30,
-		stand_speed = 20,
-		stand1_start = 35,
-		stand1_end = 75,
-		stand1_speed = 20,
-		walk_start = 85,
-		walk_end = 114,
-		walk_speed = 20,
-		run_start = 120,
-		run_end = 140,
-		run_speed = 30,
-		punch_start = 145,
-		punch_end = 160,
-		punch_speed = 20,
-		die_start = 165,
-		die_end = 185,
-		die_speed = 10,
-		die_loop = false,
+		walk_start = 35,
+		walk_end = 65,
+		run_start = 105,
+		run_end = 135,
+		punch_start = 70,
+		punch_end = 100,
 	},
 	follow = {"farming:wheat", "default:grass_1"},
 	view_range = 8,
@@ -117,7 +108,6 @@ mobs:register_mob("mobs_animal:cow", {
 			return
 		end
 	end,
-
 	on_replace = function(self, pos, oldnode, newnode)
 
 		self.food = (self.food or 0) + 1
@@ -136,15 +126,12 @@ mobs:spawn({
 	nodes = {"default:dirt_with_grass", "ethereal:green_dirt"},
 	neighbors = {"group:grass"},
 	min_light = 14,
-	interval = 60,
-	chance = 8000, -- 15000
+	interval = 30,
+	chance = 800, -- 15000
 	min_height = 5,
 	max_height = 200,
 	day_toggle = true,
 })
-
-
-mobs:register_egg("mobs_animal:cow", S("Cow"), "mobs_cow_inv.png")
 
 
 mobs:alias_mob("mobs:cow", "mobs_animal:cow") -- compatibility
@@ -155,7 +142,7 @@ minetest.register_craftitem(":mobs:bucket_milk", {
 	description = S("Bucket of Milk"),
 	inventory_image = "mobs_bucket_milk.png",
 	stack_max = 1,
-	on_use = minetest.item_eat(8, "bucket:bucket_empty"),
+	on_use = minetest.item_eat(8, 'bucket:bucket_empty'),
 	groups = {food_milk = 1, flammable = 3},
 })
 
@@ -163,7 +150,7 @@ minetest.register_craftitem(":mobs:bucket_milk", {
 minetest.register_craftitem(":mobs:glass_milk", {
 	description = S("Glass of Milk"),
 	inventory_image = "mobs_glass_milk.png",
-	on_use = minetest.item_eat(2, "vessels:drinking_glass"),
+	on_use = minetest.item_eat(2, 'vessels:drinking_glass'),
 	groups = {food_milk_glass = 1, flammable = 3, vessel = 1},
 })
 
@@ -171,9 +158,9 @@ minetest.register_craft({
 	type = "shapeless",
 	output = "mobs:glass_milk 4",
 	recipe = {
-		"vessels:drinking_glass", "vessels:drinking_glass",
-		"vessels:drinking_glass", "vessels:drinking_glass",
-		"mobs:bucket_milk"
+		'vessels:drinking_glass', 'vessels:drinking_glass',
+		'vessels:drinking_glass', 'vessels:drinking_glass',
+		'mobs:bucket_milk'
 	},
 	replacements = { {"mobs:bucket_milk", "bucket:bucket_empty"} }
 })
@@ -182,37 +169,12 @@ minetest.register_craft({
 	type = "shapeless",
 	output = "mobs:bucket_milk",
 	recipe = {
-		"mobs:glass_milk", "mobs:glass_milk",
-		"mobs:glass_milk", "mobs:glass_milk",
-		"bucket:bucket_empty"
+		'mobs:glass_milk', 'mobs:glass_milk',
+		'mobs:glass_milk', 'mobs:glass_milk',
+		'bucket:bucket_empty'
 	},
 	replacements = { {"mobs:glass_milk", "vessels:drinking_glass 4"} }
 })
-
-
--- butter
-minetest.register_craftitem(":mobs:butter", {
-	description = S("Butter"),
-	inventory_image = "mobs_butter.png",
-	on_use = minetest.item_eat(1),
-	groups = {food_butter = 1, flammable = 2},
-})
-
-if minetest.get_modpath("farming") and farming and farming.mod then
-minetest.register_craft({
-	type = "shapeless",
-	output = "mobs:butter",
-	recipe = {"mobs:bucket_milk", "farming:salt"},
-	replacements = {{ "mobs:bucket_milk", "bucket:bucket_empty"}}
-})
-else -- some saplings are high in sodium so makes a good replacement item
-minetest.register_craft({
-	type = "shapeless",
-	output = "mobs:butter",
-	recipe = {"mobs:bucket_milk", "default:sapling"},
-	replacements = {{ "mobs:bucket_milk", "bucket:bucket_empty"}}
-})
-end
 
 -- cheese wedge
 minetest.register_craftitem(":mobs:cheese", {
@@ -230,27 +192,25 @@ minetest.register_craft({
 	replacements = {{ "mobs:bucket_milk", "bucket:bucket_empty"}}
 })
 
--- cheese block
-minetest.register_node(":mobs:cheeseblock", {
-	description = S("Cheese Block"),
-	tiles = {"mobs_cheeseblock.png"},
-	is_ground_content = false,
-	groups = {crumbly = 3},
-	sounds = default.node_sound_dirt_defaults()
+-- raw porkchop
+minetest.register_craftitem(":mobs:beef_raw", {
+	description = S("Raw Beef"),
+	inventory_image = "mobs_beef_raw.png",
+	on_use = minetest.item_eat(4),
+	groups = {food_meat_raw = 1, food_pork_raw = 1, flammable = 2},
+})
+
+-- cooked porkchop
+minetest.register_craftitem(":mobs:beef_cooked", {
+	description = S("Cooked Beef"),
+	inventory_image = "mobs_beef_cooked.png",
+	on_use = minetest.item_eat(8),
+	groups = {food_meat = 1, food_pork = 1, flammable = 2},
 })
 
 minetest.register_craft({
-	output = "mobs:cheeseblock",
-	recipe = {
-		{"mobs:cheese", "mobs:cheese", "mobs:cheese"},
-		{"mobs:cheese", "mobs:cheese", "mobs:cheese"},
-		{"mobs:cheese", "mobs:cheese", "mobs:cheese"},
-	}
-})
-
-minetest.register_craft({
-	output = "mobs:cheese 9",
-	recipe = {
-		{"mobs:cheeseblock"},
-	}
+	type = "cooking",
+	output = "mobs:beef_cooked",
+	recipe = "mobs:beef_raw",
+	cooktime = 5,
 })

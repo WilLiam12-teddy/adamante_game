@@ -118,15 +118,12 @@ mobs:spawn({
 	nodes = {spawn_on},
 	neighbors = {"group:grass"},
 	min_light = 14,
-	interval = 60,
-	chance = 8000, -- 15000
+	interval = 30,
+	chance = 800, -- 15000
 	min_height = 5,
 	max_height = 200,
 	day_toggle = true,
 })
-
-
-mobs:register_egg("mobs_animal:bunny", S("Bunny"), "mobs_bunny_inv.png", 0)
 
 
 mobs:alias_mob("mobs:bunny", "mobs_animal:bunny") -- compatibility

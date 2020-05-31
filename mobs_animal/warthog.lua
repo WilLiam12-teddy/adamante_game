@@ -2,7 +2,7 @@
 local S = mobs.intllib
 
 
--- Warthog originally by KrupnoPavel, B3D model by sirrobzeroone
+-- Warthog by KrupnoPavel
 
 mobs:register_mob("mobs_animal:pumba", {
 	stepheight = 0.6,
@@ -19,7 +19,7 @@ mobs:register_mob("mobs_animal:pumba", {
 	armor = 200,
 	collisionbox = {-0.4, -0.01, -0.4, 0.4, 0.95, 0.4},
 	visual = "mesh",
-	mesh = "mobs_pumba.b3d",
+	mesh = "mobs_pumba.x",
 	textures = {
 		{"mobs_pumba.png"},
 	},
@@ -77,15 +77,12 @@ mobs:spawn({
 	nodes = spawn_on,
 	neighbors = spawn_by,
 	min_light = 14,
-	interval = 60,
-	chance = 8000, -- 15000
+	interval = 30,
+	chance = 800, -- 15000
 	min_height = 0,
 	max_height = 200,
 	day_toggle = true,
 })
-
-
-mobs:register_egg("mobs_animal:pumba", S("Warthog"), "mobs_pumba_inv.png")
 
 
 mobs:alias_mob("mobs:pumba", "mobs_animal:pumba") -- compatibility

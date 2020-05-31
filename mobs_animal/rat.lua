@@ -2,7 +2,7 @@
 local S = mobs.intllib
 
 
--- Rat by PilzAdam (B3D model by sirrobzeroone)
+-- Rat by PilzAdam
 
 mobs:register_mob("mobs_animal:rat", {
 stepheight = 0.6,
@@ -77,9 +77,6 @@ mobs:spawn({
 	max_height = 0,
 --	on_spawn = rat_spawn,
 })
-
-
-mobs:register_egg("mobs_animal:rat", S("Rat"), "mobs_rat_inv.png")
 
 
 mobs:alias_mob("mobs:rat", "mobs_animal:rat") -- compatibility
