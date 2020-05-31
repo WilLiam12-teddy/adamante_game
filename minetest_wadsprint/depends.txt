@@ -1,3 +1,0 @@
-hud?
-hudbars?
-player_monoids?
