@@ -1,4 +1,0 @@
-food
-vessels
-default?
-homedecor?

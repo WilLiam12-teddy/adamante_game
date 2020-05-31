@@ -9,8 +9,7 @@ minetest.register_craftitem("farming:seed_mint", {
 	on_place = function(itemstack, placer, pointed_thing)
 		return farming.place_seed(
 				itemstack, placer, pointed_thing, "farming:mint_1")
-	end,
-	on_use = minetest.item_eat(4),
+	end
 })
 
 -- mint leaf

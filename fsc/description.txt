@@ -1,1 +1,0 @@
-Easier method for creating better and more secure formspecs.

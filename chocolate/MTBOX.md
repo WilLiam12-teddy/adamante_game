@@ -1,1 +1,0 @@
-Add the most delicious treat to your Minetest game with the Chocolate mod. Adds cocoa and craftable chocolate bars that can be eaten 8 times before they run out.

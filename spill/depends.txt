@@ -1,5 +1,0 @@
-bucket
-technic?
-riventest?
-at_breakfast?
-at_candy?
