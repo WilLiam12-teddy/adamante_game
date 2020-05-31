@@ -68,3 +68,6 @@ mobs:spawn({
 	max_height = 200,
 	day_toggle = true,
 })
+
+
+mobs:register_egg("mobs_animal:penguin", S("Penguin"), "default_snow.png", 1)

@@ -77,12 +77,15 @@ mobs:spawn({
 	nodes = spawn_on,
 	neighbors = spawn_by,
 	min_light = 14,
-	interval = 30,
-	chance = 800, -- 15000
+	interval = 60,
+	chance = 8000, -- 15000
 	min_height = 0,
 	max_height = 200,
 	day_toggle = true,
 })
+
+
+mobs:register_egg("mobs_animal:pumba", S("Warthog"), "wool_pink.png", 1)
 
 
 mobs:alias_mob("mobs:pumba", "mobs_animal:pumba") -- compatibility

@@ -32,6 +32,7 @@ stepheight = 0.6,
 	runaway_from = {"player", "mobs_animal:pumba"},
 	drops = {
 		{name = "mobs:chicken_raw", chance = 1, min = 1, max = 1},
+		{name = "mobs:chicken_feather", chance = 1, min = 0, max = 2},
 	},
 	water_damage = 1,
 	lava_damage = 5,
@@ -101,12 +102,15 @@ mobs:spawn({
 	nodes = {spawn_on},
 	neighbors = {"group:grass"},
 	min_light = 14,
-	interval = 30,
-	chance = 800, -- 15000
+	interval = 60,
+	chance = 8000, -- 15000
 	min_height = 5,
 	max_height = 200,
 	day_toggle = true,
 })
+
+
+mobs:register_egg("mobs_animal:chicken", S("Chicken"), "mobs_chicken_inv.png", 0)
 
 
 mobs:alias_mob("mobs:chicken", "mobs_animal:chicken") -- compatibility
@@ -286,4 +290,17 @@ minetest.register_craft({
 	type  =  "cooking",
 	recipe  = "mobs:chicken_raw",
 	output = "mobs:chicken_cooked",
+})
+
+-- feather
+minetest.register_craftitem(":mobs:chicken_feather", {
+	description = S("Feather"),
+	inventory_image = "mobs_chicken_feather.png",
+	groups = {flammable = 2},
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "mobs:chicken_feather",
+	burntime = 1,
 })

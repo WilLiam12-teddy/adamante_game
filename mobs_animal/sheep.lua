@@ -196,6 +196,8 @@ for _, col in ipairs(all_colours) do
 		end
 	})
 
+	mobs:register_egg("mobs_animal:sheep_"..col[1], S("@1 Sheep", col[2]), "wool_"..col[1]..".png", 1)
+
 	-- compatibility
 	mobs:alias_mob("mobs:sheep_" .. col[1], "mobs_animal:sheep_" .. col[1])
 
@@ -207,8 +209,8 @@ mobs:spawn({
 	nodes = {"default:dirt_with_grass", "ethereal:green_dirt"},
 	neighbors = {"group:grass"},
 	min_light = 14,
-	interval = 30,
-	chance = 800, -- 15000
+	interval = 60,
+	chance = 8000, -- 15000
 	min_height = 0,
 	max_height = 200,
 	day_toggle = true,

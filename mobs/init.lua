@@ -10,6 +10,9 @@ dofile(path .. "/mount.lua")
 -- Mob Items
 dofile(path .. "/crafts.lua")
 
+-- Mob Spawner
+dofile(path .. "/spawner.lua")
+
 -- Lucky Blocks
 dofile(path .. "/lucky_block.lua")
 

@@ -35,9 +35,12 @@ mobs:register_mob("mobs_monster:lava_flan", {
 	drops = {
 		{name = "mobs:lava_orb", chance = 15, min = 1, max = 1},
 	},
-	water_damage = 5,
+	water_damage = 8,
 	lava_damage = 0,
 	light_damage = 0,
+	immune_to = {
+		{"mobs:pick_lava", -2}, -- lava pick heals 2 health
+	},
 	animation = {
 		speed_normal = 15,
 		speed_run = 15,
@@ -74,6 +77,7 @@ mobs:register_mob("mobs_monster:lava_flan", {
 			texture = "fire_basic_flame.png",
 		})
 	end,
+	glow = 10,
 })
 
 
@@ -84,6 +88,9 @@ mobs:spawn({
 	active_object_count = 1,
 	max_height = 0,
 })
+
+
+mobs:register_egg("mobs_monster:lava_flan", S("Lava Flan"), "default_lava.png", 1)
 
 mobs:alias_mob("mobs:lava_flan", "mobs_monster:lava_flan") -- compatibility
 
@@ -108,6 +115,9 @@ minetest.register_craft({
 local old_handle_node_drops = minetest.handle_node_drops
 
 function minetest.handle_node_drops(pos, drops, digger)
+
+	-- does player exist?
+	if not digger then return end
 
 	-- are we holding Lava Pick?
 	if digger:get_wielded_item():get_name() ~= ("mobs:pick_lava") then
@@ -156,8 +166,9 @@ minetest.register_tool(":mobs:pick_lava", {
 		groupcaps={
 			cracky = {times={[1]=1.80, [2]=0.80, [3]=0.40}, uses=40, maxlevel=3},
 		},
-		damage_groups = {fleshy=6},
+		damage_groups = {fleshy = 6, fire = 1},
 	},
+	groups = {pickaxe = 1}
 })
 
 minetest.register_craft({

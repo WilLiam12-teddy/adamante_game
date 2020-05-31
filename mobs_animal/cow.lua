@@ -31,8 +31,8 @@ mobs:register_mob("mobs_animal:cow", {
 	jump_height = 6,
 	pushable = true,
 	drops = {
-		{name = "mobs:beef_raw", chance = 1, min = 2, max = 4},
-		{name = "mobs:leather", chance = 1, min = 1, max = 4},
+		{name = "mobs:meat_raw", chance = 1, min = 1, max = 3},
+		{name = "mobs:leather", chance = 1, min = 0, max = 2},
 	},
 	water_damage = 0,
 	lava_damage = 5,
@@ -126,12 +126,15 @@ mobs:spawn({
 	nodes = {"default:dirt_with_grass", "ethereal:green_dirt"},
 	neighbors = {"group:grass"},
 	min_light = 14,
-	interval = 30,
-	chance = 800, -- 15000
+	interval = 60,
+	chance = 8000, -- 15000
 	min_height = 5,
 	max_height = 200,
 	day_toggle = true,
 })
+
+
+mobs:register_egg("mobs_animal:cow", S("Cow"), "default_grass.png", 1)
 
 
 mobs:alias_mob("mobs:cow", "mobs_animal:cow") -- compatibility
@@ -176,6 +179,31 @@ minetest.register_craft({
 	replacements = { {"mobs:glass_milk", "vessels:drinking_glass 4"} }
 })
 
+
+-- butter
+minetest.register_craftitem(":mobs:butter", {
+	description = S("Butter"),
+	inventory_image = "mobs_butter.png",
+	on_use = minetest.item_eat(1),
+	groups = {food_butter = 1, flammable = 2},
+})
+
+if minetest.get_modpath("farming") and farming and farming.mod then
+minetest.register_craft({
+	type = "shapeless",
+	output = "mobs:butter",
+	recipe = {"mobs:bucket_milk", "farming:salt"},
+	replacements = {{ "mobs:bucket_milk", "bucket:bucket_empty"}}
+})
+else -- some saplings are high in sodium so makes a good replacement item
+minetest.register_craft({
+	type = "shapeless",
+	output = "mobs:butter",
+	recipe = {"mobs:bucket_milk", "default:sapling"},
+	replacements = {{ "mobs:bucket_milk", "bucket:bucket_empty"}}
+})
+end
+
 -- cheese wedge
 minetest.register_craftitem(":mobs:cheese", {
 	description = S("Cheese"),
@@ -192,25 +220,27 @@ minetest.register_craft({
 	replacements = {{ "mobs:bucket_milk", "bucket:bucket_empty"}}
 })
 
--- raw porkchop
-minetest.register_craftitem(":mobs:beef_raw", {
-	description = S("Raw Beef"),
-	inventory_image = "mobs_beef_raw.png",
-	on_use = minetest.item_eat(4),
-	groups = {food_meat_raw = 1, food_pork_raw = 1, flammable = 2},
-})
-
--- cooked porkchop
-minetest.register_craftitem(":mobs:beef_cooked", {
-	description = S("Cooked Beef"),
-	inventory_image = "mobs_beef_cooked.png",
-	on_use = minetest.item_eat(8),
-	groups = {food_meat = 1, food_pork = 1, flammable = 2},
+-- cheese block
+minetest.register_node(":mobs:cheeseblock", {
+	description = S("Cheese Block"),
+	tiles = {"mobs_cheeseblock.png"},
+	is_ground_content = false,
+	groups = {crumbly = 3},
+	sounds = default.node_sound_dirt_defaults()
 })
 
 minetest.register_craft({
-	type = "cooking",
-	output = "mobs:beef_cooked",
-	recipe = "mobs:beef_raw",
-	cooktime = 5,
+	output = "mobs:cheeseblock",
+	recipe = {
+		{'mobs:cheese', 'mobs:cheese', 'mobs:cheese'},
+		{'mobs:cheese', 'mobs:cheese', 'mobs:cheese'},
+		{'mobs:cheese', 'mobs:cheese', 'mobs:cheese'},
+	}
+})
+
+minetest.register_craft({
+	output = "mobs:cheese 9",
+	recipe = {
+		{'mobs:cheeseblock'},
+	}
 })

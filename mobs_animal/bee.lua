@@ -57,6 +57,8 @@ mobs:spawn({
 	day_toggle = true,
 })
 
+mobs:register_egg("mobs_animal:bee", S("Bee"), "mobs_bee_inv.png", 0)
+
 -- compatibility
 mobs:alias_mob("mobs:bee", "mobs_animal:bee")
 

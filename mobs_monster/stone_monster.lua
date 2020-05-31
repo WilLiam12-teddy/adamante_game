@@ -32,9 +32,9 @@ mobs:register_mob("mobs_monster:stone_monster", {
 	floats = 0,
 	view_range = 10,
 	drops = {
-		{name = "default:torch", chance = 2, min = 3, max = 5},
-		{name = "default:iron_lump", chance = 5, min = 1, max = 2},
-		{name = "default:coal_lump", chance = 3, min = 1, max = 3},
+		{name = "default:cobble", chance = 1, min = 0, max = 2},
+		{name = "default:coal_lump", chance = 3, min = 0, max = 2},
+		{name = "default:iron_lump", chance = 5, min = 0, max = 2},
 	},
 	water_damage = 0,
 	lava_damage = 1,
@@ -51,6 +51,14 @@ mobs:register_mob("mobs_monster:stone_monster", {
 		punch_start = 40,
 		punch_end = 63,
 	},
+	immune_to = {
+		{"default:pick_wood", 0}, -- wooden pick doesnt hurt stone monster
+		{"default:pick_stone", 4}, -- picks deal more damage to stone monster
+		{"default:pick_bronze", 5},
+		{"default:pick_steel", 5},
+		{"default:pick_mese", 6},
+		{"default:pick_diamond", 7},
+	},
 })
 
 
@@ -61,5 +69,9 @@ mobs:spawn({
 	chance = 7000,
 	max_height = 0,
 })
+
+
+mobs:register_egg("mobs_monster:stone_monster", S("Stone Monster"), "default_stone.png", 1)
+
 
 mobs:alias_mob("mobs:stone_monster", "mobs_monster:stone_monster") -- compatibility

@@ -79,6 +79,9 @@ mobs:spawn({
 })
 
 
+mobs:register_egg("mobs_animal:rat", S("Rat"), "mobs_rat_inventory.png", 0)
+
+
 mobs:alias_mob("mobs:rat", "mobs_animal:rat") -- compatibility
 
 

@@ -44,7 +44,7 @@ mobs:register_mob("mobs_npc:npc", {
 	water_damage = 0,
 	lava_damage = 2,
 	light_damage = 0,
-	follow = {"farming:bread", "mobs:meat", "default:diamond"},
+	follow = {"farming:bread", "mobs:meat", "currency:techcent_note_20"},
 	view_range = 15,
 	owner = "",
 	order = "follow",
