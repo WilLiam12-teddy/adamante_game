@@ -1,5 +1,5 @@
 
-spawnpoint       = minetest.setting_get_pos("static_spawnpoint") or {x=0, y=31, z=0}
+spawnpoint       = minetest.setting_get_pos("static_spawnpoint") or {490.0, 27.5, 144.0}
 
 minetest.register_chatcommand("rbc", {
     description = "who built it?",
