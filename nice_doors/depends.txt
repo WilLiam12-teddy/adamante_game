@@ -1,5 +1,0 @@
-default
-doors
-moretrees?
-technic?
-framed_coloured_glass?
