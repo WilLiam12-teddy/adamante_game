@@ -1,0 +1,17 @@
+{ 
+"name": "outdoor", 
+"description": "Create signs with letters and symbols that can serve as information boards.", 
+"keywords": [ "lunovox", "display", "outdoor"], 
+"homepage": "", 
+"forum": "", 
+"repository": "https://github.com/Lunovox/outdoor", 
+"screenshots": [ "https://raw.githubusercontent.com/Lunovox/outdoor/master/screenshot.png" ], 
+"authors": [ { "name": "Lunovox Heavenfinder", "email": "lunovox@disroot.org", "homepage": "https://libreplanet.org/wiki/User:Lunovox" } ], 
+"license": "GNU-GPL-3.0-or-later", 
+"dependencies": 
+{ 
+"default": "0.4.17", 
+"": "" 
+}, 
+"ignore": [ "**/.*", "mods", "test" ] 
+}

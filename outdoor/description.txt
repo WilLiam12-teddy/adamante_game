@@ -1,0 +1,4 @@
+Create signs with letters and symbols that can serve as information boards. 
+
+License: GNU-GPL-3.0-or-Later
+
