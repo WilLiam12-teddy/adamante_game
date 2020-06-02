@@ -1,0 +1,11 @@
+#Transdutor: Lunovox <https://libreplanet.org/wiki/User:Lunovox>
+
+#------------------------------------------------------------------------------------------------------------------------
+
+Lets invisible or visible the nametag of player. = Deixa invisivel ou visivel o crachá do joagdor.
+The nametag of '%s' has makes invisible. = O crachá de '%s' torna-se invisível.
+The player '%s' has makes invisible your nametag. %s = O jogador '%s' torna invisível o seu crachá. %s
+The nametag of '%s' has makes visible. = O crachá de '%s' torna-se visível.
+The player '%s' has makes visible your nametag. %s = O jogador '%s' torna visível o seu crachá. %s
+Makes invisible or visible the nametag of player. = Torna invisível ou visível o crachá do jogador.
+
