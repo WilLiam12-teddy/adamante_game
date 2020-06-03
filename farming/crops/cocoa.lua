@@ -80,6 +80,20 @@ minetest.register_craft( {
 	}
 })
 
+-- chocolate muffin
+minetest.register_craftitem("farming:chocolate_muffin", {
+	description = S("Chocolate Muffin"),
+	inventory_image = "farming_chocolate_muffin.png",
+	on_use = minetest.item_eat(3),
+})
+
+minetest.register_craft( {
+	output = "farming:chocolate_muffin 1",
+	recipe = {
+                {"group:food_wheat", "group:food_cocoa", "group:food_cocoa"},
+	}
+})
+
 -- chocolate cookie
 minetest.register_craftitem("farming:cookie", {
 	description = S("Cookie"),
@@ -94,6 +108,20 @@ minetest.register_craft( {
 	}
 })
 
+
+-- all chocolate cookie
+minetest.register_craftitem("farming:cookie_chocolate", {
+	description = S("Chocolate Cookie"),
+	inventory_image = "farming_cookie_chocolate.png",
+	on_use = minetest.item_eat(2),
+})
+
+minetest.register_craft( {
+	output = "farming:cookie_chocolate 8",
+	recipe = {
+		{"group:food_wheat", "group:food_cocoa", "group:food_cocoa" },
+	}
+})
 -- bar of dark chocolate (thanks to Ice Pandora for her deviantart.com chocolate tutorial)
 minetest.register_craftitem("farming:chocolate_dark", {
 	description = S("Bar of Dark Chocolate"),
