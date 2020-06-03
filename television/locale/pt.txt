@@ -1,0 +1,18 @@
+#Transdutor: Lunovox <https://libreplanet.org/wiki/User:Lunovox>
+
+#------------------------------------------------------------------------------------------------------------------------
+
+# shortname
+television=televisao
+
+# image of screen
+television_screens_en.png=television_screens_pt.png
+
+# sound of turn on
+sfx_jornal_en=sfx_jornal_pt
+
+# other translates
+Television Widescreen=Televisão de Tela Larga
+Television Widescreen (off)=Televisão de Tela Larga (Desligada)
+
+
