@@ -1,5 +1,0 @@
-default
-doors
-farming
-mobs
-intllib?
