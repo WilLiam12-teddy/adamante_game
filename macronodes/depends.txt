@@ -1,9 +1,0 @@
-default
-flowers
-farming
-bucket
-dye
-sfinv?
-xdecor?
-carpets?
-wool?
