@@ -218,3 +218,18 @@ minetest.register_craft({
 		{"mobs:bucket_milk", "bucket:bucket_empty"}
 	}
 })
+
+--= Hamburger
+
+minetest.register_craftitem("farming:hamburger", {
+	description = S("Hamburger"),
+	inventory_image = "farming_hamburger.png",
+	groups = {flammable = 3},
+	on_use = minetest.item_eat(5),
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "farming:hamburger",
+	recipe = {"group:food_toast", "group:food_garlic_clove", "group:food_tomato"},
+})
