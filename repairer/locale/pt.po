@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <lunovox@disroot.org>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-18 14:56-0300\n"
+"PO-Revision-Date: 2020-04-18 14:58-0300\n"
+"Last-Translator: Lunovox Heavenfinder <lunovox@disroot.org>\n"
+"Language-Team: \n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: api.lua:31
+#, lua-format
+msgid "The file '%s' is not in table format!"
+msgstr "O arquivo '%s' não esta no formato de tabela!"
+
+#: api.lua:58
+#, lua-format
+msgid "Replacing '%s' with '%s' in %s."
+msgstr "Substituindo '%s' por '%s' em %s."
+
+#: api.lua:87
+#, lua-format
+msgid ""
+"The New-Block '%s' does not exist, or has not been previously registered."
+msgstr "O Bloco-Novo '%s' não existe ou não foi registrado anteriormente."
+
+#: api.lua:96
+#, lua-format
+msgid "The Old-Block '%s' was already registered in the cleaning list."
+msgstr "O Bloco-Antigo '%s' já estava registrado na lista de limpeza."
+
+#: api.lua:107
+#, lua-format
+msgid "The Old-Block '%s' will be replaced with '%s'!"
+msgstr "O Bloco-Antigo '%s' será substituído por '%s'!"
+
+#: api.lua:112 api.lua:126 api.lua:137 api.lua:142
+msgid "OldBlock"
+msgstr "Bloco-Antigo"
+
+#: api.lua:112 api.lua:126
+msgid "NewBlock"
+msgstr "Bloco-Novo"
+
+#: api.lua:114
+msgid "Replaces a disabled mod block with an active mod block."
+msgstr "Substitui um bloco mod desativado por um bloco mod ativo."
+
+#: api.lua:116
+#, lua-format
+msgid ""
+"The parameter [<%s>] is not mandatory. But if it is not declared, [<%s>] "
+"will be automatically replaced by air."
+msgstr ""
+"O parâmetro [<%s>] não é obrigatório. Mas se não for declarado, o [<%s>] "
+"será substituído automaticamente pelo ar."
+
+#: api.lua:127
+msgid ""
+"Replaces a particular disabled mod block with an active mod block, the next "
+"time the server is reactivated."
+msgstr ""
+"Substitui um determinado bloco de um mod desabilitado por um bloco mod "
+"ativo, na próxima vez que o servidor for reativado."
+
+#: api.lua:138 api.lua:144
+msgid ""
+"Stop replacing a particular disabled mod block, the next time the server is "
+"reactivated."
+msgstr ""
+"Para de substituir um determinado bloco registrado, na próxima vez que o "
+"servidor for reativado."
+
+#: api.lua:147
+msgid "This command has not yet been implemented!"
+msgstr "Este comando ainda não foi implementado!"
+
+#: repairer_bench.lua:20 repairer_bench.lua:45
+msgid "Repairer Bench"
+msgstr "Bancada de Reparação"
+
+#: repairer_bench.lua:21 repairer_bench.lua:46
+msgid "to repair faulty items mods."
+msgstr "para reparar itens de mods com defeito"
