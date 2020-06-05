@@ -1,7 +1,0 @@
-default
-dye
-lib_savevars
-intllib?
-brazutec?
-lunomobs?
-super-ufo?

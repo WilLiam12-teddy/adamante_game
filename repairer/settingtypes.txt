@@ -1,6 +1,0 @@
-# REPAIRER SETTINGS
-
-# REPAIRER:
-# Print map repairs in public chat
-# Default: true
-repairer.printInPublicChat (Print Log in Public Chat) bool true

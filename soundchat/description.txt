@@ -1,7 +1,0 @@
-It emits a simple sound when a player send any message in the chat, and an audible alarm when a player write his name in the chat. The admin per command can send a colored warning with flashy sound for all players. 
-
-Licence: 
- * GNU AGPL: https://pt.wikipedia.org/wiki/GNU_Affero_General_Public_License
-
-Developers:
- * Lunovox <lunovox@openmailbox.org>
