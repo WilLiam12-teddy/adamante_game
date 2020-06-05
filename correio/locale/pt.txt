@@ -1,0 +1,70 @@
+#Transdutor: Lunovox <lunovox@openmailbox.org>
+
+###################################################
+
+# ------------- priv 'postman' ---------------------
+
+Player can send messages directly by command=Jogador pode enviar mensagens diretamente por comando
+
+# ------------- debugs ---------------------
+
+Sender=Remetente
+From=Remetente
+Addressee=Destinatário
+When=Quando
+Message=Mensagem
+Letters Destroyed=Cartas Destruidas
+
+# ------------- comands ---------------------
+
+/mail [<playername> <message>]: Sends email to a player=/escrever [<destinatário> <mensagem>]: Envia email para um player
+/broadcast <message>: Sends letters to all registered players=/publicar <mensagem>: Envia cartas para todos os jogadores cadastrados
+
+# ------------- Texture Mailbox ---------------------
+
+tex_mailbox_from_en.png=tex_mailbox_from_pt.png
+
+# ------------- Mailbox and Papermail ---------------------
+
+CLOSE=FECHAR
+OPEN=ABRIR
+DELETE=EXCLUIR
+CLEAR=LIMPAR
+BACK=VOLTAR
+MAIL LETTER=CARTA DE CORREIO
+SEND=ENVIAR
+
+# ------------- Itens ---------------------
+Mailbox (Displays Letters Received)=Caixa de Correio (Exibe Cartas Recebida)
+'%s' Mailbox=Caixa de Correio de '%s'
+Letter of Mail (Send a letter to other player)=Carta de Correio (Enviar uma carta a outro jogador)
+
+# ------------- auto messages ---------------------
+
+Your letter was sent to '%02d' players=Sua carta foi enviada para '%02d' jogadores
+This letter was not sent to any player=Esta carta não foi enviada para nenhum jogador
+You have no letters...=Você não tem nenhuma carta...
+You have no letter readed to destroy=Você não tem nenhuma carta lida para destruir
+Your message has been sent successfully!=Sua mensagem foi enviada com sucesso!
+
+There was an unexpected crash while sending your message! (Please contact the mods developer mod 'CORREIO'!)=Houve uma falha inesperada ao enviar sua mensagem! (Entre em contato dom o desenvolvedor do mod 'CORREIO'!)
+
+Please enter a message before sending your letter!=Favor digite uma mensagem antes de enviar sua carta!
+Please enter the exact name of the player who received your letter!=Favor digite o nome exato do jogador que recebera sua carta!
+
+There was an error sending your message!!!=Ocorreu um erro ao enviar sua mensagem!!!
+There was an error deleting your letters=Ocorreu um erro ao apagar suas cartas
+The total of %02d letters with a deadline above %02d days have been deleted on the server=O total de %02d cartas com prazo acima de %02d dias foram apagadas no servidor
+No letter with deadline above %02d days was deleted=Nenhuma carta com prazo acima de %02d dias foi excluída
+There was an error deleting all the '%s' old emails=Ocorreu um erro ao apagar todos os '%s' emails antigos
+You have %02d unread emails \nin your mailbox!=Voce tem %02d mensagens não \nlidas em sua caixa de correio!
+Your message was sent to '$s'!=Sua mensagem foi enviada para '$s'!
+
+Select the letter you want to open!=Selecione a carta que deseja abrir!
+Select the letter you want to delete!=Selecione a carta que deseja excluir!
+You can not destroy the '%s' mailbox!=Você não pode destruir a caixa de correio de '%s'!
+This mailbox belongs to '%s'!=Esta caixa de correio pertece a '%s'!
+
+# ------------- alias name ---------------------
+mailbox=caixadecorreio
+letter=cartadecorreio

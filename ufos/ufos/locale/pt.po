@@ -1,0 +1,511 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PORTUGUESE 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-12 00:51-0300\n"
+"PO-Revision-Date: 2018-11-14 23:19-0300\n"
+"Last-Translator: Lunovox Heavenfinder <https://libreplanet.org/wiki/User:"
+"Lunovox>\n"
+"Language-Team: Lunovox Heavenfinder <https://libreplanet.org/wiki/User:"
+"Lunovox>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: pt\n"
+"X-Poedit-KeywordsList: modUFO.translate\n"
+
+#: api.lua:3
+msgid "Control the UFOs of other players."
+msgstr "Controla o OVNI de outro jogador."
+
+#: api.lua:28 ship.lua:311 ship.lua:368
+msgid "ufo"
+msgstr "ovni"
+
+#: api.lua:70
+#, lua-format
+msgid "This function only work if admin install mod '%s'!"
+msgstr "Esta função só funciona se o admin instalar mod '%s'!"
+
+#: api.lua:127
+msgid "The forge was turned off for lack of space for cooked items."
+msgstr "A forja foi desligada por falta de espaço para mais itens cozinhados."
+
+#: api.lua:144
+msgid "The forge was turned off for lack of cookable items."
+msgstr "A forja foi desligada por falta de item cozível."
+
+#: api.lua:175
+msgid "The forge was turned off for empty fuel."
+msgstr "A forja foi desligada por falta de carga."
+
+#: api.lua:221
+#, lua-format
+msgid "The Captain '%s' has placed %02d '%s' in UFO Eletric Forge!"
+msgstr "O Capitão '%s' colocou %02d '%s' na Forja Elétrica do OVNI!"
+
+#: api.lua:228
+#, lua-format
+msgid "The Captain '%s' has removed %02d '%s' in UFO Eletric Forge!"
+msgstr "O Capitão '%s' retirou %02d '%s' da Forja Elétrica do OVNI!"
+
+#: api.lua:287
+msgid "You have to brake that UFO before you leave!"
+msgstr "Você tem que freiar este OVNI antes de sair dele."
+
+#: api.lua:303
+msgid "UFO SYSTEM CONTROL"
+msgstr "SISTEMA DE CONTROLE DO OVNI"
+
+#: api.lua:304
+msgid "UFO MANUAL"
+msgstr "MANUAL DO OVNI"
+
+#: api.lua:305
+msgid "FIVE TONES"
+msgstr "CONTATO IMEDIATO"
+
+#: api.lua:306
+msgid "MAILBOX"
+msgstr "CAIXA DE MENSAGENS"
+
+#: api.lua:307
+msgid "CARRIER TRUNK"
+msgstr "PORTA-MALA"
+
+#: api.lua:308 api.lua:370
+msgid "UFO SETTINGS"
+msgstr "CONFIGURAÇÕES"
+
+#: api.lua:309 api.lua:393
+msgid "ELETRIC FORGE"
+msgstr "FORJA ELÉTRICA"
+
+#: api.lua:310
+msgid "NAVEGATION"
+msgstr "NAVEGAÇÃO"
+
+#: api.lua:311
+msgid "UPGRADES"
+msgstr "APRIMORAMENTOS"
+
+#: api.lua:368
+msgid "TELEPORT"
+msgstr "TELEPORTAR"
+
+#: api.lua:369
+msgid "ABDUCT"
+msgstr "ABDUZIR"
+
+#: api.lua:314 api.lua:352
+msgid "EMERGENCY EJECTION"
+msgstr "EJEÇÃO DE EMERGÊNCIA"
+
+#: api.lua:316
+msgid "LEAVE UFO"
+msgstr "SAIR DO OVNI"
+
+#: api.lua:323
+msgid "UFO MANUAL - CONTROLS"
+msgstr "MANUAL DO OVNI - CONTROLES"
+
+#: api.lua:324
+msgid "Key W (UP) ← Accelerator"
+msgstr "Botão W (ACIMA) ← Acelerador"
+
+#: api.lua:325
+msgid "Key S (DOWN) ← Brake"
+msgstr "Botão S (ABAIXO) ← Freio"
+
+#: api.lua:326
+msgid "Key A (LEFT) ← Turn Lett"
+msgstr "Botão A (ESQUERDA) ← Gira para Esquerda"
+
+#: api.lua:327
+msgid "Key D (RIGHT) ← Turn Right"
+msgstr "Botão D (DIREITA) ← Gira para Direita"
+
+#: api.lua:328
+msgid "Key Spacebar (JUMP) ← To lift"
+msgstr "Botão PULAR (Espaço) ← Levanta a Nave"
+
+#: api.lua:329
+msgid "Key Shift (SNAKE) ← To down"
+msgstr "Botão ESGUEIRAR (Shift) ← Desce a Nave"
+
+#: api.lua:330
+msgid "Key S (Brake) + Run Key (R or Ctrl) ← Five Tones"
+msgstr "Botão S (Freio) + Botão 'CORRER' (R ou Ctrl) ← Buzina"
+
+#: api.lua:331
+msgid "Key Shift (SNAKE) + Run Key (R or Ctrl) ← Emergency Ejection"
+msgstr "Botão 'ESGUEIRAR' + Botão 'CORRER' ← Ejeção de Emergência"
+
+#: api.lua:332
+msgid "Key Sides (A or D) + Key Run (R or Ctrl) ← Walks to the side"
+msgstr "Botões (A ou D) + Botão 'CORRER' ← Anda para o Lado"
+
+#: api.lua:334 api.lua:345
+msgid "MENU BACK"
+msgstr "VOLTAR MENU"
+
+#: api.lua:335
+msgid "NEXT"
+msgstr "PRÓXIMO"
+
+#: api.lua:339
+msgid "UFO MANUAL - MAINTENANCE"
+msgstr "MANUAL DO OVNI - MANUTENÇÃO"
+
+#: api.lua:341
+msgid ""
+"Do not forget your UFO in the garage. Your UFO can be deleted \n"
+"from the server when admin applies maintenance procedures on \n"
+"the server. Save your UFO as an item."
+msgstr ""
+"Não esqueça seu OVNI na garagem. Seu OVNI pode ser deletado \n"
+"do servidor quando o administrador aplicar procedimentos de \n"
+"manutenção no servidor. Guarde seu OVNI como item."
+
+#: api.lua:344
+msgid "PREVIOUS"
+msgstr "VOLTAR"
+
+#: api.lua:356
+msgid "The UFO recommends that you land on a flat ground."
+msgstr "O OVNI recomenda que você aterrisse em local plano. "
+
+#: api.lua:361
+msgid "Do you really want to leave the UFO on this ground?"
+msgstr "Você realmente deseja sair deste OVNI neste terreno irregular?"
+
+#: api.lua:364
+msgid "YES"
+msgstr "SIM"
+
+#: api.lua:365
+msgid "NOT"
+msgstr "NÃO"
+
+#: api.lua:373
+msgid "Ship Name"
+msgstr "Nome da Nave"
+
+#: api.lua:378
+msgid "Enable 'UFO tracer'."
+msgstr "Ativar 'Rastreador OVNI'"
+
+#: api.lua:382
+msgid ""
+"Enable 'Inertia Cancel'.\n"
+"(Spend fuel constantly if off)"
+msgstr ""
+"Ativar 'Anulador de Inércia'.\n"
+"(Gasta carga constantemente se desligado)"
+
+#: api.lua:539
+msgid "Spend fuel constantly if off"
+msgstr "Desperdiça combustível se desactivado"
+
+#: api.lua:546
+msgid "Artificial Inteligency"
+msgstr "Inteligência Artificial"
+
+#: api.lua:386
+msgid "OK"
+msgstr "OK"
+
+#: api.lua:398
+msgid "DISABLE"
+msgstr "DESATIVAR"
+
+#: api.lua:400
+msgid "ENABLE"
+msgstr "ATIVAR"
+
+#: api.lua:419
+#, lua-format
+msgid "Fuel: %s"
+msgstr "Combustível: %s"
+
+#: api.lua:421
+msgid "1º ← You need to park your UFO next to this!"
+msgstr "1º ← Estacione seu OVNI perto deste carregador!"
+
+#: api.lua:422
+msgid "2º ← Press 'run key'(Key E) in your UFO to reload!"
+msgstr "2º ← Pressione 'CORRER' (Key E) em seu OVNI para recarregá-lo!"
+
+#: api.lua:488
+#, lua-format
+msgid "CARRIER TRUNK owned by '%s':"
+msgstr "PORTA-MALA de '%s':"
+
+#: api.lua:702 ship.lua:204
+msgid "Disabled 'Inertia Cancel' of this UFO!"
+msgstr "Desativa 'Anulador de Inércia' deste OVNI!"
+
+#: api.lua:706 ship.lua:210
+msgid "Enabled 'Inertia Cancel' of this UFO!"
+msgstr "Ativa 'Anulador de Inércia' deste OVNI!"
+
+#: api.lua:717
+msgid "Disabled 'Artificial Inteligency' of this UFO!"
+msgstr "Desativa 'Ativa Inteligência' deste OVNI!"
+
+#: api.lua:614
+msgid "This UFO was not protected, you are now its owner!"
+msgstr "Este OVNI não estava protegido.. Agora você é o novo dono!"
+
+#: api.lua:626
+#, lua-format
+msgid "Hold 'Run Key'(R or Ctrl) and Click to control the UFO owned by '%s'!"
+msgstr ""
+"Segure o botão 'CORRER' (R or Ctrl) e Clique para controlar OVNI de '%s'!"
+
+#: api.lua:633
+#, lua-format
+msgid "You can not interact with a UFO owned by '%s'!"
+msgstr "Você não pode interagir com um OVNI pertencente a '%s'."
+
+#: components.lua:2
+msgid "Steel Wire"
+msgstr "Cabo de Aço"
+
+#: components.lua:17
+msgid "Steel Spiral"
+msgstr "Bobina de Aço"
+
+#: components.lua:32
+msgid "Eletric Lamp"
+msgstr "Lâmpada Elétrica"
+
+#: components.lua:47
+msgid "Gauge"
+msgstr "Aferidor"
+
+#: components.lua:62
+msgid "Cylinder"
+msgstr "Cilindro"
+
+#: components.lua:77
+msgid "Steel Pipe"
+msgstr "Cano de Aço"
+
+#: components.lua:92
+msgid "Steel Core"
+msgstr "Núcleo de Aço"
+
+#: components.lua:107
+msgid "Copper Wire"
+msgstr "Cabo de Cobre"
+
+#: components.lua:122
+msgid "Copper Coil"
+msgstr "Bonina de Cobre"
+
+#: components.lua:135
+msgid "Eletric Pump"
+msgstr "Bomba Elétrica"
+
+#: components.lua:151
+msgid "Bioresin"
+msgstr "Bioresina"
+
+#: components.lua:153
+msgid "Extracted from pine wood."
+msgstr "Extraído de alguns tronco de pinheiro."
+
+#: components.lua:163
+msgid "Ionized Bioresin"
+msgstr "Bioresina Ionizada"
+
+#: components.lua:181
+msgid "Bioplastic Mass"
+msgstr "Massa de Bioplástico"
+
+#: components.lua:193
+msgid "Bioplastic Ingot"
+msgstr "Lingote de Bioplástico"
+
+#: components.lua:206
+msgid "Speaker"
+msgstr "Alto-falantes"
+
+#: components.lua:221
+msgid "Printed Circuit"
+msgstr "Circuito Impresso"
+
+#: components.lua:237
+msgid "Oxigen System"
+msgstr "Sistema de Oxigênio"
+
+#: components.lua:250
+msgid "Switch Button"
+msgstr "Botão Interruptor"
+
+#: components.lua:265
+msgid "Panel"
+msgstr "Painel"
+
+#: components.lua:280
+msgid "Pilot Manche"
+msgstr "Manche de Pilotagem"
+
+#: components.lua:297
+msgid "Upholstered Chair"
+msgstr "Cadeira Estofada"
+
+#: components.lua:312
+msgid "Steel Ring"
+msgstr "Anel de Aço"
+
+#: components.lua:327
+msgid "Toroidal Copper Coil"
+msgstr "Bobina Toroidal de Cobre"
+
+#: components.lua:350
+msgid "Microwave Resonance Chamber"
+msgstr "Câmara de Ressonância de Micro-ondas"
+
+#: components.lua:366
+msgid "Emdrive"
+msgstr "EmDrive"
+
+#: components.lua:369
+msgid ""
+"Engine for producing impulse from an electromagnetic field within a cavity, "
+"without the need to eject mass."
+msgstr ""
+"Motor para produzir impulso a partir de um campo eletromagnético dentro de "
+"uma cavidade, sem a necessidade de ejetar massa."
+
+#: components.lua:385
+msgid "Cockpit"
+msgstr "Cabine"
+
+#: components.lua:401
+msgid "Microprocessor"
+msgstr "Microprocessador"
+
+#: components.lua:416
+msgid "Power Cell (Type Omega)"
+msgstr "Célula de Força (Tipo Ômega)"
+
+#: components.lua:431
+msgid "Batery (Type D)"
+msgstr "Bateria (tipo D)"
+
+#: components.lua:446
+msgid "Electrical Resistance"
+msgstr "Resistência Elétrica"
+
+#: components.lua:461
+msgid "Capacitor"
+msgstr "Capacitor"
+
+#: components.lua:476
+msgid "RAM Memory"
+msgstr "Memória RAM"
+
+#: components.lua:491
+msgid "Gold Wire"
+msgstr "Cabo de Ouro"
+
+#: components.lua:508 components.lua:510
+msgid "DNA Checker"
+msgstr "Verificador de DNA"
+
+#: components.lua:513
+msgid "It allows an electronic device to check its owner."
+msgstr "Permite que um dispositivo eletrônico verifique seu proprietário."
+
+#: components.lua:530
+msgid "Computer"
+msgstr "Computador"
+
+#: components.lua:533
+msgid ""
+"An embedded system is a microprocessor system in which the computer is "
+"completely encapsulated or dedicated to the device or system it controls."
+msgstr ""
+"Um sistema embarcado é um sistema de microprocessador no qual o computador é "
+"completamente encapsulado ou dedicado ao dispositivo ou sistema que ele "
+"controla."
+
+#: components.lua:559
+msgid "Pink Quartzo Crystal"
+msgstr "Cristal de Quartzo Rosa"
+
+#: components.lua:568
+msgid "Transistor"
+msgstr "Transistor"
+
+#: components.lua:594
+msgid "Upgrade - Artificial Inteligency"
+msgstr "Atualização - Inteligência Artificial"
+
+#: components.lua:596
+msgid "Allows to your UFO talk to you."
+msgstr "Permite ao seu OVNI falar com você."
+
+#: furnace.lua:2 furnace.lua:20
+msgid "UFO charging device"
+msgstr "Carregador de OVNIs"
+
+#: furnace.lua:89 ship.lua:210
+#, lua-format
+msgid "Charge: %02d GWh (Gigawatts Hour)"
+msgstr "Carga: %02d GWh (Gigawatts-Hora)"
+
+#: furnace.lua:106
+msgid "loader"
+msgstr "carregador"
+
+#: furnace.lua:107
+msgid "loaderufos"
+msgstr "carregadorovni"
+
+#: furnace.lua:141
+msgid "reloader"
+msgstr "reabastecedor"
+
+#: furnace.lua:142
+msgid "reloaderufos"
+msgstr "reabastecedordeovnis"
+
+#: ship.lua:54
+#, lua-format
+msgid "I am alive! Thank you, '%s'!"
+msgstr "Eu estou vivo! Obrigado, '%s'!"
+
+#: ship.lua:89
+#, lua-format
+msgid "Welcome to your ship, Captain %s!"
+msgstr "Bem vindo a sua nave, Capitão %s!"
+
+#: ship.lua:64
+msgid "welcome_en"
+msgstr "welcome_pt"
+
+#: ship.lua:114
+#, lua-format
+msgid ""
+"It is not possible to shrink this vehicle before the pilot '%s' comes out of "
+"it!"
+msgstr ""
+"Não é possível encolher este veículo ante do piloto '%s' sair deste OVNI!"
+
+#: ship.lua:249
+msgid "Showing the location signal of your UFO!"
+msgstr "Exibindo o sinal de localização do seu OVNI!"
+
+#: ship.lua:369
+msgid "ship"
+msgstr "Nave"

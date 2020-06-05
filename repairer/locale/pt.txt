@@ -1,0 +1,3 @@
+#Transdutor: Lunovox <lunovox@openmailbox.org>
+
+Repairer Bench (to repair faulty items mods) = Bancada de Conserto (Para consertar ítens de mods defeituosos)

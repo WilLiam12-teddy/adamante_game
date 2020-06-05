@@ -1,0 +1,22 @@
+laptop.register_theme("Undersea", {
+	taskbar_clock_position_and_size = "9.8,9.9;4,0.7",
+	desktop_background = "laptop_theme_undersea_desktop_background.png",
+	app_background = "laptop_theme_undersea_app_background.png",
+	titlebar_textcolor = "#000000",
+	major_button = "blank.png",
+	major_textcolor = "#FFFFFF",
+	minor_button = "laptop_theme_undersea_minor_button.png",
+	minor_textcolor = "#FFFFFF",
+	back_button = "blank.png",	
+	exit_button = "laptop_theme_undersea_exit_button.png",
+	contrast_background = "laptop_theme_undersea_minor_button.png",
+	desktop_icon_button = "laptop_theme_undersea_minor_button.png",
+	table_bgcolor="#FFFFFF",
+	table_highlight_bgcolor='#888888',
+	muted_textcolor = "#444444",
+	table_border = 'true',
+	os_min_version = '7.00',
+	exit_character = " ",
+	back_character = " ",
+	
+})

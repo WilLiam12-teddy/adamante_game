@@ -1,0 +1,83 @@
+#Transdutor: Lunovox <lunovox@openmailbox.org>
+
+#-------Short name to generate the item----------
+charter=alvara
+#------------------------------------------------
+
+#-------Tipos de PVP ----------------------------
+None=Nenhum
+Only the Owner=Só o Proprietário
+If Can Interact=Se Pode Interagir
+Normal=Normal
+#------------------------------------------------
+
+Opening file '%s'!=Abrindo arquivo '%s'!
+
+Privilege to be able to change the protected terrains of other players!=Privilégio de poder alterar os terrenos protegidos de outros jogadores!
+
+The 'playername' variable must be non-empty 'string' type!=A variável 'playername' precisa ser do tipo 'string' não vazia!
+The 'pos' variable must be of the 'position' type!=A variável 'pos' precisa ser do tipo 'position'!
+The 'hittername' variable must be non-empty 'string' type!=A variável 'hittername' precisa ser do tipo 'string' não vazia!
+The variable 'timeMoment' must be of type 'date' of datetime!=A variável 'timeMoment' precisa ser do tipo 'number' de datetime!
+The 'ifDamage' variable must be a 'boolean' variable!=A variavel 'ifDamage' precisa ser uma variável 'boolean'!
+The 'newType' variable must be a pvp-type 'string' variable!=A variavel 'newType' precisa ser uma variável 'string' de tipo de pvp!
+The 'tblGuests' variable must be a 'table' variable!=A variavel 'tblGuests' precisa ser uma variável 'table'!
+The variable 'nameOrIndex' must be a player name, or the guest number in the list!=A variavel 'nameOrIndex' precisa ser um nome de jogador, ou o número do convidado na lista!
+The variable 'ifPernanete' is not of the boolean type!=A variavel 'ifPernanete' não é do tipo 'boolean'!
+The 'timeSecounds' variable is not non-negative 'number' type!=A variavel 'timeSecounds' não é do tipo 'number' não-negativa!
+
+You are trying to dig the terrain that belongs to '%s'!=Voce está tentando cavar o terreno que pertence a '%s'!
+The player '%s' is trying to dig in his field!=O jogador '%s' está tentando cavar em seu terreno!
+Do not place TNT near protected areas!=Nao coloque TNT perto de areas protegida!
+This land belongs to '%s'!=Este terreno pertence a '%s'!
+The player '%s' is trying to tinker with his terrain!=O jogador '%s' está tentando mexer em seu terreno!
+Area not protected, claim this area to build or mine!=Area nao protegida, reivindique essa area para construir ou minerar!
+
+LAND PERMISSION=ALVARÁ DE TERRENO
+Show Size=Exibir Tamanho
+Protect Land=Proteger Terreno
+Guest List=Listar Convidados
+Set up=Configurar
+Leave Ground=Abandonar Terreno
+Permanent Protection=Proteção Permanente
+Land=Terreno
+
+LEAVING TERRITORY=ABANDONO DE TERRENO
+Do you really want to unprotect this land?=Deseja realmente desproteger deste terreno?
+Unprotect=Desproteger
+Cancel=Cancelar
+
+LAND GUESTS=CONVIDADOS DO TERRENO
+Remove Guest=Remover Convidado
+Guest Name=Nome do Convidado
+Add Guest=Adicionar Convidado
+
+LAND CONFIGURATION=CONFIGURAÇÃO DO TERRENO
+Enable damage by forced interaction=Habilitar dano por interação forçada
+PVP Type=Tipo de PVP
+
+Nobody=Ninguém
+Without Maturity=Sem Vencimento
+
+%02d days remain=restam %02d dias
+Up to %02d days=Até %02d dias
+
+LAND PROTECTION WILL=ALVARÁ DE PROTEÇÃO DE TERRENO
+Cost=Custo
+Payment=Pagamento
+Maturity=Vencimento
+Renovation=Renovação
+Current Owner=Atual Dono
+New Owner=Novo Dono
+Pay=Pagar
+
+Displaying the current terrain size!=Exibindo o tamanho do terreno atual!
+Enter the 'Guest Name' before pressing the 'Add Guest' button!=Digite o 'Nome do Convidado' antes de pressionar o botão 'Adicionar Convidado'!
+The player '%s' protected the field (%s)!=O jogador '%s' protegeu o terreno (%s)!
+Make sure you have correctly offered the license fee!=Verifique se voce ofereceu corretamente a taxa de alvará!
+You can pay an advance license fee only once!=Você so pode pagar a taxa de alvará adiantada uma única vez!
+Land Protection Permit=Alvará de Proteção de Terreno
+This lot belongs to '%s' for more %02d days!=Este terreno pertence a '%s' por mais %02d dias!
+You can not use the license very deeply!=Você não pode usar o alvará com muita profundidade!
+The territory (%s) belonging to '%s' has automatically been granted earth protection with time validity of %02d days!=O territorio (%s) que pertence a '%s' passou automaticamente a ter proteção de terreno com validade de tempo de %02d dias!
+It highlights the limits of the current protected land.=Destaca os limites da atual de terra protegida.

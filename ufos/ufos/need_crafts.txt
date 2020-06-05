@@ -1,0 +1,109 @@
+ * Cracking Kit - Allows to invade and steal the UFO from another player who is parked. It will show a panel to write 4 numbers without repeating numbers. You can miss 8 times. Always after using the wrong password, it will show the correct amount of characters and the amount of characters in the right place. If the attacker misses 9 times or cancels the invasion, he will die instantly.
+
+ * Gyroscope: Replace the 'Power Cells' in Emdrive recipe to a Gyroscope
+x 1 x	<- 1. Steel Ring
+1 2 1	<- 2. Tesla Motor
+x 1 3	<- 3. Microprocessor
+		<- 3. Bioplastic Ingot
+
+ * Tesla Motor:
+1 2 1  <- 1. Copper Coil
+2 3 2  <- 2. Steel blocks
+1 2 1  <- 3. Pipe
+ 
+ * Propeller/Hélice (Não é 'Populsor'):
+1 x 1  <- 1. Steel Ingot
+x 2 x  <- 2. Steel Pipe
+1 x 1
+
+ * Suction Chamber: 
+1 2 2  <- 1. Steel Pipe
+2 3 2  <- 1. Bronze Ingot
+2 2 1  <- 1. Propeller
+
+ * Suction Pump:
+1 2 3   <- 1. Copper Wire
+x 4 5   <- 2. Capacitor
+1 6 3   <- 3. Steel Pipe
+        <- 4. Tesla Motor
+        <- 5. Suction Chamber
+        <- 6. Printed Cirtcuit
+
+ * Conveyor (Esteira Transportadora): Carries items to another location. If no exist Leather
+1 1 1	<- 1. Leather (couro)
+2 x 3	<- 2. Tesla Motor
+1 1 1	<- 3. Steel Ring
+
+ * Saw Blade (Disco de Serra):
+1 1 1	<- 1. Steel Ingot
+1 2 1	<- 2. Broze Block
+1 1 1
+
+ * Extractor: Do extract Bioresin of Pinetree, and Quartzo of Sandstone.
+1 1 1	<- 1. Steel Block
+x 2 x	<- 2. Saw Blade
+4 1 3	<- 3. Locked Chest
+		<- 4. Conveyor Belt
+
+ * Tesla Copper Coil:
+1 x x	<- 1. Toroidal Copper Coil
+2 x x	<- 2. Spiral Copper Coil
+x x x
+ 
+ * Fuel Scope: (Absorve Energia do Recarregador)
+1 x 1	<- 1. Tesla Copper Coil
+2 2 2	<- 2. Printed Circuit
+3 3 3	<- 3. Capacitor
+
+ * Transistor:
+5 5 5	<- 1. Quartzo Crystal
+3 1 4	<- 2. Copper Wire
+2 x 2	<- 3. Capacitor
+		<- 4. Electrical Resistance
+		<- 5. Bioplastic Ingot
+
+ * Load Alternator:
+1 1 1	<- 1. Electrical Resistance
+2 3 2	<- 2. Transistor
+4 4 4	<- 3. Microprocessor
+		<- 4. Printed Circuit
+
+ * Charge Control System = Fuel Scope + Power Cells + Load Alternator
+1 2 3	<- 1. Fuel Scope
+x x x	<- 2. Power Cells
+x x x	<- 3. Load Alternator
+
+ * Usar " Sistema de Controle de Carga" no Cockpit
+
+ * Upgrade - Artificial Inteligency: Allows to your UFO talk to you.
+ 1 2 1	<- 1. Toroidal Copper Coil
+ 3 4 5	<- 2. Horse Egg (If not exist mod "mobs_redo" do use a "Red Mushroom"
+ 6 7 8	<- 3. MicroProcessor
+		<- 4. Diamond
+		<- 5. Transistor
+		<- 6. Capacitor
+		<- 7. Bioplastic Ingot
+ 		<- 8. Electrical Resistance
+
+ * Thermal Resistance:
+1 1 1	<- 1. Copper Wire
+1 2 1	<- 2. Coal Block
+3 4 3	<- 3. Copper Ingot
+		<- 4. Obsidian Block		
+
+ * Upgrade - Eletric Forge: A furnace in of your UFO that use electricity charge.
+1 1 1	<- 1. Steel Block
+2 3 1	<- 2. Conveyor Belt
+1 1 1	<- 3. Electrical Resistance
+
+ * Upgrade - Photovoltaic Panel (Allows to recharge by natural sunlight in half consumption speed; See mod farming how to check natural sunlight.)
+1 1 1	<- 1. Obsidian Glass
+2 2 2	<- 2. Diamond Block
+3 4 4	<- 3. Copper wire
+		<- 4. Bioplastic Ingot
+
+ * Upgrade - Mailbox: Allows to receive mails of others players. Use a 'Mailbox' of mod 'correio' over the UFO.
+ 
+ * Upgrade - Trunk Holder (Porta-Malas): Allows to save your items. Can be access too in anyone ATM. Use an 'Strongbox' of of mod 'minertrade' over the UFO.
+
+
