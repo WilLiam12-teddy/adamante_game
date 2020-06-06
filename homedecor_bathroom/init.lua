@@ -14,8 +14,6 @@ minetest.register_node(":homedecor:bathroom_tiles_dark", {
 	palette = "unifieddyes_palette_extended.png",
 	groups = {cracky=3, ud_param2_colorable = 1},
 	sounds = default.node_sound_stone_defaults(),
-	on_construct = unifieddyes.on_construct,
-	on_dig = unifieddyes.on_dig,
 })
 
 minetest.register_node(":homedecor:bathroom_tiles_medium", {
@@ -31,8 +29,6 @@ minetest.register_node(":homedecor:bathroom_tiles_medium", {
 	palette = "unifieddyes_palette_extended.png",
 	groups = {cracky=3, ud_param2_colorable = 1},
 	sounds = default.node_sound_stone_defaults(),
-	on_construct = unifieddyes.on_construct,
-	on_dig = unifieddyes.on_dig,
 })
 
 minetest.register_node(":homedecor:bathroom_tiles_light", {
@@ -48,8 +44,6 @@ minetest.register_node(":homedecor:bathroom_tiles_light", {
 	palette = "unifieddyes_palette_extended.png",
 	groups = {cracky=3, ud_param2_colorable = 1},
 	sounds = default.node_sound_stone_defaults(),
-	on_construct = unifieddyes.on_construct,
-	on_dig = unifieddyes.on_dig,
 })
 
 local tr_cbox = {
@@ -559,34 +553,12 @@ minetest.register_craft( {
 		},
 })
 
-unifieddyes.register_color_craft({
-	output = "homedecor:bathroom_tiles_light",
-	palette = "extended",
-	type = "shapeless",
-	neutral_node = "homedecor:bathroom_tiles_light",
-	recipe = {
-		"NEUTRAL_NODE",
-		"MAIN_DYE"
-	}
-})
-
 minetest.register_craft( {
 		output = "homedecor:bathroom_tiles_medium 4",
 		recipe = {
 			{ "group:marble", "group:marble", "" },
 			{ "group:marble", "group:marble", "dye:grey" }
 		},
-})
-
-unifieddyes.register_color_craft({
-	output = "homedecor:bathroom_tiles_medium",
-	palette = "extended",
-	type = "shapeless",
-	neutral_node = "homedecor:bathroom_tiles_medium",
-	recipe = {
-		"NEUTRAL_NODE",
-		"MAIN_DYE"
-	}
 })
 
 minetest.register_craft( {
@@ -597,16 +569,6 @@ minetest.register_craft( {
 		},
 })
 
-unifieddyes.register_color_craft({
-	output = "homedecor:bathroom_tiles_dark",
-	palette = "extended",
-	type = "shapeless",
-	neutral_node = "homedecor:bathroom_tiles_dark",
-	recipe = {
-		"NEUTRAL_NODE",
-		"MAIN_DYE"
-	}
-})
 
 minetest.register_craft({
 	output = "homedecor:bathroom_set",
