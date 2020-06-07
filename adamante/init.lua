@@ -124,3 +124,22 @@ minetest.register_node("adamante:wood", {
     is_ground_content = true,
     groups = {cracky=3, stone=1}
 })
+
+
+minetest.register_chatcommand("spawn", {
+    description = "Teleport player to spawn point.",
+    privs = {interact=true},
+    func = function ( name, param )
+        local spawnpoint = spawnpoint
+--            local spawnpoint = {490.0, 27.5, 144.0}
+        local player = minetest.get_player_by_name(name)
+        if minetest.get_modpath("xp_redo") then
+            if xp_redo.get_xp(player:get_player_name()) < 50 then
+                minetest.chat_send_player(player:get_player_name(), "Not enough XP to Teleport to spawn... DO THE MISSION!!!")
+                return false
+            end
+        end
+        minetest.chat_send_player(player:get_player_name(), "Teleporting to spawn...")
+        return true
+    end,
+})
