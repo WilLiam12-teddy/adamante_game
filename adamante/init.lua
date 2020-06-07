@@ -131,7 +131,7 @@ minetest.register_chatcommand("spawn", {
     privs = {interact=true},
     func = function ( name, param )
         local spawnpoint = spawnpoint
---            local spawnpoint = {490.0, 27.5, 144.0}
+--            local spawnpoint = {489.9, 27.5, 144.1}
         local player = minetest.get_player_by_name(name)
         if minetest.get_modpath("xp_redo") then
             if xp_redo.get_xp(player:get_player_name()) < 50 then
