@@ -1,4 +1,4 @@
-﻿#Transdutor: Lunovox <lunovox@openmailbox.org>
+#Transdutor: Lunovox <lunovox@openmailbox.org>
 
 #------- api.lua ---------------------------------------------------------------------------
 Permission to open locked chests of other players=Permissão de abertura de baús trancados de outros jogadores
@@ -8,50 +8,50 @@ Player '%s' has placed %02d '%s' in his safe!=O jogador '%s' colocou %02d '%s' e
 Player '% s' has removed %02d '% s' in his safe!=O jogador '%s' retirou %02d '%s' em seu cofre!
 
 #------- item_miner_cahs.lua ---------------------------------------------------------------------------
-MINERMOEDA\n* Dinheiro básico criado com ouro e aço.
-MINERCÉDULA\n* Equivale a 09 Minermoedas.
-COFRE PORQUINHO\n* Equivale a 09 Minercédulas.
-CARTÃO DE CRÉDITO\n* Equivale a 09 Cofre-Porquinhos.
+MINERCOIN\n* Basic craftable money with gold and steel.=MINERMOEDA\n* Dinheiro básico criado com ouro e aço.
+MINERMONEY\n* equals 09 Minercoins.=MINERCÉDULA\n* Equivale a 09 Minermoedas.
+PIGGY BANK\n* equals 09 Minermoneys.=COFRE PORQUINHO\n* Equivale a 09 Minercédulas.
+CREDIT CARD\n* equals 09 Piggy Banks.=CARTÃO DE CRÉDITO\n* Equivale a 09 Cofre-Porquinhos.
 
 #------- item_dispensing_machine.lua ---------------------------------------------------------------------------
-MÁQUINA DE DISPENSADORA
-Cliente Oferece
-Cliente Recebe
-ACEITAR
+DISPENSING MACHINE=MÁQUINA DE DISPENSADORA
+Customer Offer=Cliente Oferece
+Customer Receive=Cliente Recebe
+ACCEPT=ACEITAR
 Dispending done!=Dispensa Concluida!
 Current customer inventory=Inventário atual do cliente
 The Machine Need=A Maquina Precisa
 The Machine Offer=A Maquina Oferece
 Items Received (Your Profit)=Itens Recebido (Seu Lucro)
-Estoque a Oferetar
-Você Precisa
-Você Oferece
-Faça um anúncio sobre o que esta máquina dispensará
-Inventario atual do vendedor
+Stock to Offer=Estoque a Oferetar
+You need=Você Precisa
+You offer=Você Oferece
+Make an announcement about what this machine will do=Faça um anúncio sobre o que esta máquina dispensará
+Seller current inventory=Inventario atual do vendedor
 Ctrl + Right Click Mouse → Customer Interface=Ctrl + Clique Direito do Mouse → Interface do Cliente
-MÁQUINA DE DISPENSADORA\n* Vende seus itens, mesmo se você não estiver online.
-Maquina Dispensadora de '%s'.
-A Máquina Dispensadora não pode ser retirada antes de ser esvaziada!
+DISPENSING MACHINE\n* Sells your items, even if you are not online.=MÁQUINA DE DISPENSADORA\n* Vende seus itens, mesmo se você não estiver online.
+Dispensing Machine of '%s'.=Maquina Dispensadora de '%s'.
+The Dispensing Machine can not be removed before being emptied!=A Máquina Dispensadora não pode ser retirada antes de ser esvaziada!
 You can not change your own machine!=Voce nao pode trocar na sua propria maquina!
 The stock of '%s' is gone. Contact him!=O estoque de '%s' acabou. Contacte-o!
-Sem espaço suficiente na Maquina Dispensadora para receber o item do cliente. (Por favor, entre em contato com o vendedor '%s'!)
-Sem espaço suficiente na Maquina Dispensadora para receber o item do vendedor. (Por favor, esvazie a caixa de recebimento!)
-A dispensa não pode ser feita. Verifique se você ofereceu o que a máquina pede!
+Without enough space in Dispensing Machine to receive the customer item. (Please, contact the seller '%s'!)=Sem espaço suficiente na Maquina Dispensadora para receber o item do cliente. (Por favor, entre em contato com o vendedor '%s'!)
+Without enough space in Dispensing Machine to receive the seller's item. (Please, empty the receiving box!)=Sem espaço suficiente na Maquina Dispensadora para receber o item do vendedor. (Por favor, esvazie a caixa de recebimento!)
+The dispending can not be done. Make sure you offer what the machine asks for!=A dispensa não pode ser feita. Verifique se você ofereceu o que a máquina pede!
 
 #------- item_exchange_table.lua ---------------------------------------------------------------------------
-MESA DE ESCAMBO\n(Jogador para Jogador)
-MESA DE ESCAMBO\n* Faz trocas seguras jogador a jogador sem a necessidade de colocar seu itens no chão.
+EXCHANGE TABLE\n(Player to Player)=MESA DE ESCAMBO\n(Jogador para Jogador)
+EXCHANGE TABLE\n* It makes safe exchanges from player to player without the need to put your items on the ground.=MESA DE ESCAMBO\n* Faz trocas seguras jogador a jogador sem a necessidade de colocar seu itens no chão.
 '%s' offer='%s' oferece
-Seu inventario
-Abrir
-Oferecer
-Cancelar
-Confirmar
+Your inventory=Seu inventario
+Open=Abrir
+Offer=Oferecer
+Cancel=Cancelar
+Confirm=Confirmar
 
 #------- item_strongbox.lua ---------------------------------------------------------------------------
-COFRE
+STRONGBOX=COFRE
 STRONGBOX\n* Save your money in this safe and withdraw your money at any shop that has an ATM.=COFRE\n* Guarde seu dinheiro neste cofre e retire seu dinheiro em qualquer loja que possua um Caixa Eletrônico.
-COFRE (Propriedade de '%s')\n* Guarde seu dinheiro neste cofre e retire seu dinheiro em qualquer loja que possua um Caixa Eletrônico.
+STRONGBOX (Property of '%s')\n* Save your money in this safe and withdraw your money at any shop that has an ATM.=COFRE (Propriedade de '%s')\n* Guarde seu dinheiro neste cofre e retire seu dinheiro em qualquer loja que possua um Caixa Eletrônico.
 The safe is going to work %02d seconds after it is installed!=O cofre só vai funcionar %02d segundos depois de instalado!
 You do not have access to the safe belonging to '%s'!=Você não tem acesso ao cofre pertencente a '%s'!
 STRONGBOX owned by '%s':=COFRE FORTE de '%s':
@@ -64,26 +64,26 @@ The ATM will only run %02d seconds after it is installed!=O Caixa Eletrônico s�
 PUBLIC ATM - Account of '%s':=CAIXA ELETRÔNICO - Conta de '%s':
 
 #------- payday.lua ---------------------------------------------------------------------------
-PREFEITURA
-Somente jogadores com esse privilégio receberão um pagamento diário.
-O seu cofre está cheio! %2d itens não foram adicionados à sua conta bancária.
-A prefeitura depositou o %2d° salário em sua conta bancária!
+CITY HALL=PREFEITURA
+Only players with this privilege will receive a daily payment.=Somente jogadores com esse privilégio receberão um pagamento diário.
+Your Strongbox is full! %2d items weren't added in your bank account.=O seu cofre está cheio! %2d itens não foram adicionados à sua conta bancária.
+The city hall deposited the %2d° salary in your bank account!=A prefeitura depositou o %2d° salário em sua conta bancária!
 
 #------- commands.lua ---------------------------------------------------------------------------
-checacofre
-Permite verificar o conteúdo do cofre de outro jogador.
-O Cofre de %s não foi criado ainda!
-Você não tem permissão para executar este comando sem o privilégio 'checkstrongbox'!
+checkstrongbox=checacofre
+Lets you check the contents of another players strongbox.=Permite verificar o conteúdo do cofre de outro jogador.
+The strongbox of %s was not created yet!=O Cofre de %s não foi criado ainda!
+You do not have permission to run this command without the privileges 'checkstrongbox'!=Você não tem permissão para executar este comando sem o privilégio 'checkstrongbox'!
 
 #------- on_final.lua ---------------------------------------------------------------------------
-Salvando cofre de todos os jogadores no arquivo '%s'!
+Saving strongbox from all players in the file '%s'!=Salvando cofre de todos os jogadores no arquivo '%s'!
 
 # ------- alias ---------------------------------------------------------------------------
-minermoeda
-minercedula
-cofreporquinho
-cartaodecredito
-dispensadora
-mesadetroca
-caixaforte
-caixaeletronico
+minercoin=minermoeda
+minermoney=minercedula
+piggybank=cofreporquinho
+creditcard=cartaodecredito
+dispensingmachine=dispensadora
+exchangetable=mesadetroca
+strongbox=caixaforte
+atm=caixaeletronico
