@@ -1,0 +1,2 @@
+default
+lamps

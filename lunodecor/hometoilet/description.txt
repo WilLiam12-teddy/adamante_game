@@ -1,0 +1,8 @@
+Vaso Sanitário decorativo.
+
+Licence: 
+ * GNU AGPL: https://pt.wikipedia.org/wiki/GNU_Affero_General_Public_License
+
+Developers:
+ * Fork do mod Homedecor
+ * Lunovox <lunovox@openmailbox.org>
