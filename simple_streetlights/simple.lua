@@ -25,7 +25,7 @@ local rules_alldir = {
 
 local enable_digilines = minetest.get_modpath("digilines")
 
-ilights.player_channels = {} -- last light source channel name that was set by a given player
+player_channels = {} -- last light source channel name that was set by a given player
 
 if enable_digilines then
 
@@ -38,7 +38,7 @@ if enable_digilines then
 		end
 	end)
 
-	function ilights.digiline_on_use(itemstack, user, pointed_thing)
+	function digiline_on_use(itemstack, user, pointed_thing)
 		if user and user:get_player_control().sneak then
 			local name = user:get_player_name()
 			local form = "field[channel;Set a channel for future streetlights;]"
@@ -296,7 +296,7 @@ for _, pole in ipairs(poles_tab) do
 						on_place = function(itemstack, placer, pointed_thing)
 							check_and_place(itemstack, placer, pointed_thing, matnode, lightnode, lightparam2, true)
 						end,
-						on_use = ilights.digiline_on_use
+						on_use = digiline_on_use
 					})
 
 					minetest.register_craft({
@@ -346,7 +346,7 @@ for _, pole in ipairs(poles_tab) do
 							on_place = function(itemstack, placer, pointed_thing)
 								check_and_place(itemstack, placer, pointed_thing, matnode, lightnode, lightparam2, true, distributor)
 							end,
-							on_use = ilights.digiline_on_use
+							on_use = digiline_on_use
 						})
 
 						minetest.register_craft({
