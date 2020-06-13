@@ -1,4 +1,4 @@
---[[
+﻿--[[
 	Mod Taverna_Barbara para Minetest
 	Copyright (C) 2018 BrunoMine (https://github.com/BrunoMine)
 	
@@ -221,44 +221,6 @@ local def = {
 	end,
 
 }
-
-creatures.register_mob("taverna_barbara:trambiqueiro", def)
-
--- Node Bau do Trambiqueiro
-minetest.register_node("taverna_barbara:bau_trambiqueiro", {
-	description = "Bau o Trambiqueiro",
-	tiles = {
-		"default_chest_top.png", 
-		"default_chest_top.png", 
-		"default_chest_side.png^taverna_barbara_bau_trambiqueiro.png",
-		"default_chest_side.png^taverna_barbara_bau_trambiqueiro.png", 
-		"default_chest_side.png", 
-		"default_chest_front.png"
-	},
-	paramtype = "light",
-	paramtype2 = "facedir",
-	is_ground_content = false,
-	legacy_facedir_simple = true,
-	groups = {choppy=2,oddly_breakable_by_hand=1},
-	sounds = default.node_sound_wood_defaults(),
-	on_construct = function(pos)
-		local meta = minetest.get_meta(pos)
-		meta:set_string("infotext", "Bau do Trambiqueiro") -- infotext pode ser serializado
-	end,
-})
-
-local verificar_trambiqueiro = function(pos)
-	if table.maxn(creatures.find_target(pos, 10, {
-		search_type = "mate",
-		mob_name = "taverna_barbara:trambiqueiro",
-		xray = true,
-		no_count = false
-	})) == 0 then
-		local node = minetest.get_node(pos)
-		local p = minetest.facedir_to_dir(node.param2)
-		minetest.add_entity({x=pos.x-p.x,y=pos.y+1.5,z=pos.z-p.z}, "taverna_barbara:trambiqueiro")
-	end
-end
 
 -- Coloca e verifica o barman
 minetest.register_abm({

@@ -1,4 +1,4 @@
---[[
+﻿--[[
 	Mod Taverna_Barbara para Minetest
 	Copyright (C) 2018 BrunoMine (https://github.com/BrunoMine)
 	
@@ -107,53 +107,6 @@ local def = {
 
 
 }
-
-creatures.register_mob("taverna_barbara:barman", def)
-
--- receptor dos botoes do menu do barman
-minetest.register_on_player_receive_fields(function(player, formname, fields)
-	if formname == "taverna_barbara:barman" then
-		if fields.cerveja then
-			
-			local custo = taverna_barbara.custo_cerveja
-			
-			if taverna_barbara.tror.trocar_plus(player, {taverna_barbara.item_moeda.." "..custo}, {"taverna_barbara:cerveja 1"}) == false then
-				local desc_item = minetest.registered_items["taverna_barbara:cerveja"].description
-				local desc_moeda = taverna_barbara.desc_item_moeda
-				minetest.chat_send_player(
-					player:get_player_name(), 
-					S("Voce precisa de @1 @2 para comprar @3", tostring(custo), desc_moeda, desc_item))
-				return
-			end
-			
-		elseif fields.whisky then
-			
-			local custo = taverna_barbara.custo_whisky
-			
-			if taverna_barbara.tror.trocar_plus(player, {item_moeda.." "..custo}, {"taverna_barbara:whisky 1"}) == false then
-				local desc_item = minetest.registered_items["taverna_barbara:whisky"].description
-				minetest.chat_send_player(
-					player:get_player_name(), 
-					S("Voce precisa de @1 @2 para comprar @3", tostring(custo), desc_item_moeda, desc_item))
-				return
-			end
-			
-		elseif fields.batanoura_defumada then
-			
-			local custo = taverna_barbara.custo_batanoura_defumada
-			
-			if taverna_barbara.tror.trocar_plus(player, {item_moeda.." "..custo}, {"taverna_barbara:batanoura_defumada 1"}) == false then
-				local desc_item = minetest.registered_items["taverna_barbara:batanoura_defumada"].description
-				minetest.chat_send_player(
-					player:get_player_name(), 
-					S("Voce precisa de @1 @2 para comprar @3", tostring(custo), desc_item_moeda, desc_item))
-				return
-			end
-			
-		end
-	end
-end)
-
 
 -- Node Piso do barman
 minetest.register_node("taverna_barbara:piso_barman", {

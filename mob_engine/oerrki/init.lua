@@ -106,5 +106,3 @@ local def = {
     }
   },
 }
-
-creatures.register_mob(def)
