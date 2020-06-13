@@ -1,0 +1,5 @@
+creatures
+default
+farming
+wool
+fire
