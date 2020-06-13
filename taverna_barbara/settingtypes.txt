@@ -1,0 +1,80 @@
+# Configurações aplicaveis para o menu gráfico
+
+#
+# Outros
+#
+
+# Item usado como moeda para compra de itens na taverna
+# Porcentagem de probabilidade de gerar uma taverna barbara quando possivel
+# 0 (%) não gera
+# 100 (%) gera sempre que possivel
+# Por padrão é 7
+taverna_barbara_probabilidade_gerar_taverna (Probabilidade de surgir vilas) int 7 0 100
+
+#
+# Vendas
+#
+
+# Item usado como moeda para compra de itens na taverna
+# Deve ser um itemstring
+taverna_barbara_moeda (Moeda de troca da Taverna) string default:apple
+
+# Nome encurtado da moeda
+# Exemplos: Apple, Dollar, Libra, Fruta, Macro
+# Não traduzivel
+taverna_barbara_moeda_code (Nome curto da moeda) string
+
+# Custo de compra de Cerveja
+# Por padrão é 3
+taverna_barbara_custo_cerveja (Custa de Cerveja) int 3 1
+
+# Custo de compra de Whisky
+# Por padrão é 4
+taverna_barbara_custo_whisky (Custa de Whisky) int 4 1
+
+# Custo de compra de Batanoura Defumada
+# Por padrão é 2
+taverna_barbara_custo_batanoura_defumada (Custa de Batanoura Defumada) int 2 1
+
+# Custo de compra de Amendoim
+# Por padrão é 1
+taverna_barbara_custo_amendoim (Custa de Amendoim) int 1 1
+
+# Custo de compra de Balinha Sortida
+# Por padrão é 1
+taverna_barbara_custo_balinha_sortida (Custa de Balinha Sortida) int 1 1
+
+#
+# Saciamento
+#
+
+# Quantidade de saude ou fome restaurada ou saciada pela Cerveja
+# (1 equivale a meio unidade de saude ou fome)
+# Por padrão é 4
+taverna_barbara_saciamento_cerveja (Saciamento da Cerveja) int 4 0
+
+# Quantidade de saude ou fome restaurada ou saciada pelo Whisky
+# (1 equivale a meio unidade de saude ou fome)
+# Por padrão é 5
+taverna_barbara_saciamento_whisky (Saciamento da Whisky) int 5 0
+
+# Quantidade de saude ou fome restaurada ou saciada pela Batanoura Defumada
+# (1 equivale a meio unidade de saude ou fome)
+# Por padrão é 4
+taverna_barbara_saciamento_batanoura_defumada (Saciamento da Batanoura Defumada) int 4 0
+
+# Quantidade de saude ou fome restaurada ou saciada pelo Amendoim
+# (1 equivale a meio unidade de saude ou fome)
+# Por padrão é 1
+taverna_barbara_saciamento_amendoim (Saciamento da Amendoim) int 1 0
+
+# Quantidade de saude ou fome restaurada ou saciada pela Balinha Sortida
+# (1 equivale a meio unidade de saude ou fome)
+# Por padrão é 0
+taverna_barbara_saciamento_balinha_sortida (Saciamento da Balinha Sortida) int 0 0
+
+
+
+
+
+
