@@ -1,0 +1,268 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-04 20:31-0300\n"
+"PO-Revision-Date: 2020-04-04 20:43-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#: city.lua
+msgid "City ID"
+msgstr "ID da cidade"
+
+#: city.lua
+msgid "Create an active city"
+msgstr "Criar uma cidade ativa"
+
+#: city.lua
+msgid "Invalid City ID"
+msgstr "ID de cidade inválido"
+
+#: city.lua
+msgid "@1 created."
+msgstr "Cidade @1 criada."
+
+#: city_builder.lua
+msgid "Export failed."
+msgstr "A exportação falhou."
+
+#: city_builder.lua
+msgid ""
+"Schematic successfully exported. Restart the world to import it. '@1' file "
+"is in the world directory ('cities in work' folder)."
+msgstr ""
+"A estrutura esquemática foi exportado com sucesso. Reinicie o mundo para "
+"importar-lo. Arquivo '@1' está no diretório do mundo (na pasta 'cities in "
+"work')."
+
+#: city_builder.lua
+msgid "Import failed."
+msgstr "A importação falhou."
+
+#: city_builder.lua
+msgid "Schematic successfully imported."
+msgstr "A estrutura esquemática foi importada."
+
+#: city_builder.lua
+msgid "City ID (eg. wood_ville)"
+msgstr "ID da cidade (exemplo: vila_da_madeira)"
+
+#: city_builder.lua
+msgid "Radius"
+msgstr "Raio"
+
+#: city_builder.lua
+msgid "Height"
+msgstr "Altura"
+
+#: city_builder.lua
+msgid "Depth"
+msgstr "Profundidade"
+
+#: city_builder.lua
+msgid "This node is the reference for central position."
+msgstr "Esse bloco é a referencia para a posição central."
+
+#: city_builder.lua
+msgid "Spawn position for this city is 6 blocks above this block."
+msgstr "Posição de spawn para a cidade será 6 blocos acima desse bloco."
+
+#: city_builder.lua
+msgid "Export"
+msgstr "Exportar"
+
+#: city_builder.lua
+msgid "Import"
+msgstr "Importar"
+
+#: city_builder.lua
+msgid "Mark"
+msgstr "Marcar"
+
+#: city_builder.lua
+msgid "City Builder"
+msgstr "Construtor de Cidade"
+
+#: exchange.lua
+msgid "You can not pay that."
+msgstr "Você não consegue pagar isso."
+
+#: exchange.lua
+msgid "Crowded inventory. Leftovers were dropped."
+msgstr "Inventário lotado. As sobras caíram no chão."
+
+#: number_nodes.lua
+msgid "Stone"
+msgstr "Pedra"
+
+#: property.lua
+msgid "None"
+msgstr "Nenhum"
+
+#: property.lua sfinv_menu.lua
+msgid "Sell property"
+msgstr "Vender propriedade"
+
+#: property.lua
+msgid "No property."
+msgstr "Nenhuma propriedade."
+
+#: property_builder.lua
+msgid "Radius (3 - 12)"
+msgstr "Raio (3  -  12)"
+
+#: property_builder.lua
+msgid "Height (3, 5, 8, 10, 12, 14, 16, 18, 20 or 25)"
+msgstr "Altura (3, 5, 8, 10, 12, 14, 16, 18, 20 or 25)"
+
+#: property_builder.lua
+msgid "Cost (10 - 9990)"
+msgstr "Custo (10 - 9990)"
+
+#: property_builder.lua
+msgid "Create"
+msgstr "Criar"
+
+#: property_builder.lua
+msgid "Property Builder"
+msgstr "Construtor de Propriedade"
+
+#: property_builder.lua
+msgid "Invalid radius."
+msgstr "Raio inválido."
+
+#: property_builder.lua
+msgid "Invalid height."
+msgstr "Altura inválida."
+
+#: property_builder.lua
+msgid "Invalid cost."
+msgstr "Custo inválido."
+
+#: seller_node.lua
+msgid "Make sure you can pay."
+msgstr "Certifique-se de que pode pagar."
+
+#: seller_node.lua
+msgid "You already own land. Sell it to buy that one."
+msgstr "Já tens uma propriedade. Venda ela antes."
+
+#: seller_node.lua
+msgid "Land for sale"
+msgstr "Propriedade a venda"
+
+#: seller_node.lua
+msgid "Height: @1"
+msgstr "Altura: @1"
+
+#: seller_node.lua
+msgid "Width: @1"
+msgstr "Largura: @1"
+
+#: seller_node.lua
+msgid "Total buildable area: @1 blocks"
+msgstr "Total de área construível: @1 blocos"
+
+#: seller_node.lua
+msgid "Cost: @1"
+msgstr "Custo: @1"
+
+#: seller_node.lua
+msgid "Sale price: @1"
+msgstr "Preço de venda: @1"
+
+#: seller_node.lua
+msgid "Buy"
+msgstr "Comprar"
+
+#: seller_node.lua
+msgid "Insufficient payment."
+msgstr "Pagamento insuficiente."
+
+#: seller_node.lua
+msgid "Land purchased."
+msgstr "Propriedade comprada."
+
+#: sfinv_menu.lua teleporter.lua
+msgid "Choose a city"
+msgstr "Escolha uma cidade"
+
+#: sfinv_menu.lua
+msgid "Are you sure?"
+msgstr "Você tem certeza?"
+
+#: sfinv_menu.lua
+msgid "All the land will be destroyed."
+msgstr "Toda propriedade será destruída."
+
+#: sfinv_menu.lua
+msgid "Yes"
+msgstr "Sim"
+
+#: sfinv_menu.lua
+msgid "No"
+msgstr "Não"
+
+#: sfinv_menu.lua
+msgid "Your land has been sold. You received @1."
+msgstr "Sua propriedade for vendida. Você recebeu @1."
+
+#: sfinv_menu.lua
+msgid "My Property"
+msgstr "Propriedade"
+
+#: sfinv_menu.lua
+msgid "You do not have a property."
+msgstr "Você não tem propriedade."
+
+#: sfinv_menu.lua
+msgid "Buy a property in a city."
+msgstr "Compre uma em uma cidade."
+
+#: sfinv_menu.lua
+msgid "No defined"
+msgstr "Não definida"
+
+#: sfinv_menu.lua
+msgid "City: @1"
+msgstr "Cidade: @1"
+
+#: sfinv_menu.lua
+msgid "Price: @1"
+msgstr "Preço: @1"
+
+#: sfinv_menu.lua
+msgid "Resale price: @1"
+msgstr "Preço de revenda: @1"
+
+#: teleporter.lua
+msgid "Go"
+msgstr "Ir"
+
+#: teleporter.lua
+msgid "Welcome to @1"
+msgstr "Bem vindo a @1"
+
+#: teleporter.lua
+msgid "Teleporter"
+msgstr "Teleportador"
+
+#~ msgid "Sell self property"
+#~ msgstr "Vender propriedade"
+
+#~ msgid "Seller Icon"
+#~ msgstr "Seller Icon"
+
+#~ msgid "Area Mark"
+#~ msgstr "Marcar area"

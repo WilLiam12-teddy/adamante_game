@@ -1,0 +1,272 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-04 20:26-0300\n"
+"PO-Revision-Date: 2020-04-04 20:01-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#: city.lua
+msgid "City ID"
+msgstr "City ID"
+
+#: city.lua
+msgid "Create an active city"
+msgstr "Create an active city"
+
+#: city.lua
+msgid "Invalid City ID"
+msgstr "Invalid City ID"
+
+#: city.lua
+msgid "@1 created."
+msgstr "@1 created."
+
+#: city_builder.lua
+msgid "Export failed."
+msgstr "Export failed."
+
+#: city_builder.lua
+msgid ""
+"Schematic successfully exported. Restart the world to import it. '@1' file "
+"is in the world directory ('cities in work' folder)."
+msgstr ""
+"Schematic successfully exported. Restart the world to import it. '@1' file "
+"is in the world directory ('cities in work' folder)."
+
+#: city_builder.lua
+msgid "Import failed."
+msgstr "Import failed."
+
+#: city_builder.lua
+msgid "Schematic successfully imported."
+msgstr "Schematic successfully imported."
+
+#: city_builder.lua
+msgid "City ID (eg. wood_ville)"
+msgstr "City ID (eg. wood_ville)"
+
+#: city_builder.lua
+msgid "Radius"
+msgstr "Radius"
+
+#: city_builder.lua
+msgid "Height"
+msgstr "Height"
+
+#: city_builder.lua
+msgid "Depth"
+msgstr "Depth"
+
+#: city_builder.lua
+msgid "This node is the reference for central position."
+msgstr "This node is the reference for central position."
+
+#: city_builder.lua
+msgid "Spawn position for this city is 6 blocks above this block."
+msgstr "Spawn position for this city is 6 blocks above this block."
+
+#: city_builder.lua
+msgid "Export"
+msgstr "Export"
+
+#: city_builder.lua
+msgid "Import"
+msgstr "Import"
+
+#: city_builder.lua
+msgid "Mark"
+msgstr "Mark"
+
+#: city_builder.lua
+msgid "City Builder"
+msgstr "City Builder"
+
+#: exchange.lua
+msgid "You can not pay that."
+msgstr "You can not pay that."
+
+#: exchange.lua
+msgid "Crowded inventory. Leftovers were dropped."
+msgstr "Crowded inventory. Leftovers were dropped."
+
+#: number_nodes.lua
+msgid "Stone"
+msgstr "Stone"
+
+#: property.lua
+msgid "None"
+msgstr "None"
+
+#: property.lua
+#, fuzzy
+msgid "Sell self property"
+msgstr "Sell my property"
+
+#: property.lua
+msgid "No property."
+msgstr "No property."
+
+#: property_builder.lua
+msgid "Radius (3 - 12)"
+msgstr "Radius (3 - 12)"
+
+#: property_builder.lua
+msgid "Height (3, 5, 8, 10, 12, 14, 16, 18, 20 or 25)"
+msgstr "Height (3, 5, 8, 10, 12, 14, 16, 18, 20 or 25)"
+
+#: property_builder.lua
+msgid "Cost (10 - 9990)"
+msgstr "Cost (10 - 9990)"
+
+#: property_builder.lua
+msgid "Create"
+msgstr "Create"
+
+#: property_builder.lua
+msgid "Property Builder"
+msgstr "Property Builder"
+
+#: property_builder.lua
+msgid "Invalid radius."
+msgstr "Invalid radius."
+
+#: property_builder.lua
+msgid "Invalid height."
+msgstr "Invalid height."
+
+#: property_builder.lua
+msgid "Invalid cost."
+msgstr "Invalid cost."
+
+#: seller_node.lua
+msgid "Make sure you can pay."
+msgstr "Make sure you can pay."
+
+#: seller_node.lua
+msgid "You already own land. Sell it to buy that one."
+msgstr "You already own land. Sell it to buy that one."
+
+#: seller_node.lua
+msgid "Land for sale"
+msgstr "Land for sale"
+
+#: seller_node.lua
+msgid "Height: @1"
+msgstr "Height: @1"
+
+#: seller_node.lua
+msgid "Width: @1"
+msgstr "Width: @1"
+
+#: seller_node.lua
+msgid "Total buildable area: @1 blocks"
+msgstr "Total buildable area: @1 blocks"
+
+#: seller_node.lua
+msgid "Cost: @1"
+msgstr "Cost: @1"
+
+#: seller_node.lua
+msgid "Sale price: @1"
+msgstr "Sale price: @1"
+
+#: seller_node.lua
+msgid "Buy"
+msgstr "Buy"
+
+#: seller_node.lua
+msgid "Insufficient payment."
+msgstr "Insufficient payment."
+
+#: seller_node.lua
+msgid "Land purchased."
+msgstr "Land purchased."
+
+#: sfinv_menu.lua teleporter.lua
+msgid "Choose a city"
+msgstr "Choose a city"
+
+#: sfinv_menu.lua
+msgid "Are you sure?"
+msgstr "Are you sure?"
+
+#: sfinv_menu.lua
+msgid "All the land will be destroyed."
+msgstr "All the land will be destroyed."
+
+#: sfinv_menu.lua
+msgid "Yes"
+msgstr "Yes"
+
+#: sfinv_menu.lua
+msgid "No"
+msgstr "No"
+
+#: sfinv_menu.lua
+msgid "Your land has been sold. You received @1."
+msgstr "Your land has been sold. You received @1."
+
+#: sfinv_menu.lua
+msgid "My Property"
+msgstr "My Property"
+
+#: sfinv_menu.lua
+msgid "You do not have a property."
+msgstr "You do not have a property."
+
+#: sfinv_menu.lua
+msgid "Buy a property in a city."
+msgstr "Buy a property in a city."
+
+#: sfinv_menu.lua
+msgid "No defined"
+msgstr "No defined"
+
+#: sfinv_menu.lua
+msgid "City: @1"
+msgstr "City: @1"
+
+#: sfinv_menu.lua
+msgid "Price: @1"
+msgstr "Price: @1"
+
+#: sfinv_menu.lua
+msgid "Resale price: @1"
+msgstr "Resale price: @1"
+
+#: sfinv_menu.lua
+msgid "Sell my property"
+msgstr "Sell my property"
+
+#: teleporter.lua
+msgid "Go"
+msgstr "Go"
+
+#: teleporter.lua
+msgid "Welcome to @1"
+msgstr "Welcome to @1"
+
+#: teleporter.lua
+msgid "Teleporter"
+msgstr "Teleporter"
+
+#~ msgid "Seller Icon"
+#~ msgstr "Seller Icon"
+
+#~ msgid "Reset self property"
+#~ msgstr "Reset self property"
+
+#~ msgid "Area Mark"
+#~ msgstr "Area Mark"
