@@ -211,3 +211,5 @@ local def = {
 		end
 	end
 }
+
+creatures.register_mob(def)
