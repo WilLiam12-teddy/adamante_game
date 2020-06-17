@@ -1,4 +1,4 @@
---[[
+﻿--[[
 	Mod Sunos para Minetest
 	Copyright (C) 2017 BrunoMine (https://github.com/BrunoMine)
 	
@@ -21,11 +21,6 @@ minetest.register_craftitem("sunos:petisco", {
 	inventory_image = "sunos_petisco_frutas.png",
 	on_use = core.item_eat(tonumber(minetest.setting_get("sunos_item_petisco_eat") or 1)),
 })
-
--- Registrar comida no hbhunger
-if minetest.get_modpath("hbhunger") then
-	hbhunger.register_food("sunos:petisco", tonumber(minetest.setting_get("sunos_item_petisco_eat") or 1), nil, nil, 2, "sunos_comendo_crocante")
-end
 
 minetest.register_node("sunos:expositor_petisco_frutas", {
 	description = S("Expositor de Petisco de Frutas dos Sunos"),

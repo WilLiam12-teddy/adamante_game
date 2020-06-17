@@ -129,26 +129,6 @@ minetest.register_craft({
 	burntime = 50,
 })
 
-if minetest.get_modpath("moreblocks") then
-	register_stair_slab_panel_micro(
-	"bamboo",
-	"block",
-	"bamboo:block",
-	{choppy=2, oddly_breakable_by_hand=2, flammable=2}, {
-		"bamboo_block.png",
-		"bamboo_block.png",
-		"bamboo_bottom.png",
-		"bamboo_bottom.png",
-		"bamboo_block.png",
-		"bamboo_block.png"
-	},
-	"Bamboo",
-	"block",
-	0
-	)
-	table.insert(circular_saw.known_stairs, "bamboo:block")
-end
-
 --ABMs
 
 minetest.register_abm({

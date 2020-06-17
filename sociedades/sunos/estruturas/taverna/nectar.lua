@@ -1,4 +1,4 @@
---[[
+﻿--[[
 	Mod Sunos para Minetest
 	Copyright (C) 2017 BrunoMine (https://github.com/BrunoMine)
 	
@@ -86,11 +86,6 @@ minetest.register_node("sunos:nectar_node", {
 	drop = "sunos:nectar",
 	
 })
-
--- Registrar comida no hbhunger
-if minetest.get_modpath("hbhunger") then
-	hbhunger.register_food("sunos:nectar", tonumber(minetest.setting_get("sunos_item_nectar_eat") or 4), "vessels:glass_bottle", nil, 2, "sunos_bebendo_garrafa_de_vidro")
-end
 
 -- Criar cópia sem Drop (para evitar furtos em estruturas dos sunos)
 do
