@@ -341,23 +341,6 @@ end
 
 
 
-local on_step = function(self, dtime)
-	-- surface drag calculations
-	local cvel, fextra = apply(dtime, self.object)
-
-	-- slow-down damage
-	squish(self, self.object, dtime, cvel, fextra)
-
-	-- check the player is still appropriate, else remove ourselves
-	local kill = check_self_kill(self)
-	if kill then
-		debug("object no longer suitable")
-		self:cleanup()
-		return
-	end
-end
-
-
 
 
 
