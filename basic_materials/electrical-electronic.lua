@@ -4,27 +4,27 @@ local S = minetest.get_translator("basic_materials")
 -- items
 
 minetest.register_craftitem("basic_materials:silicon", {
-	description = S("Silicon lump"),
+	description = S("caroco de silicone"),
 	inventory_image = "basic_materials_silicon.png",
 })
 
 minetest.register_craftitem("basic_materials:ic", {
-	description = S("Simple Integrated Circuit"),
+	description = S("Circuito Integrado Simples"),
 	inventory_image = "basic_materials_ic.png",
 })
 
 minetest.register_craftitem("basic_materials:motor", {
-	description = S("Simple Motor"),
+	description = S("Motor Simples"),
 	inventory_image = "basic_materials_motor.png",
 })
 
 minetest.register_craftitem("basic_materials:heating_element", {
-	description = S("Heating element"),
+	description = S("Elemento de aquecimento"),
 	inventory_image = "basic_materials_heating_element.png",
 })
 
 minetest.register_craftitem("basic_materials:energy_crystal_simple", {
-	description = S("Simple energy crystal"),
+	description = S("Cristal de Energia Simples"),
 	inventory_image = "basic_materials_energy_crystal.png",
 })
 

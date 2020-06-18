@@ -10,7 +10,7 @@ local S, NS = dofile(basic_signs.path .. "/intllib.lua")
 basic_signs.gettext = S
 
 signs_lib.register_sign("basic_signs:sign_wall_locked", {
-	description = S("Locked Sign"),
+	description = S("Placa Trancada"),
 	tiles = {
 		"basic_signs_sign_wall_locked.png",
 		"signs_lib_sign_wall_steel_edges.png"
@@ -26,7 +26,7 @@ signs_lib.register_sign("basic_signs:sign_wall_locked", {
 })
 
 signs_lib.register_sign("basic_signs:sign_wall_glass", {
-	description = S("Glass Sign"),
+	description = S("Placa de Vidro"),
 	yard_mesh = "signs_lib_standard_sign_yard_two_sticks.obj",
 	tiles = {
 		{ name = "basic_signs_sign_wall_glass.png", backface_culling = true},
@@ -49,7 +49,7 @@ signs_lib.register_sign("basic_signs:sign_wall_glass", {
 })
 
 signs_lib.register_sign("basic_signs:sign_wall_obsidian_glass", {
-	description = S("Obsidian Glass Sign"),
+	description = S("Placa de Video de Obsidian"),
 	yard_mesh = "signs_lib_standard_sign_yard_two_sticks.obj",
 	tiles = {
 		{ name = "basic_signs_sign_wall_obsidian_glass.png", backface_culling = true},
@@ -74,7 +74,7 @@ signs_lib.register_sign("basic_signs:sign_wall_obsidian_glass", {
 minetest.register_alias("locked_sign:sign_wall_locked", "basic_signs:sign_wall_locked")
 
 signs_lib.register_sign("basic_signs:sign_wall_plastic", {
-	description = S("Plastic Sign"),
+	description = S("Placa de Plastico"),
 	yard_mesh = "signs_lib_standard_sign_yard_two_sticks.obj",
 	tiles = {
 		"basic_signs_sign_wall_plastic.png",
@@ -99,21 +99,21 @@ signs_lib.register_sign("basic_signs:sign_wall_plastic", {
 -- array : color, translated color, default text color
 
 local sign_colors = {
-	{"green",        S("green"),       "f"},
-	{"yellow",       S("yellow"),      "0"},
-	{"red",          S("red"),         "f"},
-	{"white_red",    S("white_red"),   "4"},
+	{"green",        S("verde"),       "f"},
+	{"yellow",       S("amarelo"),      "0"},
+	{"red",          S("vermelho"),         "f"},
+	{"white_red",    S("vermelho claro"),   "4"},
 	{"white_black",  S("white_black"), "0"},
-	{"orange",       S("orange"),      "0"},
-	{"blue",         S("blue"),        "f"},
-	{"brown",        S("brown"),       "f"},
+	{"orange",       S("laranja"),      "0"},
+	{"blue",         S("azul"),        "f"},
+	{"brown",        S("marrom"),       "f"},
 }
 
 local cbox = signs_lib.make_selection_boxes(35, 25, true, 0, 0, 0, true)
 
 for i, color in ipairs(sign_colors) do
 	signs_lib.register_sign("basic_signs:sign_wall_steel_"..color[1], {
-		description = S("Sign (@1, steel)", color[2]),
+		description = S("Placa (@1, ferro)", color[2]),
 		paramtype2 = "facedir",
 		selection_box = cbox,
 		mesh = "signs_lib_standard_facedir_sign_wall.obj",

@@ -4,62 +4,62 @@ local S = minetest.get_translator("basic_materials")
 -- items
 
 minetest.register_craftitem("basic_materials:steel_wire", {
-	description = S("Spool of steel wire"),
+	description = S("Carretel de fio de aco"),
 	inventory_image = "basic_materials_steel_wire.png"
 })
 
 minetest.register_craftitem("basic_materials:copper_wire", {
-	description = S("Spool of copper wire"),
+	description = S("Carretel de fio de cobre"),
 	inventory_image = "basic_materials_copper_wire.png"
 })
 
 minetest.register_craftitem("basic_materials:silver_wire", {
-	description = S("Spool of silver wire"),
+	description = S("Carretel de fio de Prata"),
 	inventory_image = "basic_materials_silver_wire.png"
 })
 
 minetest.register_craftitem("basic_materials:gold_wire", {
-	description = S("Spool of gold wire"),
+	description = S("Carretel de fio de Ouro"),
 	inventory_image = "basic_materials_gold_wire.png"
 })
 
 minetest.register_craftitem("basic_materials:steel_strip", {
-	description = S("Steel Strip"),
+	description = S("Tiras de aco"),
 	inventory_image = "basic_materials_steel_strip.png"
 })
 
 minetest.register_craftitem("basic_materials:copper_strip", {
-	description = S("Copper Strip"),
+	description = S("Tiras de cobre"),
 	inventory_image = "basic_materials_copper_strip.png"
 })
 
 minetest.register_craftitem("basic_materials:steel_bar", {
-	description = S("Steel Bar"),
+	description = S("Barra de Aco"),
 	inventory_image = "basic_materials_steel_bar.png",
 })
 
 minetest.register_craftitem("basic_materials:chainlink_brass", {
-	description = S("Chainlinks (brass)"),
+	description = S("Chainlinks (latao)"),
 	inventory_image = "basic_materials_chainlink_brass.png"
 })
 
 minetest.register_craftitem("basic_materials:chainlink_steel", {
-	description = S("Chainlinks (steel)"),
+	description = S("Chainlinks (ferro)"),
 	inventory_image = "basic_materials_chainlink_steel.png"
 })
 
 minetest.register_craftitem("basic_materials:brass_ingot", {
-	description = S("Brass Ingot"),
+	description = S("Lingote de latao"),
 	inventory_image = "basic_materials_brass_ingot.png",
 })
 
 minetest.register_craftitem("basic_materials:gear_steel", {
-	description = S("Steel gear"),
+	description = S("Engrenagem de aco"),
 	inventory_image = "basic_materials_gear_steel.png"
 })
 
 minetest.register_craftitem("basic_materials:padlock", {
-	description = S("Padlock"),
+	description = S("Cadeado"),
 	inventory_image = "basic_materials_padlock.png"
 })
 
@@ -79,7 +79,7 @@ local topchains_sbox = {
 }
 
 minetest.register_node("basic_materials:chain_steel", {
-	description = S("Chain (steel, hanging)"),
+	description = S("Corrente (steel, hanging)"),
 	drawtype = "mesh",
 	mesh = "basic_materials_chains.obj",
 	tiles = {"basic_materials_chain_steel.png"},
@@ -93,7 +93,7 @@ minetest.register_node("basic_materials:chain_steel", {
 })
 
 minetest.register_node("basic_materials:chain_brass", {
-	description = S("Chain (brass, hanging)"),
+	description = S("Corrente (brass, hanging)"),
 	drawtype = "mesh",
 	mesh = "basic_materials_chains.obj",
 	tiles = {"basic_materials_chain_brass.png"},
@@ -107,7 +107,7 @@ minetest.register_node("basic_materials:chain_brass", {
 })
 
 minetest.register_node("basic_materials:brass_block", {
-	description = S("Brass Block"),
+	description = S("Bloco de Latao"),
 	tiles = { "basic_materials_brass_block.png" },
 	is_ground_content = false,
 	groups = {cracky=1, level=2},

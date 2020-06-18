@@ -4,17 +4,17 @@ local S = minetest.get_translator("basic_materials")
 -- items
 
 minetest.register_craftitem("basic_materials:plastic_sheet", {
-	description = S("Plastic sheet"),
+	description = S("folha de plastico"),
 	inventory_image = "basic_materials_plastic_sheet.png",
 })
 
 minetest.register_craftitem("basic_materials:plastic_strip", {
-	description = S("Plastic strips"),
+	description = S("Tiras de Plastico"),
 	inventory_image = "basic_materials_plastic_strip.png",
 })
 
 minetest.register_craftitem("basic_materials:empty_spool", {
-	description = S("Empty wire spool"),
+	description = S("Carretel de fio vazio"),
 	inventory_image = "basic_materials_empty_spool.png"
 })
 

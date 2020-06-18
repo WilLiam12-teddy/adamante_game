@@ -4,29 +4,29 @@ local S = minetest.get_translator("basic_materials")
 -- items
 
 minetest.register_craftitem("basic_materials:oil_extract", {
-	description = S("Oil extract"),
+	description = S("Extrato de Oleo"),
 	inventory_image = "basic_materials_oil_extract.png",
 })
 
 minetest.register_craftitem("basic_materials:paraffin", {
-	description = S("Unprocessed paraffin"),
+	description = S("Parafina nao processada"),
 	inventory_image = "basic_materials_paraffin.png",
 })
 
 minetest.register_craftitem("basic_materials:terracotta_base", {
-	description = S("Uncooked Terracotta Base"),
+	description = S("Base de terracota nao cozida"),
 	inventory_image = "basic_materials_terracotta_base.png",
 })
 
 minetest.register_craftitem("basic_materials:wet_cement", {
-	description = S("Wet Cement"),
+	description = S("Cimento molhado"),
 	inventory_image = "basic_materials_wet_cement.png",
 })
 
 -- nodes
 
 minetest.register_node("basic_materials:cement_block", {
-	description = S("Cement"),
+	description = S("Cimento"),
 	tiles = {"basic_materials_cement_block.png"},
 	is_ground_content = true,
 	groups = {cracky=2},
@@ -34,7 +34,7 @@ minetest.register_node("basic_materials:cement_block", {
 })
 
 minetest.register_node("basic_materials:concrete_block", {
-	description = S("Concrete Block"),
+	description = S("Bloco de Concreto"),
 	tiles = {"basic_materials_concrete_block.png",},
 	groups = {cracky=1, level=2, concrete=1},
 	sounds = default.node_sound_stone_defaults(),

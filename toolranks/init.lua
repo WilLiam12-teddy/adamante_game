@@ -81,7 +81,7 @@ function toolranks.new_afteruse(itemstack, user, node, digparams)
     most_digs = dugnodes
     if(most_digs_user ~= user:get_player_name()) then -- Avoid spam.
       most_digs_user = user:get_player_name()
-      minetest.chat_send_all(S("Most used tool is now a @1@2@3 owned by @4 with @5 uses.",
+      minetest.chat_send_all(S("A ferramenta mais usada agora e um(a) @1@2@3 pertencente a @4 com @5 usos.",
                                toolranks.colors.green,
                                itemdesc,
                                toolranks.colors.white,
