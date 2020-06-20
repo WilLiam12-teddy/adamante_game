@@ -31,12 +31,8 @@ stepheight = 0.6,
 	light_damage = 0,
 	fear_height = 2,
 	on_rightclick = function(self, clicker)
-		mobs:capture_mob(self, clicker, 100, 100, 100, true, "mobs_animal:rat")
+		mobs:capture_mob(self, clicker, 50, 90, 0, true, "mobs_animal:rat")
 	end,
-        -- rats grow up after one day
-        growup_duration = 60 * 60 * 24,
-        -- rats feel like breeding after three days
-        breed_duration = 60 * 60 * 24 * 3,
 --[[
 	do_custom = function(self, dtime)
 
@@ -73,11 +69,11 @@ end
 
 mobs:spawn({
 	name = "mobs_animal:rat",
-	nodes = {"default:dirt_with_grass"},
+	nodes = {"default:stone"},
 	min_light = 3,
 	max_light = 9,
 	interval = 60,
-	chance = 100000,
+	chance = 8000,
 	max_height = 0,
 --	on_spawn = rat_spawn,
 })

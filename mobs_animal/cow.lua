@@ -19,6 +19,7 @@ mobs:register_mob("mobs_animal:cow", {
 	mesh = "mobs_cow.b3d",
 	textures = {
 		{"mobs_cow.png"},
+		{"mobs_cow2.png"},
 	},
 	makes_footstep_sound = true,
 	sounds = {
@@ -30,33 +31,32 @@ mobs:register_mob("mobs_animal:cow", {
 	jump_height = 6,
 	pushable = true,
 	drops = {
-		{name = "mobs:meat_raw", chance = 1, min = 45, max = 55},
-                {name = "mobs:meat_raw", chance = 1, min = 45, max = 55},
-		{name = "mobs:leather", chance = 1, min = 25, max = 35}
+		{name = "mobs:meat_raw", chance = 1, min = 1, max = 3},
+		{name = "mobs:leather", chance = 1, min = 0, max = 2},
 	},
 	water_damage = 0,
 	lava_damage = 5,
 	light_damage = 0,
-        visual_size = {
-           x = 10,
-           y = 10,
-        },
 	animation = {
 		stand_start = 0,
-		stand_end = 0,
+		stand_end = 30,
 		stand_speed = 20,
-
-		stand2_start = 10,
-		stand2_end = 70,
-		stand2_speed = 10,
-
-		walk_start = 70,
-		walk_end = 100,
+		stand1_start = 35,
+		stand1_end = 75,
+		stand1_speed = 20,
+		walk_start = 85,
+		walk_end = 114,
 		walk_speed = 20,
-
-		run_start = 70,
-		run_end = 100,
+		run_start = 120,
+		run_end = 140,
 		run_speed = 30,
+		punch_start = 145,
+		punch_end = 160,
+		punch_speed = 20,
+		die_start = 165,
+		die_end = 185,
+		die_speed = 10,
+		die_loop = false,
 	},
 	follow = {"farming:wheat", "default:grass_1"},
 	view_range = 8,
@@ -65,13 +65,8 @@ mobs:register_mob("mobs_animal:cow", {
 		{"group:grass", "air", 0},
 		{"default:dirt_with_grass", "default:dirt", -1}
 	},
+--	stay_near = {{"farming:straw", "group:grass"}, 10},
 	fear_height = 2,
-        -- cows grow up after three days
-        growup_duration = 60 * 60 * 24 * 3,
-        -- growup_duration = 60,
-        -- cows feel like breeding after three days
-        breed_duration = 60 * 60 * 24 * 3,
-        -- breed_duration = 60,
 	on_rightclick = function(self, clicker)
 
 		-- feed or tame
@@ -84,6 +79,9 @@ mobs:register_mob("mobs_animal:cow", {
 
 			return
 		end
+
+		if mobs:protect(self, clicker) then return end
+		if mobs:capture_mob(self, clicker, 0, 5, 60, false, nil) then return end
 
 		local tool = clicker:get_wielded_item()
 		local name = clicker:get_player_name()
@@ -140,16 +138,10 @@ mobs:spawn({
 	neighbors = {"group:grass"},
 	min_light = 14,
 	interval = 60,
-        -- 2000 approx. equals one cow spawn per minute per player
-        -- we want one cow spawn per day
-        -- 2000 * 60 * 24 = 2880000
-        --
-        -- Important to note that cows will feel rarer because players won't
-        -- fully explore all areas that they load.
-	chance = 2880000,
+	chance = 8000, -- 15000
 	min_height = 5,
 	max_height = 200,
-	day_toggle = nil,
+	day_toggle = true,
 })
 
 

@@ -23,22 +23,22 @@ stepheight = 0.6,
 	},
 	sounds = {},
 	makes_footstep_sound = false,
-	walk_velocity = 3,
-	run_velocity = 6,
+	walk_velocity = 1,
+	run_velocity = 2,
 	runaway = true,
 	runaway_from = {"mobs_animal:pumba", "player"},
 	jump = true,
 	jump_height = 6,
 	drops = {
-		{name = "mobs:rabbit_raw", chance = 1, min = 2, max = 4},
-		{name = "mobs:rabbit_hide", chance = 1, min = 2, max = 4},
+		{name = "mobs:rabbit_raw", chance = 1, min = 1, max = 1},
+		{name = "mobs:rabbit_hide", chance = 1, min = 0, max = 1},
 	},
 	water_damage = 0,
 	lava_damage = 4,
 	light_damage = 0,
 	fear_height = 2,
 	animation = {
-		speed_normal = 25,
+		speed_normal = 15,
 		stand_start = 1,
 		stand_end = 15,
 		walk_start = 16,
@@ -47,16 +47,16 @@ stepheight = 0.6,
 		punch_end = 24,
 	},
 	follow = {"farming:carrot", "farming_plus:carrot_item", "default:grass_1"},
-	view_range = 10,
+	view_range = 8,
 	replace_rate = 10,
 	replace_what = {"farming:carrot_7", "farming:carrot_8", "farming_plus:carrot"},
 	replace_with = "air",
 	on_rightclick = function(self, clicker)
 
 		-- feed or tame
-		-- if mobs:feed_tame(self, clicker, 4, true, true) then return end
-		-- if mobs:protect(self, clicker) then return end
-		-- if mobs:capture_mob(self, clicker, 30, 50, 80, false, nil) then return end
+		if mobs:feed_tame(self, clicker, 4, true, true) then return end
+		if mobs:protect(self, clicker) then return end
+		if mobs:capture_mob(self, clicker, 30, 50, 80, false, nil) then return end
 
 		-- Monty Python tribute
 		local item = clicker:get_wielded_item()
@@ -119,9 +119,10 @@ mobs:spawn({
 	neighbors = {"group:grass"},
 	min_light = 14,
 	interval = 60,
-	chance = 10000,
-	min_height = 0,
+	chance = 8000, -- 15000
+	min_height = 5,
 	max_height = 200,
+	day_toggle = true,
 })
 
 
@@ -144,7 +145,7 @@ minetest.register_craftitem(":mobs:rabbit_cooked", {
 	description = S("Cooked Rabbit"),
 	inventory_image = "mobs_rabbit_cooked.png",
 	on_use = minetest.item_eat(5),
-	groups = {food_meat = 1, food_rabbit = 1, flammable = 2, food_cooked_meat = 1},
+	groups = {food_meat = 1, food_rabbit = 1, flammable = 2},
 })
 
 minetest.register_craft({

@@ -44,20 +44,6 @@ mobs:register_mob("zombie:zombie", {
 	},
 })
 
-mobs:spawn_specific(
---[[               name]] "zombie:zombie",
---[[              nodes]] {"group:stone", "group:soil", "group:sand"},
---[[          neighbors]] "air",
---[[          min_light]] 0,
---[[          max_light]] 5,
---[[           interval]] 10,
---[[             chance]] 3,
---[[active_object_count]] 1,
---[[         min_height]] -30911,
---[[         max_height]] 30911)
-
-mobs:register_egg("zombie:zombie", "Zombie", "zombie_head.png", 0)
-
 minetest.register_craftitem("zombie:rotten_flesh", {
 	description = "Rotten Flesh",
 	inventory_image = "mobs_rotten_flesh.png",

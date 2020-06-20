@@ -38,8 +38,7 @@ stepheight = 1.1,
 	runaway = true,
 	jump = false,
 	drops = {
-                {name = "mobs:meat_raw", chance = 1, min = 3, max = 5},
-		{name = "mobs:leather", chance = 1, min = 3, max = 5}
+		{name = "farming:string", chance = 1, min = 0, max = 1},
 	},
 	water_damage = 0,
 	lava_damage = 5,
@@ -55,13 +54,12 @@ stepheight = 1.1,
 	},
 	follow = {"mobs_animal:rat", "ethereal:fish_raw", "mobs_fish:clownfish", "mobs_fish:tropical"},
 	view_range = 8,
-        -- kittens grow up after two days
-        growup_duration = 60 * 60 * 24 * 2,
-        -- kittens feel like breeding after two days
-        breed_duration = 60 * 60 * 24 * 2,
+
 	on_rightclick = function(self, clicker)
 
 		if mobs:feed_tame(self, clicker, 4, true, true) then return end
+		if mobs:protect(self, clicker) then return end
+		if mobs:capture_mob(self, clicker, 50, 50, 90, false, nil) then return end
 
 		-- by right-clicking owner can switch between staying and walking
 		if self.owner and self.owner == clicker:get_player_name() then
@@ -120,7 +118,7 @@ mobs:spawn({
 	neighbors = {"group:grass"},
 	min_light = 14,
 	interval = 60,
-	chance = 1440000,
+	chance = 10000, -- 22000
 	min_height = 5,
 	max_height = 50,
 	day_toggle = true,
