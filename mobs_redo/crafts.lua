@@ -36,7 +36,7 @@ minetest.register_craftitem("mobs:meat", {
 	description = S("Meat"),
 	inventory_image = "mobs_meat.png",
 	on_use = minetest.item_eat(8),
-	groups = {food_meat = 1, flammable = 2}
+	groups = {food_meat = 1, flammable = 2, food_cooked_meat = 1}
 })
 
 minetest.register_craft({
@@ -52,17 +52,6 @@ minetest.register_tool("mobs:lasso", {
 	inventory_image = "mobs_magic_lasso.png",
 	groups = {flammable = 2}
 })
-
-if minetest.get_modpath("farming") then
-	minetest.register_craft({
-		output = "mobs:lasso",
-		recipe = {
-			{"farming:string", "", "farming:string"},
-			{"", "default:diamond", ""},
-			{"farming:string", "", "farming:string"}
-		}
-	})
-end
 
 minetest.register_alias("mobs:magic_lasso", "mobs:lasso")
 
@@ -106,15 +95,6 @@ minetest.register_craftitem("mobs:protector", {
 	groups = {flammable = 2}
 })
 
-minetest.register_craft({
-	output = "mobs:protector",
-	recipe = {
-		{"default:stone", "default:stone", "default:stone"},
-		{"default:stone", "default:goldblock", "default:stone"},
-		{"default:stone", "default:stone", "default:stone"}
-	}
-})
-
 -- saddle
 minetest.register_craftitem("mobs:saddle", {
 	description = S("Saddle"),
@@ -130,10 +110,6 @@ minetest.register_craft({
 		{"mobs:leather", "default:steel_ingot", "mobs:leather"}
 	}
 })
-
-
--- make sure we can register fences
-if default.register_fence then
 
 -- mob fence (looks like normal fence but collision is 2 high)
 default.register_fence("mobs:fence_wood", {
@@ -181,9 +157,6 @@ minetest.register_craft({
 	}
 })
 
-end
-
-
 -- items that can be used as fuel
 minetest.register_craft({
 	type = "fuel",
@@ -226,7 +199,6 @@ minetest.register_craft({
 	recipe = "mobs:fence_top",
 	burntime = 2
 })
-
 
 -- this tool spawns same mob and adds owner, protected, nametag info
 -- then removes original entity, this is used for fixing any issues.
@@ -302,6 +274,8 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 	and fields.name
 	and fields.name ~= "" then
 
+		local name = player:get_player_name()
+
 		-- does mob still exist?
 		if not tex_obj
 		or not tex_obj:get_luaentity() then
@@ -316,8 +290,8 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 		end
 
 		-- limit name entered to 64 characters long
-		if fields.name:len() > 64 then
-			fields.name = fields.name:sub(1, 64)
+		if string.len(fields.name) > 64 then
+			fields.name = string.sub(fields.name, 1, 64)
 		end
 
 		-- update texture

@@ -19,8 +19,7 @@ minetest.register_node("mobs:spawner", {
 
 		-- text entry formspec
 		meta:set_string("formspec",
-			"field[text;" .. S("Mob MinLight MaxLight Amount PlayerDist")
-			.. ";${command}]")
+			"field[text;" .. S("Mob MinLight MaxLight Amount PlayerDist") .. ";${command}]")
 		meta:set_string("infotext", S("Spawner Not Active (enter settings)"))
 		meta:set_string("command", spawner_default)
 	end,
@@ -116,10 +115,10 @@ minetest.register_abm({
 		-- check objects inside 9x9 area around spawner
 		local objs = minetest.get_objects_inside_radius(pos, 9)
 		local count = 0
-		local ent
+		local ent = nil
 
 		-- count mob objects of same type in area
-		for _, obj in ipairs(objs) do
+		for k, obj in ipairs(objs) do
 
 			ent = obj:get_luaentity()
 
@@ -137,9 +136,9 @@ minetest.register_abm({
 		if pla > 0 then
 
 			local in_range = 0
-			local objsp = minetest.get_objects_inside_radius(pos, pla)
+			local objs = minetest.get_objects_inside_radius(pos, pla)
 
-			for _, oir in pairs(objsp) do
+			for _,oir in pairs(objs) do
 
 				if oir:is_player() then
 
@@ -158,7 +157,8 @@ minetest.register_abm({
 		-- find air blocks within 5 nodes of spawner
 		local air = minetest.find_nodes_in_area(
 			{x = pos.x - 5, y = pos.y + yof, z = pos.z - 5},
-			{x = pos.x + 5, y = pos.y + yof, z = pos.z + 5}, {"air"})
+			{x = pos.x + 5, y = pos.y + yof, z = pos.z + 5},
+			{"air"})
 
 		-- spawn in random air block
 		if air and #air > 0 then
