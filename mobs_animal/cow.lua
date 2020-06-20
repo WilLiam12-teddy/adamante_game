@@ -2,7 +2,7 @@
 local S = mobs.intllib
 
 
--- Cow by Krupnovpavel (additional texture by JurajVajda)
+-- Cow by sirrobzeroone
 
 mobs:register_mob("mobs_animal:cow", {
 	type = "animal",
@@ -16,10 +16,9 @@ mobs:register_mob("mobs_animal:cow", {
 	armor = 200,
 	collisionbox = {-0.4, -0.01, -0.4, 0.4, 1.2, 0.4},
 	visual = "mesh",
-	mesh = "mobs_cow.x",
+	mesh = "mobs_cow.b3d",
 	textures = {
 		{"mobs_cow.png"},
-		{"mobs_cow2.png"},
 	},
 	makes_footstep_sound = true,
 	sounds = {
@@ -31,23 +30,33 @@ mobs:register_mob("mobs_animal:cow", {
 	jump_height = 6,
 	pushable = true,
 	drops = {
-		{name = "mobs:meat_raw", chance = 1, min = 1, max = 3},
-		{name = "mobs:leather", chance = 1, min = 0, max = 2},
+		{name = "mobs:meat_raw", chance = 1, min = 45, max = 55},
+                {name = "mobs:meat_raw", chance = 1, min = 45, max = 55},
+		{name = "mobs:leather", chance = 1, min = 25, max = 35}
 	},
 	water_damage = 0,
 	lava_damage = 5,
 	light_damage = 0,
+        visual_size = {
+           x = 10,
+           y = 10,
+        },
 	animation = {
-		speed_normal = 15,
-		speed_run = 15,
 		stand_start = 0,
-		stand_end = 30,
-		walk_start = 35,
-		walk_end = 65,
-		run_start = 105,
-		run_end = 135,
-		punch_start = 70,
-		punch_end = 100,
+		stand_end = 0,
+		stand_speed = 20,
+
+		stand2_start = 10,
+		stand2_end = 70,
+		stand2_speed = 10,
+
+		walk_start = 70,
+		walk_end = 100,
+		walk_speed = 20,
+
+		run_start = 70,
+		run_end = 100,
+		run_speed = 30,
 	},
 	follow = {"farming:wheat", "default:grass_1"},
 	view_range = 8,
@@ -57,6 +66,12 @@ mobs:register_mob("mobs_animal:cow", {
 		{"default:dirt_with_grass", "default:dirt", -1}
 	},
 	fear_height = 2,
+        -- cows grow up after three days
+        growup_duration = 60 * 60 * 24 * 3,
+        -- growup_duration = 60,
+        -- cows feel like breeding after three days
+        breed_duration = 60 * 60 * 24 * 3,
+        -- breed_duration = 60,
 	on_rightclick = function(self, clicker)
 
 		-- feed or tame
@@ -69,9 +84,6 @@ mobs:register_mob("mobs_animal:cow", {
 
 			return
 		end
-
-		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 0, 5, 60, false, nil) then return end
 
 		local tool = clicker:get_wielded_item()
 		local name = clicker:get_player_name()
@@ -108,6 +120,7 @@ mobs:register_mob("mobs_animal:cow", {
 			return
 		end
 	end,
+
 	on_replace = function(self, pos, oldnode, newnode)
 
 		self.food = (self.food or 0) + 1
@@ -127,14 +140,20 @@ mobs:spawn({
 	neighbors = {"group:grass"},
 	min_light = 14,
 	interval = 60,
-	chance = 8000, -- 15000
+        -- 2000 approx. equals one cow spawn per minute per player
+        -- we want one cow spawn per day
+        -- 2000 * 60 * 24 = 2880000
+        --
+        -- Important to note that cows will feel rarer because players won't
+        -- fully explore all areas that they load.
+	chance = 2880000,
 	min_height = 5,
 	max_height = 200,
-	day_toggle = true,
+	day_toggle = nil,
 })
 
 
-mobs:register_egg("mobs_animal:cow", S("Cow"), "default_grass.png", 1)
+mobs:register_egg("mobs_animal:cow", S("Cow"), "mobs_cow_inv.png")
 
 
 mobs:alias_mob("mobs:cow", "mobs_animal:cow") -- compatibility
@@ -145,7 +164,7 @@ minetest.register_craftitem(":mobs:bucket_milk", {
 	description = S("Bucket of Milk"),
 	inventory_image = "mobs_bucket_milk.png",
 	stack_max = 1,
-	on_use = minetest.item_eat(8, 'bucket:bucket_empty'),
+	on_use = minetest.item_eat(8, "bucket:bucket_empty"),
 	groups = {food_milk = 1, flammable = 3},
 })
 
@@ -153,7 +172,7 @@ minetest.register_craftitem(":mobs:bucket_milk", {
 minetest.register_craftitem(":mobs:glass_milk", {
 	description = S("Glass of Milk"),
 	inventory_image = "mobs_glass_milk.png",
-	on_use = minetest.item_eat(2, 'vessels:drinking_glass'),
+	on_use = minetest.item_eat(2, "vessels:drinking_glass"),
 	groups = {food_milk_glass = 1, flammable = 3, vessel = 1},
 })
 
@@ -161,9 +180,9 @@ minetest.register_craft({
 	type = "shapeless",
 	output = "mobs:glass_milk 4",
 	recipe = {
-		'vessels:drinking_glass', 'vessels:drinking_glass',
-		'vessels:drinking_glass', 'vessels:drinking_glass',
-		'mobs:bucket_milk'
+		"vessels:drinking_glass", "vessels:drinking_glass",
+		"vessels:drinking_glass", "vessels:drinking_glass",
+		"mobs:bucket_milk"
 	},
 	replacements = { {"mobs:bucket_milk", "bucket:bucket_empty"} }
 })
@@ -172,9 +191,9 @@ minetest.register_craft({
 	type = "shapeless",
 	output = "mobs:bucket_milk",
 	recipe = {
-		'mobs:glass_milk', 'mobs:glass_milk',
-		'mobs:glass_milk', 'mobs:glass_milk',
-		'bucket:bucket_empty'
+		"mobs:glass_milk", "mobs:glass_milk",
+		"mobs:glass_milk", "mobs:glass_milk",
+		"bucket:bucket_empty"
 	},
 	replacements = { {"mobs:glass_milk", "vessels:drinking_glass 4"} }
 })
@@ -232,15 +251,15 @@ minetest.register_node(":mobs:cheeseblock", {
 minetest.register_craft({
 	output = "mobs:cheeseblock",
 	recipe = {
-		{'mobs:cheese', 'mobs:cheese', 'mobs:cheese'},
-		{'mobs:cheese', 'mobs:cheese', 'mobs:cheese'},
-		{'mobs:cheese', 'mobs:cheese', 'mobs:cheese'},
+		{"mobs:cheese", "mobs:cheese", "mobs:cheese"},
+		{"mobs:cheese", "mobs:cheese", "mobs:cheese"},
+		{"mobs:cheese", "mobs:cheese", "mobs:cheese"},
 	}
 })
 
 minetest.register_craft({
 	output = "mobs:cheese 9",
 	recipe = {
-		{'mobs:cheeseblock'},
+		{"mobs:cheeseblock"},
 	}
 })

@@ -31,8 +31,8 @@ stepheight = 0.6,
 	runaway = true,
 	runaway_from = {"player", "mobs_animal:pumba"},
 	drops = {
-		{name = "mobs:chicken_raw", chance = 1, min = 1, max = 1},
-		{name = "mobs:chicken_feather", chance = 1, min = 0, max = 2},
+		{name = "mobs:chicken_raw", chance = 1, min = 4, max = 6},
+		{name = "mobs:chicken_feather", chance = 1, min = 20, max = 40},
 	},
 	water_damage = 1,
 	lava_damage = 5,
@@ -57,12 +57,15 @@ stepheight = 0.6,
 	},
 	follow = {"farming:seed_wheat", "farming:seed_cotton"},
 	view_range = 5,
+        -- chickens grow up after one days
+        growup_duration = 60 * 60 * 24,
+        -- chickens feel like breeding after two days
+        breed_duration = 60 * 60 * 24 * 2,
 
 	on_rightclick = function(self, clicker)
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
-		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 30, 50, 80, false, nil) then return end
+
 	end,
 
 	do_custom = function(self, dtime)
@@ -103,7 +106,7 @@ mobs:spawn({
 	neighbors = {"group:grass"},
 	min_light = 14,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 1440000,
 	min_height = 5,
 	max_height = 200,
 	day_toggle = true,
@@ -137,53 +140,13 @@ mobs:register_arrow("mobs_animal:egg_entity", {
 			damage_groups = {fleshy = 1},
 		}, nil)
 	end,
-
-	hit_node = function(self, pos, node)
-
-		if math.random(1, 10) > 1 then
-			return
-		end
-
-		pos.y = pos.y + 1
-
-		local nod = minetest.get_node_or_nil(pos)
-
-		if not nod
-		or not minetest.registered_nodes[nod.name]
-		or minetest.registered_nodes[nod.name].walkable == true then
-			return
-		end
-
-		local mob = minetest.add_entity(pos, "mobs_animal:chicken")
-		local ent2 = mob:get_luaentity()
-
-		mob:set_properties({
-			textures = ent2.child_texture[1],
-			visual_size = {
-				x = ent2.base_size.x / 2,
-				y = ent2.base_size.y / 2
-			},
-			collisionbox = {
-				ent2.base_colbox[1] / 2,
-				ent2.base_colbox[2] / 2,
-				ent2.base_colbox[3] / 2,
-				ent2.base_colbox[4] / 2,
-				ent2.base_colbox[5] / 2,
-				ent2.base_colbox[6] / 2
-			},
-		})
-
-		ent2.child = true
-		ent2.tamed = true
-		ent2.owner = self.playername
-	end
 })
 
 
 -- egg throwing item
 
-local egg_GRAVITY = 9
-local egg_VELOCITY = 19
+local egg_GRAVITY = 11
+local egg_VELOCITY = 25
 
 -- shoot egg
 local mobs_shoot_egg = function (item, player, pointed_thing)

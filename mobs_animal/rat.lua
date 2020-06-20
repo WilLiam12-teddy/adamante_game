@@ -2,7 +2,7 @@
 local S = mobs.intllib
 
 
--- Rat by PilzAdam
+-- Rat by PilzAdam (B3D model by sirrobzeroone)
 
 mobs:register_mob("mobs_animal:rat", {
 stepheight = 0.6,
@@ -31,8 +31,12 @@ stepheight = 0.6,
 	light_damage = 0,
 	fear_height = 2,
 	on_rightclick = function(self, clicker)
-		mobs:capture_mob(self, clicker, 50, 90, 0, true, "mobs_animal:rat")
+		mobs:capture_mob(self, clicker, 100, 100, 100, true, "mobs_animal:rat")
 	end,
+        -- rats grow up after one day
+        growup_duration = 60 * 60 * 24,
+        -- rats feel like breeding after three days
+        breed_duration = 60 * 60 * 24 * 3,
 --[[
 	do_custom = function(self, dtime)
 
@@ -69,17 +73,17 @@ end
 
 mobs:spawn({
 	name = "mobs_animal:rat",
-	nodes = {"default:stone"},
+	nodes = {"default:dirt_with_grass"},
 	min_light = 3,
 	max_light = 9,
 	interval = 60,
-	chance = 8000,
+	chance = 100000,
 	max_height = 0,
 --	on_spawn = rat_spawn,
 })
 
 
-mobs:register_egg("mobs_animal:rat", S("Rat"), "mobs_rat_inventory.png", 0)
+mobs:register_egg("mobs_animal:rat", S("Rat"), "mobs_rat_inv.png")
 
 
 mobs:alias_mob("mobs:rat", "mobs_animal:rat") -- compatibility
