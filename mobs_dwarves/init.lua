@@ -1,4 +1,4 @@
---[[
+﻿--[[
 	Mobs Dwarves - Adds dwarves.
 	Copyright © 2018, 2019 Hamlet <hamlatmesehub@riseup.net> and contributors.
 
@@ -1337,35 +1337,6 @@ local i_SpawnerMultiplier = 1
 if (minetest.get_modpath("goblins") ~= nil) then
 	i_SpawnerMultiplier = 6
 end
-
-
-mobs:spawn({
-	name = "mobs_dwarves:dwarf",
-	nodes = {
-		"default:stone", "castle_masonry:pavement_brick",
-		"dfcaverns:dirt_with_cave_moss", "dfcaverns:cobble_with_floor_fungus"
-	},
-	neighbors = "air",
-	max_light = 13,
-	min_light = 0,
-	chance = 5000,
-	active_object_count = (2 * i_SpawnerMultiplier),
-	min_height = -31000,
-	max_height = -300
-})
-
--- Spawn Egg
-
-mobs:register_egg("mobs_dwarves:dwarf", S("Spawn Dwarf"),
-	"mobs_dwarves_icon.png")
-
-
---
--- Alias
---
-
-mobs:alias_mob("mobs:dwarf", "mobs_dwarves:dwarf")
-
 
 --
 -- Minetest engine debug logging
