@@ -458,7 +458,7 @@ apartment.rent = function( pos, pname, oldmetadata, actor )
 						-- change the actual owner
 						-- set a fitting infotext
 						local itext = 'Object in Ap. '..descr..' ('..rented_by..')';
-						local n = minetest.get_node( {x=px, y=py, z=pz} );
+						n = minetest.get_node( {x=px, y=py, z=pz} );
 						if( n.name == 'default:chest_locked' ) then
 							if( pname == '' ) then
 								itext = "Locked Chest (owned by "..original_owner..")";
@@ -735,13 +735,13 @@ end
 minetest.register_node("apartment:apartment_free", {
 	drawtype = "nodebox",
 	description = "apartment management panel",
----	tiles = {"default_chest_top.png^door_steel.png"},
+---	tiles = {"default_chest_top.png^apartment_controls_vacant.png"},
 	tiles = {"default_steel_block.png","default_steel_block.png","default_steel_block.png","default_steel_block.png",
 			"default_steel_block.png","apartment_controls_vacant.png","default_steel_block.png"},
 	paramtype  = "light",
         paramtype2 = "facedir",
 	light_source = 14,
-	groups = {cracky=2,not_in_creative_inventory=1},
+	groups = {cracky=2},
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -783,7 +783,7 @@ minetest.register_node("apartment:apartment_free", {
 minetest.register_node("apartment:apartment_occupied", {
 	drawtype = "nodebox",
 	description = "apartment management panel",
----	tiles = {"default_chest_top.png^door_steel.png"},
+---	tiles = {"default_chest_top.png^apartment_controls_vacant.png"},
 	tiles = {"default_steel_block.png","default_steel_block.png","default_steel_block.png","default_steel_block.png",
 			"default_steel_block.png","apartment_controls_occupied.png","default_steel_block.png"},
 	paramtype  = "light",
@@ -865,13 +865,13 @@ end
 minetest.register_node("apartment:apartment", {
 	drawtype = "nodebox",
 	description = "apartment management panel (transition state)",
----	tiles = {"default_chest_top.png^door_steel.png"},
+---	tiles = {"default_chest_top.png^apartment_controls_vacant.png"},
 	tiles = {"default_steel_block.png","default_steel_block.png","default_steel_block.png","default_steel_block.png",
 			"default_steel_block.png","apartment_controls_vacant.png","default_steel_block.png"},
 	paramtype  = "light",
         paramtype2 = "facedir",
 	light_source = 14,
-	groups = {cracky=2,not_in_creative_inventory=1},
+	groups = {cracky=2},
 	node_box = {
 		type = "fixed",
 		fixed = {
