@@ -509,7 +509,7 @@ minetest.register_craftitem(n, {
 	end,
 	on_place = releaseme,
 	on_secondary_use = releaseme,
-	groups = { not_in_creative_inventory = 1 },
+	groups = { },
 })
 
 

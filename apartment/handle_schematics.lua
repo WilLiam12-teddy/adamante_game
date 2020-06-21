@@ -593,6 +593,7 @@ minetest.register_node("apartment:build_chest", {
 	tiles = {"default_chest_side.png", "default_chest_top.png^apartment_controls_vacant.png", "default_chest_side.png",
 		"default_chest_side.png", "default_chest_side.png", "default_chest_lock.png^apartment_controls_vacant.png"},
 	paramtype2 = "facedir",
+        is_ground_content = true,
 	groups = {snappy=2,choppy=2,oddly_breakable_by_hand=2},
 	legacy_facedir_simple = true,
 

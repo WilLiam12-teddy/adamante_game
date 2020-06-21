@@ -8,7 +8,7 @@ modTradeLands = {
 	},
 	protected_days = 15, --The addition of time on the protection of the land. If the value is 0 (zero) then the protection will be 100 real years (same that permanent).
 	price={ --Items that the player must pay to protect the land. (Maximum of 4 item types)
-		"default:gold_ingot 3", "default:steel_ingot 3"
+		"minertrade:minermoney 1"
 		--"minertrade:minermoney 3", "minertrade:minercoin 3" --If you want the mod minertrade do download in: https://github.com/Lunovox/minertrade
 	}, 
 	damage_interact = 6, --The amount of damage that the player will receive if it forces interact with the terrain. (6 x 0.5 = 3HP)

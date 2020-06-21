@@ -789,7 +789,7 @@ minetest.register_node("apartment:apartment_occupied", {
 	paramtype  = "light",
         paramtype2 = "facedir",
 	light_source = 14,
-	groups = {cracky=2, not_in_creative_inventory=1 },
+	groups = {cracky=2 },
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -871,6 +871,7 @@ minetest.register_node("apartment:apartment", {
 	paramtype  = "light",
         paramtype2 = "facedir",
 	light_source = 14,
+        is_ground_content = true,
 	groups = {cracky=2},
 	node_box = {
 		type = "fixed",
