@@ -21,6 +21,7 @@ minetest.register_node("pizza:pizza", {
     wield_image = "pizza.png",
     groups = { dig_immediate=2 },
     paramtype = "light",
+    paramtype2 = "wallmounted",
     on_use = minetest.item_eat(30),
 })
 
@@ -90,7 +91,7 @@ minetest.register_node("pizza:pizzabox_open", {
 minetest.register_craft({
     type = "shapeless",
     output = "pizza:pizza_dough",
-    recipe = {"farming:flour", "food:cheese", "food:tomato"},
+    recipe = {"farming:flour", "mobs:cheese", "farming:tomato"},
 })
 
 minetest.register_craft({
