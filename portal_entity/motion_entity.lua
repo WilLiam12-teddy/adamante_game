@@ -486,6 +486,7 @@ minetest.register_craftitem(n, {
 			throw_node(pointed.under, user)
 			return
 		end
+                local target = pointed.ref
 		hammer_throw(user, target)
 	end,
 	on_place = throwme,
