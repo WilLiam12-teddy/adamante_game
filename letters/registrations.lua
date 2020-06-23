@@ -69,3 +69,8 @@ if minetest.get_modpath("colouredstonebricks") then
 	letters.register_letters("colouredstonebricks", "white", "colouredstonebricks:white", "White", "colouredstonebricks_white.png")
 	letters.register_letters("colouredstonebricks", "yellow", "colouredstonebricks:yellow", "Yellow", "colouredstonebricks_yellow.png")
 end
+
+if minetest.get_modpath("bakedclay") then
+	letters.register_letters("bakedclay", "black", "bakedclay:black", "Black", "baked_clay_black.png")
+        letters.register_letters("bakedclay", "white", "bakedclay:white", "White", "baked_clay_white.png")
+end
