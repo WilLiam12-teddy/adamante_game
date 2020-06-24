@@ -41,7 +41,7 @@ outdoor.register_simbol("simbol_distintivo", "Delegacia de Policia", "simbol_dis
 outdoor.register_simbol("simbol_sheriff", "Xerife", "simbol_sheriff.png")
 outdoor.register_simbol("sign_open", "Placa 'Aberto'", "sign_open.png", "Placa 'Aberto'")
 outdoor.register_simbol("sign_close", "Placa 'Fechado'", "sign_close.png", "Placa 'Fechado'")
-outdoor.register_simbol("walmart", "Walmart Logo", "walmart.png", "Walmart Logo")
+outdoor.register_simbol("walmart", "Walmart Logo", "sign_walmart.png", "Walmart Logo")
 
 outdoor.register_simbol("sign_alugase1", "Placa 'Aluga-se (Terreno)'", "sign_aluga-se1.png")
 outdoor.register_simbol("sign_alugase2", "Placa 'Aluga-se (Generico)'", "sign_aluga-se2.png")
