@@ -1,0 +1,24 @@
+# textdomain: minetest_remover
+Magnifying Glass=
+Name of the Node: = 
+Located at: =
+Light on the Node: =
+Light above: =
+Light under: =
+Is protected? Yes.=
+Is protected: No.=
+Is diggable.=
+Is walkable.=
+Is climbable.=
+Is replaceable.=
+Is regenerateable.=
+Has an alpha-channel.=
+With a transparency of = 
+Light shines trough.=
+Shines with Lightlevel =
+Deals with =
+ Points Damage per Second.=
+Stacks with =
+ Items / Stack.=
+Node unknown!=
+Pointed on no Node.=

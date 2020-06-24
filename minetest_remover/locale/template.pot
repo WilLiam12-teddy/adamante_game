@@ -1,0 +1,110 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# acm <undertakers_help@yahoo.com>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-21 19:43+0100\n"
+"PO-Revision-Date: 2019-11-21 20:10+0100\n"
+"Last-Translator: acm <undertakers_help@yahoo.com>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 19.08.3\n"
+
+#: init.lua
+msgid "Magnifying Glass"
+msgstr "Vergrößerungsglas"
+
+#: init.lua
+msgid "Name of the Node: "
+msgstr "Name des Blockes: "
+
+#: init.lua
+msgid "Located at: "
+msgstr "Gefunden bei: "
+
+#: init.lua
+msgid "Light on the Node: "
+msgstr "Licht im Block: "
+
+#: init.lua
+msgid "Light above: "
+msgstr "Licht darüber: "
+
+#: init.lua
+msgid "Light under: "
+msgstr "Licht darunter: "
+
+#: init.lua
+msgid "Is protected? Yes."
+msgstr "Ist geschützt? Ja."
+
+#: init.lua
+msgid "Is protected: No."
+msgstr "Ist geschützt? Nein."
+
+#: init.lua
+msgid "Is diggable."
+msgstr "Ist abbaubar."
+
+#: init.lua
+msgid "Is walkable."
+msgstr "Ist begehbar."
+
+#: init.lua
+msgid "Is climbable."
+msgstr "Kann erklettert werden."
+
+#: init.lua
+msgid "Is replaceable."
+msgstr "Ist ersetzbar."
+
+#: init.lua
+msgid "Is regenerateable."
+msgstr "Ist erneuerbar."
+
+#: init.lua
+msgid "Has an alpha-channel."
+msgstr "Hat einen Alpha-Kanal."
+
+#: init.lua
+msgid "With a transparency of "
+msgstr "Mit einer Transparenz von "
+
+#: init.lua
+msgid "Light shines trough."
+msgstr "Licht scheint durch."
+
+#: init.lua
+msgid "Shines with Lightlevel "
+msgstr "Scheint mit einer Stärke von "
+
+#: init.lua
+msgid "Deals with "
+msgstr "Verteilt "
+
+#: init.lua
+msgid " Points Damage per Second."
+msgstr " Punkte Schaden pro Sekunde."
+
+#: init.lua
+msgid "Stacks with "
+msgstr "Stapelbar bis "
+
+#: init.lua
+msgid " Items / Stack."
+msgstr " Stück / Stapel."
+
+#: init.lua
+msgid "Node unknown!"
+msgstr "Block unbekannt!"
+
+#: init.lua
+msgid "Pointed on no Node."
+msgstr "Zeigt auf keinen Block."
