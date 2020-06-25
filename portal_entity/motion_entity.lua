@@ -543,5 +543,3 @@ minetest.register_node("portal_entity:aerial_faith_plate", {
 
 
 return i
-
-

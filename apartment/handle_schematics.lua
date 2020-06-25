@@ -8,10 +8,6 @@ handle_schematics.AUTODECAY   = 'apartment:autodecay';
 
 handle_schematics.ENABLE_SLOW_DECAY = false
 
-
-minetest.register_privilege("apartment_spawn", { description = "allows you to spawn apartments", give_to_singleplayer = false});
-
-
 -- taken from https://github.com/MirceaKitsune/minetest_mods_structures/blob/master/structures_io.lua (Taokis Sructures I/O mod)
 -- gets the size of a structure file
 -- nodenames: contains all the node names that are used in the schematic
@@ -187,26 +183,11 @@ handle_schematics.update_nodes = function( start_pos, end_pos, on_constr, after_
 		-- steel doors are annoying because the cannot be catched with the functions above
 		local doornodes = minetest.find_nodes_in_area( start_pos, end_pos,
 				{'doors:door_steel_b_1','doors:door_steel_b_2',
-				 'doors:door_steel_t_1','doors:door_steel_t_2',
-				 'doors:door_steel_a', 'doors:door_steel_b'});
+				 'doors:door_steel_t_1','doors:door_steel_t_2'});
 		for _, p in ipairs( doornodes ) do
-			local node = minetest.get_node( p );
 			local meta = minetest.get_meta( p );
-			if( not( node ) or not( node.name )) then
-				-- do nothing
-			elseif( node.name=='doors:door_steel_t_1' or node.name=='doors:door_steel_t_2') then
-				-- replace top of old steel doors with new node
-				minetest.swap_node( p, {name='doors:door_hidden', param2=node.param2} );
-			else
-				-- set the new owner
-				meta:set_string("doors_owner", player_name );
-				meta:set_string("infotext", "Owned by "..player_name)
-				if(     node.name == 'doors:door_steel_b_1' ) then
-					minetest.swap_node( p, {name='doors:door_steel_a', param2=nod3.param2});
-				elseif( node.name == 'doors:door_steel_b_2' ) then
-					minetest.swap_node( p, {name='doors:door_steel_b', param2=node.param2});
-				end
-			end
+			meta:set_string("doors_owner", player_name );
+			meta:set_string("infotext", "Owned by "..player_name)
 		end
 
 
@@ -545,7 +526,7 @@ handle_schematics.on_receive_fields = function(pos, formname, fields, sender)
 	end
 
 	pname = sender:get_player_name();
-	if( not( minetest.check_player_privs(pname, {apartment_spawn=true}))) then
+	if( not( minetest.check_player_privs(pname, {apartment_unrent=true}))) then
 		minetest.chat_send_player( pname, 'You do not have the necessary privileges.');
 		return;
 	end
@@ -609,13 +590,60 @@ end
 
 minetest.register_node("apartment:build_chest", {
 	description = "Apartment spawner",
-	tiles = {"default_chest_top.png", "default_chest_top.png", "default_chest_top.png",
-		"default_chest_top.png", "default_chest_top.png", "apartment_controls_vacant.png"},
+	tiles = {"default_chest_side.png", "default_chest_top.png^apartment_controls_vacant.png", "default_chest_side.png",
+		"default_chest_side.png", "default_chest_side.png", "default_chest_lock.png^apartment_controls_vacant.png"},
 	paramtype2 = "facedir",
 	groups = {snappy=2,choppy=2,oddly_breakable_by_hand=2},
 	legacy_facedir_simple = true,
-})
 
+	after_place_node = function(pos, placer, itemstack)
+		local meta  = minetest.get_meta( pos );
+		meta:set_string('formspec', handle_schematics.update_apartment_spawner_formspec( pos ));
+        end,
+
+	on_receive_fields = function( pos, formname, fields, sender )
+		handle_schematics.on_receive_fields(pos, formname, fields, sender)
+	end,
+
+	-- if the building chest is removed, remove the building as well - and place nodes looking like leaves and autodecaying in order
+ 	-- to indicate where the building has been
+	after_dig_node = function(pos, oldnode, oldmetadata, digger)
+		local meta  = minetest.get_meta( pos );
+
+		if( oldmetadata and oldmetadata.fields and oldmetadata.fields.path ) then
+
+			local replacement_function = handle_schematics.replacement_function_decay;
+			local replacement_param    = nil;
+			local path = minetest.get_modpath("apartment")..'/schems/'..oldmetadata.fields.path;
+
+			minetest.chat_send_player( digger:get_player_name(), 'Removing building '..tostring( oldmetadata.fields.path ));
+			handle_schematics.place_schematic( pos, oldnode.param2, path, 0,
+			                                   replacement_function, replacement_param, digger,
+			                                   {h=oldmetadata.fields.h,v=oldmetadata.fields.v} )
+		end
+	end,
+
+	-- check if digging is allowed
+	can_dig = function(pos,player)	
+
+		if( not( player )) then
+			return false;
+		end
+		local pname = player:get_player_name();
+		if( not( minetest.check_player_privs(pname, {apartment_unrent=true}))) then
+			minetest.chat_send_player( pname, 'You do not have the apartment_unrent priv which is necessary to dig this node.');
+			return false;
+		end
+		local meta  = minetest.get_meta( pos );
+		local old_placer = meta:get_string('placed_by');
+		if( old_placer and old_placer ~= '' and old_placer ~= pname ) then
+			minetest.chat_send_player( pname, 'Only '..tostring( old_placer )..' can dig this node.');
+			return false;
+		end
+		return true;
+	end,
+
+})
 
 if handle_schematics.ENABLE_SLOW_DECAY  then
    minetest.register_node( handle_schematics.AUTODECAY, {
@@ -639,3 +667,11 @@ if handle_schematics.ENABLE_SLOW_DECAY  then
 	end
    })
 end
+
+minetest.register_craft({
+    type = "shaped",
+    output = "apartment:build_chest 0",
+    recipe = {
+        {""}
+    }
+})

@@ -26,10 +26,6 @@ minetest.register_privilege("areas_high_limit", {
 	description = "Can can more, bigger areas."
 })
 
-minetest.register_privilege("protect_admin", {
-	description = "Só admins podem proteger. ;)."
-})
-
 if not minetest.registered_privileges[areas.config.self_protection_privilege] then
 	minetest.register_privilege(areas.config.self_protection_privilege, {
 		description = "Can protect areas.",
