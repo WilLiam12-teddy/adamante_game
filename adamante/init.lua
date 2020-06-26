@@ -70,9 +70,136 @@ minetest.register_chatcommand("r", {
     end,
 })
 
-minetest.register_craftitem( "adamante:potato_chips", {
-	description = "Batata Chips",
-	inventory_image = "potato_chips.png",
-	wield_image = "potato_chips.png",
-	on_use = minetest.item_eat(3),
+local disable_sounds = minetest.settings:get_bool("shields_disable_sounds")
+
+local function play_sound_effect(player, name)
+	if not disable_sounds and player then
+		local pos = player:getpos()
+		if pos then
+			minetest.sound_play(name, {
+				pos = pos,
+				max_hear_distance = 10,
+				gain = 0.5,
+			})
+		end
+	end
+end
+
+armor:register_armor("adamante:helmet", {
+	description = "Moderator Helmet",
+	inventory_image = "adamante_inv_helmet.png",
+	groups = {armor_head=1, armor_heal=12, armor_use=100},
+	armor_groups = {fleshy=15},
+	damage_groups = {cracky=2, snappy=1, level=3},
+})
+
+armor:register_armor("adamante:chestplate", {
+	description = "Moderator Chestplate",
+	inventory_image = "adamante_inv_chestplate.png",
+	groups = {armor_torso=1, armor_heal=12, armor_use=100},
+	armor_groups = {fleshy=20},
+	damage_groups = {cracky=2, snappy=1, level=3},
+})
+
+armor:register_armor("adamante:leggings", {
+	description = "Moderator Leggings",
+	inventory_image = "adamante_inv_leggings.png",
+	groups = {armor_legs=1, armor_heal=12, armor_use=100},
+	armor_groups = {fleshy=20},
+	damage_groups = {cracky=2, snappy=1, level=3},
+})
+
+armor:register_armor("adamante:boots", {
+	description = "Moderator Boots",
+	inventory_image = "adamante_inv_boots.png",
+	groups = {armor_feet=1, armor_heal=12, armor_use=100},
+	armor_groups = {fleshy=15},
+	damage_groups = {cracky=2, snappy=1, level=3},
+})
+
+armor:register_armor("adamante:shield", {
+	description = "Moderator Shield",
+	inventory_image = "adamante_inv_shield.png",
+	groups = {armor_shield=1, armor_heal=12, armor_use=100},
+	armor_groups = {fleshy=15},
+	damage_groups = {cracky=2, snappy=1, level=3},
+	reciprocate_damage = true,
+	on_damage = function(player, index, stack)
+		play_sound_effect(player, "default_glass_footstep")
+	end,
+	on_destroy = function(player, index, stack)
+		play_sound_effect(player, "default_break_glass")
+	end,
+})
+
+print("[OK] Moderator armor")
+
+local spawn_spawnpos = minetest.setting_get_pos("static_spawnpoint")
+
+minetest.register_chatcommand("spawn", {
+	params = "",
+	description = "Teleport to the spawn point",
+        privs = { fly=true },
+	func = function(name, param)
+		local player = minetest.get_player_by_name(name)
+		if not player then
+			return false, "Player not found"
+		end
+		if spawn_spawnpos then
+			player:setpos(spawn_spawnpos)
+			return true, "Teleporting to spawn..."
+		else
+			return false, "The spawn point is not set!"
+		end
+	end,
+})
+
+minetest.register_chatcommand("setspawn", {
+	params = "",
+	description = "Sets the spawn point to your current position",
+	privs = { server=true },
+	func = function(name, param)
+		local player = minetest.get_player_by_name(name)
+		if not player then
+			return false, "Player not found"
+		end
+		local pos = player:getpos()
+		local x = pos.x
+		local y = pos.y
+		local z = pos.z
+		local pos_string = x..","..y..","..z
+		local pos_string_2 = "Setting spawn point to ("..x..", "..y..", "..z..")"
+		minetest.setting_set("static_spawnpoint",pos_string)
+		spawn_spawnpos = pos
+		minetest.setting_save()
+		return true, pos_string_2
+	end,
+})
+
+minetest.register_node("adamante:pequenogamer", {
+    description = "PequenoGamer",
+    tiles = {"yay_pequenogamer.png"},
+    is_ground_content = true,
+    groups = {cracky=3, stone=1}
+})
+
+minetest.register_tool("adamante:killer_tool", {
+	description = ("Killer Tool - Movimento Anti mcfoxyotuber"),
+	range = 12,
+	inventory_image = "tool_anti_mcfoxyoutuber.png",
+	tool_capabilities = {
+		full_punch_interval = 0.1,
+		max_drop_level = 3,
+		groups = {cracky = 3},
+		groupcaps= {
+			unbreakable = {times={[1] = 0, [2] = 0, [3] = 0}, uses = 0, maxlevel = 3},
+			fleshy =      {times={[1] = 0, [2] = 0, [3] = 0}, uses = 0, maxlevel = 3},
+			choppy =      {times={[1] = 0, [2] = 0, [3] = 0}, uses = 0, maxlevel = 3},
+			bendy =       {times={[1] = 0, [2] = 0, [3] = 0}, uses = 0, maxlevel = 3},
+			cracky =      {times={[1] = 0, [2] = 0, [3] = 0}, uses = 0, maxlevel = 3},
+			crumbly =     {times={[1] = 0, [2] = 0, [3] = 0}, uses = 0, maxlevel = 3},
+			snappy =      {times={[1] = 0, [2] = 0, [3] = 0}, uses = 0, maxlevel = 3},
+		},
+		damage_groups = {fleshy = 1000},
+	},
 })
