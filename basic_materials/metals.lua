@@ -4,12 +4,12 @@ local S = minetest.get_translator("basic_materials")
 -- items
 
 minetest.register_craftitem("basic_materials:steel_wire", {
-	description = S("Spool of steel wire"),
+	description = S("Carretel de fio de aco"),
 	inventory_image = "basic_materials_steel_wire.png"
 })
 
 minetest.register_craftitem("basic_materials:copper_wire", {
-	description = S("Spool of copper wire"),
+	description = S("Carretel de fio de cobre"),
 	inventory_image = "basic_materials_copper_wire.png"
 })
 
@@ -19,22 +19,22 @@ minetest.register_craftitem("basic_materials:silver_wire", {
 })
 
 minetest.register_craftitem("basic_materials:gold_wire", {
-	description = S("Spool of gold wire"),
+	description = S("Carretel de fio de ouro"),
 	inventory_image = "basic_materials_gold_wire.png"
 })
 
 minetest.register_craftitem("basic_materials:steel_strip", {
-	description = S("Steel Strip"),
+	description = S("Tiras de aco"),
 	inventory_image = "basic_materials_steel_strip.png"
 })
 
 minetest.register_craftitem("basic_materials:copper_strip", {
-	description = S("Copper Strip"),
+	description = S("Tiras de cobre"),
 	inventory_image = "basic_materials_copper_strip.png"
 })
 
 minetest.register_craftitem("basic_materials:steel_bar", {
-	description = S("Steel Bar"),
+	description = S("Barra de aco"),
 	inventory_image = "basic_materials_steel_bar.png",
 })
 

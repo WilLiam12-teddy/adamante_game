@@ -5,21 +5,21 @@ local ethereal_mod = minetest.get_modpath("ethereal")
 
 
 local colours = {
-	{"black",      "Black",      "#000000b0"},
-	{"blue",       "Blue",       "#015dbb70"},
-	{"brown",      "Brown",      "#a78c4570"},
-	{"cyan",       "Cyan",       "#01ffd870"},
-	{"dark_green", "Dark Green", "#005b0770"},
-	{"dark_grey",  "Dark Grey",  "#303030b0"},
-	{"green",      "Green",      "#61ff0170"},
-	{"grey",       "Grey",       "#5b5b5bb0"},
+	{"black",      "Preto",      "#000000b0"},
+	{"blue",       "Azul",       "#015dbb70"},
+	{"brown",      "Marrom",      "#a78c4570"},
+	{"cyan",       "Ciano",       "#01ffd870"},
+	{"dark_green", "Verde Escuro", "#005b0770"},
+	{"dark_grey",  "Cinza Escuro",  "#303030b0"},
+	{"green",      "Verde",      "#61ff0170"},
+	{"grey",       "Cinza",       "#5b5b5bb0"},
 	{"magenta",    "Magenta",    "#ff05bb70"},
-	{"orange",     "Orange",     "#ff840170"},
-	{"pink",       "Pink",       "#ff65b570"},
-	{"red",        "Red",        "#ff000070"},
-	{"violet",     "Violet",     "#2000c970"},
-	{"white",      "White",      "#abababc0"},
-	{"yellow",     "Yellow",     "#e3ff0070"},
+	{"orange",     "Laranja",     "#ff840170"},
+	{"pink",       "Rosa",       "#ff65b570"},
+	{"red",        "Vermelho",        "#ff000070"},
+	{"violet",     "Violeta",     "#2000c970"},
+	{"white",      "Branco",      "#abababc0"},
+	{"yellow",     "Amarelo",     "#e3ff0070"},
 }
 
 
@@ -99,7 +99,7 @@ for i = 1, #colours, 1 do
 -- stone brick
 
 cblocks_stairs("cblocks:stonebrick_" .. colours[i][1], {
-	description = colours[i][2] .. " Stone Brick",
+	description = colours[i][2] .. " Tijolo de Pedra",
 	tiles = {"default_stone_brick.png^[colorize:" .. colours[i][3]},
 	paramtype = "light",
 	is_ground_content = false,
@@ -120,7 +120,7 @@ minetest.register_craft({
 if stairs_mod and stairs and stairs.mod and stairs.mod == "redo" then
 
 	cblocks_stairs("cblocks:glass_" .. colours[i][1], {
-		description = colours[i][2] .. " Glass",
+		description = colours[i][2] .. " Vidro",
 		tiles = {"cblocks.png^[colorize:" .. colours[i][3]},
 		drawtype = "glasslike",
 		paramtype = "light",
@@ -134,7 +134,7 @@ if stairs_mod and stairs and stairs.mod and stairs.mod == "redo" then
 	set_alias(colours[i][1], "glass")
 else
 	minetest.register_node("cblocks:glass_" .. colours[i][1], {
-		description = colours[i][2] .. " Glass",
+		description = colours[i][2] .. " Vidro",
 		tiles = {"cblocks.png^[colorize:" .. colours[i][3]},
 		drawtype = "glasslike",
 		paramtype = "light",
@@ -163,7 +163,7 @@ if ethereal_mod and col == "yellow" then
 end
 
 cblocks_stairs("cblocks:wood_" .. col, {
-	description = colours[i][2] .. " Wooden Planks",
+	description = colours[i][2] .. " Madeira",
 	tiles = {"default_wood.png^[colorize:" .. colours[i][3]},
 	paramtype = "light",
 	is_ground_content = false,

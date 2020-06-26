@@ -33,7 +33,7 @@ local S, NS = dofile(MP.."/intllib.lua")
 -- the hammer for the anvil
 
 local hammer_def = {
-	description = S("Steel blacksmithing hammer"),
+	description = S("Martelo de aco para ferraria"),
 	_doc_items_longdesc = S("A tool for repairing other tools at a blacksmith's anvil."),
 	_doc_items_usagehelp = S("Use this hammer to strike blows upon an anvil bearing a damaged tool and you can repair it. It can also be used for smashing stone, but it is not well suited to this task."),
 	image           = "anvil_tool_steelhammer.png",
@@ -133,7 +133,7 @@ end
 
 minetest.register_node("anvil:anvil", {
 	drawtype = "nodebox",
-	description = S("Anvil"),
+	description = S("Bigorna"),
 	_doc_items_longdesc = S("A tool for repairing other tools in conjunction with a blacksmith's hammer."),
 	_doc_items_usagehelp = S("Right-click on this anvil with a damaged tool to place the damaged tool upon it. You can then repair the damaged tool by striking it with a blacksmith's hammer. Repeated blows may be necessary to fully repair a badly worn tool. To retrieve the tool either punch or right-click the anvil with an empty hand."),
 	tiles = {"default_stone.png"},
