@@ -591,8 +591,9 @@ end
 minetest.register_node("apartment:build_chest", {
 	description = "Apartment spawner",
 	tiles = {"default_chest_side.png", "default_chest_top.png^apartment_controls_vacant.png", "default_chest_side.png",
-		"default_chest_side.png", "default_chest_side.png", "default_chest_lock.png^apartment_controls_vacant.png"},
+		"default_chest_side.png", "default_chest_side.png", "default_chest_top.png^apartment_controls_vacant.png"},
 	paramtype2 = "facedir",
+        not_in_creative_inventory = 1,
 	groups = {snappy=2,choppy=2,oddly_breakable_by_hand=2},
 	legacy_facedir_simple = true,
 
