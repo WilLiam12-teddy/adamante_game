@@ -676,3 +676,12 @@ minetest.register_craft({
         {""}
     }
 })
+
+minetest.register_craft({
+    output = "apartment:build_chest",
+    recipe = {
+        {"", ""                       },
+        {"", ""},
+        {"", ""}
+    }
+})

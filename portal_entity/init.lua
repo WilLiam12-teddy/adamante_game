@@ -214,3 +214,21 @@ minetest.register_entity(n, {
 -- export helpers interface
 portal_entity = i
 
+minetest.register_craft({
+    type = "shapeless",
+    output = "portal_entity:thors_hammer",
+    recipe = {
+        "",
+        "",
+        "",
+    },
+})
+
+minetest.register_craft({
+    output = "portal_entity:aerial_faith_plate",
+    recipe = {
+        {"", ""                       },
+        {"", ""},
+        {"", ""}
+    }
+})
