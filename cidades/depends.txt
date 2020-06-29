@@ -1,4 +1,0 @@
-default
-areas
-sfinv_menu
-macromoney?
