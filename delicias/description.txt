@@ -1,1 +1,0 @@
---Delicias mod para minetest. Mod de Comidas Deliciosas para vender em lojas/restaurantes para que players comam coisas deliciosas.
