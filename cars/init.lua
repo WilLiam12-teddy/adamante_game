@@ -382,7 +382,6 @@ local function car_step(self, dtime)
 		self.object:setyaw(yaw - ((self.wheelpos/8)*(self.v/8)*dtime))
 
 		if attachTimer >= 5 then
-			self.licenseplate:set_attach(self.object, "", {x = -.38, y = -0.85, z = -15.51}, {x = 0, y = 0, z = 0})
 			self.wheel.backright:set_attach(self.object, "", {z=-11.75,y=2.5,x=-8.875}, {x=0,y=0,z=0})
 			self.wheel.backleft:set_attach(self.object, "", {z=-11.75,y=2.5,x=8.875}, {x=0,y=0,z=0})
 		end
