@@ -1,20 +1,3 @@
-minetest.register_tool("adamante_food:doritos", {
-    description = "Pacote de Doritos",
-    inventory_image = "doritos.png",
-    tool_capabilities = {
-        full_punch_interval = 1.5,
-        max_drop_level = 1,
-        groupcaps = {
-            crumbly = {
-                maxlevel = 2,
-                uses = 20,
-                times = { [1]=1.60, [2]=1.20, [3]=0.80 }
-            },
-        },
-        damage_groups = {fleshy=2},
-    },
-})
-
 minetest.register_craftitem("adamante_food:doritos_queijo", {
     description = "Doritos",
     inventory_image = "doritos_queijo.png",
@@ -29,10 +12,21 @@ minetest.register_craft({
     },
 })
 
-minetest.register_craftitem("adamante_food:coke", {
-    description = "Coca-Cola",
-    inventory_image = "cocacola.png",
-    on_use = minetest.item_eat(1),
+minetest.register_node("adamante_food:cocacola", {
+	description = ("Coca-Cola"),
+	drawtype = "plantlike",
+	tiles = {"cocacola.png"},
+	inventory_image = "cocacola.png",
+	wield_image = "cocacola.png",
+	paramtype = "light",
+	is_ground_content = false,
+	on_use = minetest.item_eat(1),
+	walkable = false,
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.25, -0.5, -0.25, 0.25, 0.3, 0.25}
+	},
+	groups = {dig_immediate = 3, attached_node = 1, food_vegan = 1, food_sweet = 1, food_butter = 1, eatable = 1},
 })
 
 minetest.register_craftitem("adamante_food:sorvete", {
@@ -74,5 +68,34 @@ minetest.register_node("adamante_food:snackmachine", {
   paramtype2 = "facedir",
   light_source = 15,
   tiles = {"snack_machine.png"},
+  groups = {snappy=3},
+})
+
+minetest.register_node("adamante_food:doritos", {
+	description = ("Pacote de Doritos"),
+	drawtype = "plantlike",
+	tiles = {"doritos.png"},
+	inventory_image = "doritos.png",
+	wield_image = "doritos.png",
+	paramtype = "light",
+	is_ground_content = false,
+	on_use = minetest.item_eat(1),
+	walkable = false,
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.25, -0.5, -0.25, 0.25, 0.3, 0.25}
+	},
+	groups = {dig_immediate = 3, attached_node = 1, food_vegan = 1, food_sweet = 1, food_butter = 1, eatable = 1},
+})
+
+minetest.register_node("adamante_food:snackmachine2", {
+	description = ("Maquina de Doces e Snacks 2"),
+  drawtype = "mesh",
+	mesh = "snack_machine.obj",
+  inventory_image = "snack_machine2_inv.png",
+  paramtype = "light",
+  paramtype2 = "facedir",
+  light_source = 15,
+  tiles = {"snack_machine2.png"},
   groups = {snappy=3},
 })
