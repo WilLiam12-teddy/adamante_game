@@ -139,7 +139,7 @@ local spawn_spawnpos = minetest.setting_get_pos("static_spawnpoint")
 minetest.register_chatcommand("spawn", {
 	params = "",
 	description = "Teleport to the spawn point",
-        privs = { fly=true },
+        privs = { interact=true },
 	func = function(name, param)
 		local player = minetest.get_player_by_name(name)
 		if not player then

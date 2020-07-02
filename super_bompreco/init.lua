@@ -5,10 +5,14 @@ local pictures = {  ["farmacia"]="Farmacia Bompreco",
                     ["comida4"]="Comida4",
                     ["comida5"]="Comida5",
                     ["comida6"]="Comida6",
+                    ["comida7"]="Comida7",
+                    ["comida8"]="Comida8",
                     ["flores"]="Flores",
                     ["frase1"]="Frase1",
                     ["frase2"]="Frase2",
                     ["frase3"]="Frase3",
+                    ["frase4"]="Frase4",
+                    ["frase5"]="Frase5",
 }
 
 for name,desc in pairs(pictures) do
@@ -40,7 +44,7 @@ for name,desc in pairs(pictures) do
     })
 end
 
-local pictures = {  ["bompreco"]="Bompreco",
+local pictures = {  ["nacional"]="Nacional",
 }
 
 for name,desc in pairs(pictures) do
@@ -72,7 +76,7 @@ for name,desc in pairs(pictures) do
     })
 end
 
-local pictures = {  ["bompreco"]="Bompreco grande",
+local pictures = {  ["nacional_grande"]="Nacional grande",
 }
 
 for name,desc in pairs(pictures) do
@@ -81,7 +85,7 @@ for name,desc in pairs(pictures) do
         drawtype = "signlike",
         inventory_image = name..".png",
         wield_image = name..".png",
-        visual_scale = 6.0,
+        visual_scale = 12.0,
         tiles = {name..".png",},
         use_texture_alpha = true,
         paramtype = "light",
