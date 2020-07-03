@@ -1,4 +1,4 @@
-minetest.register_craftitem("ufos:steel_wire", {
+﻿minetest.register_craftitem("ufos:steel_wire", {
 	description = modUFO.translate("Steel Wire"),
 	inventory_image = "obj_steel_wire_64.png",
 })
@@ -6,7 +6,7 @@ minetest.register_craft({
 	output = "ufos:steel_wire",
 	recipe = {
 		{"", 				"",		"default:steel_ingot"},
-		{"", 						"default:steel_ingot", 	""},
+		{"", 						"default:diamond", 	""},
 		{"default:steel_ingot", 	"", 					""}
 	}
 })
