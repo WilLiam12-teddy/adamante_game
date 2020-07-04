@@ -71,24 +71,19 @@ minetest.register_chatcommand("r", {
 })
 
 minetest.register_chatcommand("spawn", {
-	description = "Teleport to spawn",
-	privs = {interact=true},
+	params = "",
+	description = "Teleport to the spawn point",
 	func = function(name, param)
 		local player = minetest.get_player_by_name(name)
-		if param ~= "" then
-			local pplayer = minetest.get_player_by_name(param)
-			if pplayer and minetest.check_player_privs(pplayer, {bring=true}) then
-				player = pplayer
-			else
-				return false, "Cannot teleport another player to spawn without bring privilege"
-			end
+		if not player then
+			return false, "Player not found"
 		end
-
-		if not spawnpoint.pos then
-			return false, "No spawnpoint set!"
+		if spawn_spawnpos then
+			player:setpos(spawn_spawnpos)
+			return true, "Teleporting to spawn..."
+		else
+			return false, "The spawn point is not set!"
 		end
-
-		spawnpoint.begin(player)
 	end,
 })
 
