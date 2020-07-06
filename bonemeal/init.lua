@@ -478,7 +478,7 @@ end
 
 -- mulch (strength 1)
 minetest.register_craftitem("bonemeal:mulch", {
-	description = S("Adubo"),
+	description = S("Mulch"),
 	inventory_image = "bonemeal_mulch.png",
 
 	on_use = function(itemstack, user, pointed_thing)
@@ -508,7 +508,7 @@ minetest.register_craftitem("bonemeal:mulch", {
 
 -- bonemeal (strength 2)
 minetest.register_craftitem("bonemeal:bonemeal", {
-	description = S("Refeicao de Osso"),
+	description = S("Bone Meal"),
 	inventory_image = "bonemeal_item.png",
 
 	on_use = function(itemstack, user, pointed_thing)
@@ -538,7 +538,7 @@ minetest.register_craftitem("bonemeal:bonemeal", {
 
 -- fertiliser (strength 3)
 minetest.register_craftitem("bonemeal:fertiliser", {
-	description = S("Fertilizante"),
+	description = S("Fertiliser"),
 	inventory_image = "bonemeal_fertiliser.png",
 
 	on_use = function(itemstack, user, pointed_thing)
@@ -568,14 +568,14 @@ minetest.register_craftitem("bonemeal:fertiliser", {
 
 -- bone
 minetest.register_craftitem("bonemeal:bone", {
-	description = S("Osso"),
+	description = S("Bone"),
 	inventory_image = "bonemeal_bone.png",
 	groups = {bone = 1}
 })
 
 -- gelatin powder
 minetest.register_craftitem("bonemeal:gelatin_powder", {
-	description = S("Gelatina em po"),
+	description = S("Gelatin Powder"),
 	inventory_image = "bonemeal_gelatin_powder.png",
 	groups = {food_gelatin = 1, flammable = 2}
 })
