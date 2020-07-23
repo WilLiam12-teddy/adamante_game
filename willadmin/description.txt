@@ -1,0 +1,7 @@
+--willadmin by: WilLiam12 and Nigel
+
+A mod that adds useful tools for server admins.
+
+And please, do not go around distributing the tools and the privilege to the players. ;-)
+
+I hope this mod helps you and your server.

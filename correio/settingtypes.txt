@@ -1,0 +1,12 @@
+# CORREIO SETTINGS
+
+# CORREIO:
+# Delay in seconds of notice of arrival of the new message. 
+# Need to be longer than 5 seconds to not cause lag on server.
+# Default: 10
+correio.hud.delay (HUD Delay) int 10 5 3600
+
+# CORREIO:
+# Avoid occupying RAM memory with the mails of players who have forsake the server.
+# Default: 30
+correio.max_validate_days (Max Validate Days) int 30 1 365

@@ -1,0 +1,19 @@
+area of radius graph, cheating with linear in 1/r radius change over time
+
+A = Ar + At
+
+Ar = area of "rectangle" formed by first position's radius. r1 * t
+At = area of triangle formed by change in radius to r2. (r2 - r1) / 2 * t
+
+Therefore
+A = (((r2 - r1) / 2) + r1) * t
+2A = ((r2 - r1) + 2r1) * t
+2A = (r2 + r1) * t
+A = (r2 + r1) * 0.5 * t
+
+if we fix a value for t we can bake the 0.5 into that, becoming:
+let c = 0.5 * t
+A = (r2 + r1) * c
+
+(remember r values being 1/r here)
+

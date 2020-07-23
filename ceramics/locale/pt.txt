@@ -1,0 +1,39 @@
+#Transdutor: Lunovox <lunovox@openmailbox.org>
+
+Ceramic Aqua Green = Cerâmica Água Verde
+Stair Aqua Green = Escadaria Água Verde
+
+Ceramic Black (Type 1) = Cerâmica Preta (Tipo 1)
+Stair Black (Type 1) = Escadaria Preta (Tipo 1)
+
+Ceramic Black (Type 2) = Cerâmica Preta (Tipo 2)
+Stair Black (Type 2) = Escadaria Preta (Tipo 2)
+
+Ceramic Black (Type 3) = Cerâmica Preta (Tipo 3)
+Stair Black (Type 3) = Escadaria Preta (Tipo 3)
+
+Ceramic Marble = Cerâmica de Mármore
+Stair Marble = Escadaria de Mármore
+
+Ceramic Orange = Cerâmica Laranja
+Stair Orange = Escadaria Laranja
+
+Ceramic Pink = Cerâmica Rosa
+Stair Pink = Escadaria Rosa
+
+Ceramic Purple = Cerâmica Púrpura
+Stair Purple = Escadaria Púrpura
+
+Ceramic Red = Cerâmica Vermelha
+Stair Red = Escadaria Vermelha
+
+Ceramic Wood Tatame = Cerâmica de Tatame de Madeira
+Stair Wood Tatame = Escadaria de Tatame de Madeira
+
+Ceramic Wood Flower = Cerâmica Madeira Florida
+Stair Wood Flower = Escadaria Madeira Florida
+
+Ceramic Yellow Leaf = Cerâmica Folha Amarela
+Stair Yellow Leaf = Escadaria Folha Amarela
+
+

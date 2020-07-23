@@ -1,0 +1,10 @@
+Adiciona cadeiras de diversas cores. Podendo ate sentar na cadeira.
+
+Fork:
+ * Baseado no mod 'Homedecor'
+
+Licence: 
+ * GNU AGPL: https://pt.wikipedia.org/wiki/GNU_Affero_General_Public_License
+
+Developers:
+ * Lunovox <lunovox@openmailbox.org>
