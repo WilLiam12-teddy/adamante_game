@@ -1,7 +1,0 @@
-Criador do mod: 
-	* Luiz Fernando de Lima
-Versão do Mod:
-	* 1.0 (03/03/2015)
-Licença: 
-	* Imagens: GPLv3
-	* Script Lua: GPLv3

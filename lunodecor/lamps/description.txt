@@ -1,4 +1,0 @@
-Adiciona uma lampada branca grande
-
-License: 
- * AGPL

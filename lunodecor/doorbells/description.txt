@@ -1,4 +1,0 @@
-Adiciona uma campainha sonora.
-
-License: 
- * AGPL

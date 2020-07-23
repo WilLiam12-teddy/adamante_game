@@ -1,4 +1,0 @@
-default
-darkage?
-colouredstonebricks?
-bakedclay?

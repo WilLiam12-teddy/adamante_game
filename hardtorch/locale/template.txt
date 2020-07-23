@@ -1,9 +1,0 @@
-# textdomain:hardtorch
-
-Oil=
-Without fuel=
-Without heat source or lighter=
-Torch (used)=
-Oil Lamp=
-Oil Lamp Lit=
-Candle (used)=

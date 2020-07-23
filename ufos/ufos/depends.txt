@@ -1,5 +1,0 @@
-default
-wool
-intllib?
-correio?
-minertrade?
