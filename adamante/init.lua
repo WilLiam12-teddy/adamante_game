@@ -115,24 +115,3 @@ minetest.register_node("adamante:pequenogamer", {
     is_ground_content = true,
     groups = {cracky=3, stone=1}
 })
-
-minetest.register_tool("adamante:killer_tool", {
-	description = ("Killer Tool - Movimento Anti mcfoxyotuber"),
-	range = 12,
-	inventory_image = "tool_anti_mcfoxyoutuber.png",
-	tool_capabilities = {
-		full_punch_interval = 0.1,
-		max_drop_level = 3,
-		groups = {cracky = 3},
-		groupcaps= {
-			unbreakable = {times={[1] = 0, [2] = 0, [3] = 0}, uses = 0, maxlevel = 3},
-			fleshy =      {times={[1] = 0, [2] = 0, [3] = 0}, uses = 0, maxlevel = 3},
-			choppy =      {times={[1] = 0, [2] = 0, [3] = 0}, uses = 0, maxlevel = 3},
-			bendy =       {times={[1] = 0, [2] = 0, [3] = 0}, uses = 0, maxlevel = 3},
-			cracky =      {times={[1] = 0, [2] = 0, [3] = 0}, uses = 0, maxlevel = 3},
-			crumbly =     {times={[1] = 0, [2] = 0, [3] = 0}, uses = 0, maxlevel = 3},
-			snappy =      {times={[1] = 0, [2] = 0, [3] = 0}, uses = 0, maxlevel = 3},
-		},
-		damage_groups = {fleshy = 1000},
-	},
-})
