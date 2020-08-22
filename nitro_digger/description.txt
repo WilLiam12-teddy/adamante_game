@@ -1,0 +1,1 @@
+Adds a tool that removes nodes quickly.
