@@ -3,7 +3,7 @@ local pictures = {  ["nacional"]="Nacional",
 }
 
 for name,desc in pairs(pictures) do
-    minetest.register_node("images:"..name, {
+    minetest.register_node("nacional:"..name, {
         description = desc,
         drawtype = "signlike",
         inventory_image = name..".png",
@@ -36,7 +36,7 @@ local pictures = {  ["nacional_grande"]="Nacional",
 }
 
 for name,desc in pairs(pictures) do
-    minetest.register_node("images:"..name, {
+    minetest.register_node("nacional:"..name, {
         description = desc,
         drawtype = "signlike",
         inventory_image = name..".png",
@@ -69,7 +69,7 @@ local pictures = {  ["nacional_grandao"]="Nacional",
 }
 
 for name,desc in pairs(pictures) do
-    minetest.register_node("images:"..name, {
+    minetest.register_node("nacional:"..name, {
         description = desc,
         drawtype = "signlike",
         inventory_image = name..".png",
@@ -105,7 +105,7 @@ local pictures = {  ["pizza"]="Pizza",
 }
 
 for name,desc in pairs(pictures) do
-    minetest.register_node("images:"..name, {
+    minetest.register_node("nacional:"..name, {
         description = desc,
         drawtype = "signlike",
         inventory_image = name..".png",
